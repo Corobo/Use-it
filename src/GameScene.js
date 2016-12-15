@@ -28,16 +28,14 @@ var GameLayer = cc.Layer.extend({
         this._super();
         var size = cc.winSize;
 
-        cc.spriteFrameCache.addSpriteFrames(res.playershootright_plist);
         cc.spriteFrameCache.addSpriteFrames(res.disparo_plist);
         cc.spriteFrameCache.addSpriteFrames(res.animacion_cuervo_plist);
         cc.spriteFrameCache.addSpriteFrames(res.moneda_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.playerrunright_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.playerjumpright_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.playeridleright_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.playerdieright_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.alucard_walking_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.alucard_jump_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.alucard_idle_plist);
         cc.spriteFrameCache.addSpriteFrames(res.disparo_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.playershootright_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.alucard_hit_plist);
 
 
 

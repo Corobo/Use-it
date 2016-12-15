@@ -23,8 +23,11 @@ ctor:function (space, posicion, layer) {
 
     // animaciones - correr
     var framesAnimacion = [];
-    for (var i = 1; i <= 8; i++) {
-        var str = "playerrunright_0" + i + ".png";
+    for (var i = 1; i <= 31; i++) {
+        if(i<10)
+            var str = "alucard_walking_0" + i + ".png";
+        else
+            var str = "alucard_walking_" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -34,29 +37,52 @@ ctor:function (space, posicion, layer) {
 
     // animaciones - saltar
     var framesAnimacion = [];
-    for (var i = 1; i <= 3; i++) {
-        var str = "playerjumpright_0" + i + ".png";
+    for (var i = 1; i <= 12; i++) {
+        if(i<10)
+            var str = "alucard_jump_0" + i + ".png";
+        else
+            var str = "alucard_jump_" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
-    var animacion = new cc.Animation(framesAnimacion, 0.2);
+    var animacion = new cc.Animation(framesAnimacion, 0.1);
     this.animacionSaltar = new cc.RepeatForever(new cc.Animate(animacion));
 
 
     // animaciones - quieto
     var framesAnimacion = [];
-    for (var i = 1; i <= 5; i++) {
-        var str = "playeridleright_0" + i + ".png";
+    for (var i = 1; i <= 14; i++) {
+        if(i<10)
+            var str = "alucard_idle_0" + i + ".png";
+        else
+            var str = "alucard_idle_" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
-    var animacion = new cc.Animation(framesAnimacion, 0.2);
+    var animacion = new cc.Animation(framesAnimacion, 0.3);
     this.animacionQuieto = new cc.RepeatForever(new cc.Animate(animacion));
+
+    // Crear animación - disparar
+    var framesAnimacion = [];
+    for (var i = 1; i <= 11; i++) {
+        if(i<10)
+            var str = "alucard_hit_0" + i + ".png";
+        else
+            var str = "alucard_hit_" + i + ".png";
+        var frame = cc.spriteFrameCache.getSpriteFrame(str);
+        framesAnimacion.push(frame);
+    }
+    var animacion = new cc.Animation(framesAnimacion, 0.05);
+    this.animacionDisparar =
+        new cc.Repeat(new cc.Animate(animacion),1);
 
     // Crear animación
     var framesAnimacion = [];
-    for (var i = 1; i <= 5; i++) {
-        var str = "playeridleright_0" + i + ".png";
+    for (var i = 1; i <= 14; i++) {
+        if(i<10)
+            var str = "alucard_idle_0" + i + ".png";
+        else
+            var str = "alucard_idle_" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -65,20 +91,8 @@ ctor:function (space, posicion, layer) {
         new cc.RepeatForever(new cc.Animate(animacion));
 
 
-    // Crear animación - disparar
-    var framesAnimacion = [];
-    for (var i = 1; i <= 3; i++) {
-        var str = "playershootright_0" + i + ".png";
-        var frame = cc.spriteFrameCache.getSpriteFrame(str);
-        framesAnimacion.push(frame);
-    }
-    var animacion = new cc.Animation(framesAnimacion, 0.2);
-    this.animacionDisparar =
-        new cc.Repeat(new cc.Animate(animacion),1);
-
-
     // Crear Sprite - Cuerpo y forma
-    this.sprite = new cc.PhysicsSprite("#playeridleright_01.png");
+    this.sprite = new cc.PhysicsSprite("#alucard_idle_01.png");
     // Cuerpo dinamico, SI le afectan las fuerzas
 
 
