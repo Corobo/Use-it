@@ -2,94 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be83737f-9ac8-4800-a02e-a9b395e279a4" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_01.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_02.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_03.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_04.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_05.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_06.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_07.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_08.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_09.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_10.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch_11.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking.plist" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_01.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_02.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_03.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_04.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_05.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_06.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_07.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_08.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_09.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_10.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_11.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_12.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_13.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_14.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_15.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_16.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_17.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_18.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_19.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_20.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_21.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_22.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_23.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_24.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_25.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_26.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_27.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_28.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_29.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_30.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\alucard_walking_31.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_getup.plist" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_getup.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_getup_01.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_getup_02.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_getup_03.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_getup_04.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_getup_05.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_getup_06.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle2_01.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_01.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_02.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_03.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_04.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_05.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_06.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_07.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_08.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_09.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_10.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_11.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_12.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_13.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle_14.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump.plist" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_02.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_03.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_04.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_05.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_06.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_07.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_08.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_09.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_10.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_11.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_12.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/Jugador/Agacharse/alucard_crouch.png" afterPath="$PROJECT_DIR$/res/Jugador/Agacharse/alucard_crouch.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/Jugador/Parado/alucard_idle.png" afterPath="$PROJECT_DIR$/res/Jugador/Parado/alucard_idle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/Jugador/Saltar/alucard_jump_01.png" afterPath="$PROJECT_DIR$/res/Jugador/Saltar/alucard_jump_01.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ControlesLayer.js" afterPath="$PROJECT_DIR$/src/ControlesLayer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch.plist" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Agacharse\alucard_crouch.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit.plist" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_01.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_02.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_03.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_04.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_05.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_06.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_07.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_08.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_09.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_10.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_11.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_12.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_13.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_14.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_15.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_16.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Atacar\alucard_hit_17.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\walking.plist" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Caminar\walking.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Dañado\alucard_hitted.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_stand_up.plist" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Levantarse\alucard_stand_up.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Muriendo\alucard_dieing.plist" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Muriendo\alucard_dieing.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle.plist" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Parado\alucard_idle.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_01.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_movement.plist" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\Jugador\Saltar\alucard_jump_movement.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\PlayStation - Castlevania Symphony of the Night - Abandoned Mine Shaft.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\abeja_13.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\alucard_jump.plist" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\alucard_jump.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\fondoToolBar.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\mapa.tmx" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\mapa1.tmx" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\mapa2.tmx" afterPath="" />
+      <change type="DELETED" beforePath="D:\Corobo\Documents\Use-it\res\mapaPrueba.tmx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameScene.js" afterPath="$PROJECT_DIR$/src/GameScene.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Jugador.js" afterPath="$PROJECT_DIR$/src/Jugador.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/Jugador/Agacharse/alucard_crouch.plist" afterPath="$PROJECT_DIR$/res/Jugador/Agacharse/alucard_crouch.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/Jugador/Parado/alucard_idle.plist" afterPath="$PROJECT_DIR$/res/Jugador/Parado/alucard_idle.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resource.js" afterPath="$PROJECT_DIR$/src/resource.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -117,17 +74,17 @@
         <entry file="file://$PROJECT_DIR$/src/Jugador.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="158" column="17" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
+              <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resource.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="resource.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/resource.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.10979548">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -146,17 +103,17 @@
       <file leaf-file-name="GameScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-117.24138">
-              <caret line="200" column="53" selection-start-line="200" selection-start-column="53" selection-end-line="200" selection-end-column="53" />
+            <state vertical-scroll-proportion="-15.689655">
+              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlesLayer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControlesLayer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ControlesLayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.036598492">
+            <state vertical-scroll-proportion="0.0">
               <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
               <folding />
             </state>
@@ -176,10 +133,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Jugador.js" />
-        <option value="$PROJECT_DIR$/src/GameScene.js" />
-        <option value="$PROJECT_DIR$/src/resource.js" />
         <option value="$PROJECT_DIR$/src/ControlesLayer.js" />
+        <option value="$PROJECT_DIR$/src/GameScene.js" />
+        <option value="$PROJECT_DIR$/src/Jugador.js" />
+        <option value="$PROJECT_DIR$/src/resource.js" />
       </list>
     </option>
   </component>
@@ -261,11 +218,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Use-it" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Use-it" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mapas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mapa_puzzles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Use-it" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Use-it" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mapas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,7 +434,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -448,7 +445,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -480,6 +477,86 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Jugador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControlesLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jugador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="17" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="200" column="53" selection-start-line="200" selection-start-column="53" selection-end-line="200" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ControlesLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Jugador.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -576,36 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/Jugador/Atacar/alucard_hit_16.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Jugador/Atacar/alucard_hit_15.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Jugador/Atacar/alucard_hit_11.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Jugador/Atacar/alucard_hit_12.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Jugador/Atacar/alucard_hit_17.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/Jugador/Saltar/alucard_jump_01.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -614,34 +661,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jugador.js">
+    <entry file="file://$PROJECT_DIR$/src/ControlesLayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="17" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-117.24138">
-          <caret line="200" column="53" selection-start-line="200" selection-start-column="53" selection-end-line="200" selection-end-column="53" />
+        <state vertical-scroll-proportion="-15.689655">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jugador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlesLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.036598492">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.10979548">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>

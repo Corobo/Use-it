@@ -32,10 +32,9 @@ var GameLayer = cc.Layer.extend({
         cc.spriteFrameCache.addSpriteFrames(res.animacion_cuervo_plist);
         cc.spriteFrameCache.addSpriteFrames(res.moneda_plist);
         cc.spriteFrameCache.addSpriteFrames(res.walking_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.alucard_jump_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.alucard_idle_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.disparo_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.alucard_hit_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.jumping_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.dieing_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.idle_plist);
 
 
 
@@ -54,7 +53,7 @@ var GameLayer = cc.Layer.extend({
 
 
         this.jugador = new Jugador(this.space,
-               cc.p(50,150), this);
+               cc.p(64,377), this);
 
         cc.eventManager.addListener({
             event: cc.EventListener.KEYBOARD,
@@ -198,7 +197,7 @@ var GameLayer = cc.Layer.extend({
      }
 
 }, cargarMapa:function () {
-       this.mapa = new cc.TMXTiledMap(res.mapa_prueba);
+       this.mapa = new cc.TMXTiledMap(res.mapa_puzzles);
        // Añadirlo a la Layer
        this.addChild(this.mapa);
        // Ancho del mapa

@@ -23,7 +23,7 @@ ctor:function (space, posicion, layer) {
 
     // animaciones - correr
     var framesAnimacion = [];
-    for (var i = 1; i <= 6; i++) {
+    for (var i = 1; i <= 3; i++) {
         var str = "walking_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
@@ -34,8 +34,8 @@ ctor:function (space, posicion, layer) {
 
     // animaciones - saltar
     var framesAnimacion = [];
-    for (var i = 1; i <= 7; i++) {
-        var str = "alucard_jump_movement_0" + i + ".png";
+    for (var i = 1; i <= 1; i++) {
+        var str = "jumping_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -45,8 +45,8 @@ ctor:function (space, posicion, layer) {
 
     // animaciones - quieto
     var framesAnimacion = [];
-    for (var i = 1; i <= 3; i++) {
-        var str = "alucard_idle_0" + i + ".png";
+    for (var i = 1; i <= 1; i++) {
+        var str = "idle_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -55,11 +55,8 @@ ctor:function (space, posicion, layer) {
 
     // Crear animación - disparar
     var framesAnimacion = [];
-    for (var i = 1; i <= 11; i++) {
-        if(i<10)
-            var str = "alucard_hit_0" + i + ".png";
-        else
-            var str = "alucard_hit_" + i + ".png";
+    for (var i = 1; i <= 1; i++) {
+        var str = "idle_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -69,8 +66,8 @@ ctor:function (space, posicion, layer) {
 
     // Crear animación
     var framesAnimacion = [];
-    for (var i = 1; i <= 3; i++) {
-        var str = "alucard_idle_0" + i + ".png";
+    for (var i = 1; i <= 1; i++) {
+        var str = "idle_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -80,7 +77,7 @@ ctor:function (space, posicion, layer) {
 
 
     // Crear Sprite - Cuerpo y forma
-    this.sprite = new cc.PhysicsSprite("#alucard_idle_01.png");
+    this.sprite = new cc.PhysicsSprite("#idle_01.png");
     // Cuerpo dinamico, SI le afectan las fuerzas
 
 
