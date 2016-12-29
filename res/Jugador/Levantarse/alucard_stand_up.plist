@@ -4,46 +4,32 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>alucard_crouch_01.png</key>
+			<key>alucard_standup_01.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,0},{43,39}}</string>
+				<string>{{0,0},{25,32}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{43,39}}</string>
+				<string>{{0,0},{25,32}}</string>
 				<key>sourceSize</key>
-				<string>{43,39}</string>
+				<string>{25,32}</string>
 			</dict>
 
-			<key>alucard_crouch_02.png</key>
+			<key>alucard_standup_02.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,40},{41,30}}</string>
+				<string>{{26,0},{24,43}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{41,30}}</string>
+				<string>{{0,0},{24,43}}</string>
 				<key>sourceSize</key>
-				<string>{41,30}</string>
-			</dict>
-
-			<key>alucard_crouch_03.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,71},{30,25}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{30,25}}</string>
-				<key>sourceSize</key>
-				<string>{30,25}</string>
+				<string>{24,43}</string>
 			</dict>
 
 		</dict>
@@ -53,9 +39,9 @@
 			<key>format</key>
 			<integer>2</integer>
 			<key>size</key>
-			<string>{64,128}</string>
+			<string>{64,64}</string>
 			<key>textureFileName</key>
-			<string>alucard_crouch.png</string>
+			<string>alucard_stand_up.png</string>
 			</dict>
 		</dict>
 </plist>

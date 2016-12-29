@@ -23,11 +23,8 @@ ctor:function (space, posicion, layer) {
 
     // animaciones - correr
     var framesAnimacion = [];
-    for (var i = 1; i <= 31; i++) {
-        if(i<10)
-            var str = "alucard_walking_0" + i + ".png";
-        else
-            var str = "alucard_walking_" + i + ".png";
+    for (var i = 1; i <= 6; i++) {
+        var str = "walking_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -37,25 +34,19 @@ ctor:function (space, posicion, layer) {
 
     // animaciones - saltar
     var framesAnimacion = [];
-    for (var i = 1; i <= 12; i++) {
-        if(i<10)
-            var str = "alucard_jump_0" + i + ".png";
-        else
-            var str = "alucard_jump_" + i + ".png";
+    for (var i = 1; i <= 7; i++) {
+        var str = "alucard_jump_movement_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
-    var animacion = new cc.Animation(framesAnimacion, 0.1);
+    var animacion = new cc.Animation(framesAnimacion, 0.3);
     this.animacionSaltar = new cc.RepeatForever(new cc.Animate(animacion));
 
 
     // animaciones - quieto
     var framesAnimacion = [];
-    for (var i = 1; i <= 14; i++) {
-        if(i<10)
-            var str = "alucard_idle_0" + i + ".png";
-        else
-            var str = "alucard_idle_" + i + ".png";
+    for (var i = 1; i <= 3; i++) {
+        var str = "alucard_idle_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -78,11 +69,8 @@ ctor:function (space, posicion, layer) {
 
     // Crear animación
     var framesAnimacion = [];
-    for (var i = 1; i <= 14; i++) {
-        if(i<10)
-            var str = "alucard_idle_0" + i + ".png";
-        else
-            var str = "alucard_idle_" + i + ".png";
+    for (var i = 1; i <= 3; i++) {
+        var str = "alucard_idle_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -122,7 +110,7 @@ ctor:function (space, posicion, layer) {
 
 
     }, moverIzquierda: function(){
-        if ( this.estado != correr && this.tiempoDisparando <= 0 ) {
+        if (this.estado != correr && this.tiempoDisparando <= 0 ) {
             this.estado = correr;
             this.sprite.stopAllActions();
             this.sprite.runAction(this.animacionCorrer);
@@ -132,9 +120,10 @@ ctor:function (space, posicion, layer) {
         this.body.applyImpulse(cp.v(-100, 0), cp.v(0, 0));
 
     }, moverDerecha: function(){
-        if ( this.estado != correr && this.tiempoDisparando <= 0) {
+        if (this.estado != correr && this.tiempoDisparando <= 0) {
             this.estado = correr;
             this.sprite.stopAllActions();
+            console.log("correr" );
             this.sprite.runAction(this.animacionCorrer);
         }
         this.sprite.scaleX = 1;
@@ -153,6 +142,7 @@ ctor:function (space, posicion, layer) {
           if ( this.estado != saltar && this.tiempoDisparando <= 0) {
                this.estado = saltar;
                this.sprite.stopAllActions();
+               console.log("Saltando" );
                this.sprite.runAction(this.animacionSaltar);
            }
 
@@ -166,9 +156,10 @@ ctor:function (space, posicion, layer) {
         }
         if ( this.body.vy <= 10 && this.body.vy >= -10
            && this.body.vx <= 0.1 && this.body.vx >= -0.1 ){
-              if( this.estado != quieto && this.tiempoDisparando <= 0){
+              if(this.estado != quieto && this.tiempoDisparando <= 0){
                   this.estado = quieto;
                   this.sprite.stopAllActions();
+                  console.log("parado" );
                   this.sprite.runAction(this.animacionQuieto);
               }
         }
@@ -177,6 +168,7 @@ ctor:function (space, posicion, layer) {
               if( this.estado != saltar && this.tiempoDisparando <= 0){
                   this.estado = saltar;
                   this.sprite.stopAllActions();
+                  console.log("Saltando" );
                   this.sprite.runAction(this.animacionSaltar);
               }
         }

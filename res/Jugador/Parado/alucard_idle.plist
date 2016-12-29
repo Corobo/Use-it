@@ -7,197 +7,43 @@
 			<key>alucard_idle_01.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{26,49},{25,47}}</string>
+				<string>{{24,0},{23,46}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{25,47}}</string>
+				<string>{{0,0},{23,46}}</string>
 				<key>sourceSize</key>
-				<string>{25,47}</string>
+				<string>{23,46}</string>
 			</dict>
 
 			<key>alucard_idle_02.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,0},{25,47}}</string>
+				<string>{{0,48},{23,46}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{25,47}}</string>
+				<string>{{0,0},{23,46}}</string>
 				<key>sourceSize</key>
-				<string>{25,47}</string>
+				<string>{23,46}</string>
 			</dict>
 
 			<key>alucard_idle_03.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,48},{25,47}}</string>
+				<string>{{0,0},{23,47}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{25,47}}</string>
+				<string>{{0,0},{23,47}}</string>
 				<key>sourceSize</key>
-				<string>{25,47}</string>
-			</dict>
-
-			<key>alucard_idle_04.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{26,0},{25,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{25,48}}</string>
-				<key>sourceSize</key>
-				<string>{25,48}</string>
-			</dict>
-
-			<key>alucard_idle_05.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{52,0},{25,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{25,48}}</string>
-				<key>sourceSize</key>
-				<string>{25,48}</string>
-			</dict>
-
-			<key>alucard_idle_06.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{52,49},{24,47}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{24,47}}</string>
-				<key>sourceSize</key>
-				<string>{24,47}</string>
-			</dict>
-
-			<key>alucard_idle_07.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{77,49},{24,47}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{24,47}}</string>
-				<key>sourceSize</key>
-				<string>{24,47}</string>
-			</dict>
-
-			<key>alucard_idle_08.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{125,0},{21,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{21,48}}</string>
-				<key>sourceSize</key>
-				<string>{21,48}</string>
-			</dict>
-
-			<key>alucard_idle_09.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{146,49},{20,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{20,48}}</string>
-				<key>sourceSize</key>
-				<string>{20,48}</string>
-			</dict>
-
-			<key>alucard_idle_10.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{102,49},{22,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{22,48}}</string>
-				<key>sourceSize</key>
-				<string>{22,48}</string>
-			</dict>
-
-			<key>alucard_idle_11.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{78,0},{24,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{24,48}}</string>
-				<key>sourceSize</key>
-				<string>{24,48}</string>
-			</dict>
-
-			<key>alucard_idle_12.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{125,49},{20,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{20,48}}</string>
-				<key>sourceSize</key>
-				<string>{20,48}</string>
-			</dict>
-
-			<key>alucard_idle_13.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{103,0},{21,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{21,48}}</string>
-				<key>sourceSize</key>
-				<string>{21,48}</string>
-			</dict>
-
-			<key>alucard_idle_14.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{147,0},{19,48}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{19,48}}</string>
-				<key>sourceSize</key>
-				<string>{19,48}</string>
+				<string>{23,47}</string>
 			</dict>
 
 		</dict>
@@ -207,7 +53,7 @@
 			<key>format</key>
 			<integer>2</integer>
 			<key>size</key>
-			<string>{256,128}</string>
+			<string>{64,128}</string>
 			<key>textureFileName</key>
 			<string>alucard_idle.png</string>
 			</dict>

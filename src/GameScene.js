@@ -31,7 +31,7 @@ var GameLayer = cc.Layer.extend({
         cc.spriteFrameCache.addSpriteFrames(res.disparo_plist);
         cc.spriteFrameCache.addSpriteFrames(res.animacion_cuervo_plist);
         cc.spriteFrameCache.addSpriteFrames(res.moneda_plist);
-        cc.spriteFrameCache.addSpriteFrames(res.alucard_walking_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.walking_plist);
         cc.spriteFrameCache.addSpriteFrames(res.alucard_jump_plist);
         cc.spriteFrameCache.addSpriteFrames(res.alucard_idle_plist);
         cc.spriteFrameCache.addSpriteFrames(res.disparo_plist);
@@ -198,7 +198,7 @@ var GameLayer = cc.Layer.extend({
      }
 
 }, cargarMapa:function () {
-       this.mapa = new cc.TMXTiledMap(niveles[nivelActual]);
+       this.mapa = new cc.TMXTiledMap(res.mapa_prueba);
        // Añadirlo a la Layer
        this.addChild(this.mapa);
        // Ancho del mapa

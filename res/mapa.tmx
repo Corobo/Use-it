@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="2">
+ <layer name="Capa de Patrones 1" width="200" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T+1lC6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAbnEAAAQ==
+  </data>
+ </layer>
+ <imagelayer name="Capa de Imagen 1">
+  <image source="C:/Users/Corobo/Desktop/SpritesCocos/FondosNiveles/PlayStation - Castlevania Symphony of the Night - Prologue.png" trans="ffffff" width="1298" height="959"/>
+ </imagelayer>
+ <objectgroup name="Capa de Objetos 1">
+  <object id="1" x="1286" y="892.667">
+   <polyline points="0,0 -123.333,-0.666667 -382.667,-255.333 -500.667,-258 -495.333,-216.667 -498,-206.667 -505.333,-211 -1271,-209.667"/>
+  </object>
+ </objectgroup>
+</map>
