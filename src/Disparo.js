@@ -11,7 +11,7 @@ ctor:function (space, posicion, layer) {
     // Crear animación
     var framesAnimacion = [];
     for (var i = 1; i <= 4; i++) {
-        var str = "disparo_0" + i + ".png";
+        var str = "disparo_jugador_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -20,7 +20,7 @@ ctor:function (space, posicion, layer) {
         new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
-    this.sprite = new cc.PhysicsSprite("#disparo_01.png");
+    this.sprite = new cc.PhysicsSprite("#disparo_jugador_01.png");
     // Cuerpo estática , no le afectan las fuerzas
     this.body = new cp.Body(5, Infinity);
 

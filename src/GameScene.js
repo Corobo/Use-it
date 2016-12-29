@@ -28,7 +28,7 @@ var GameLayer = cc.Layer.extend({
         this._super();
         var size = cc.winSize;
 
-        cc.spriteFrameCache.addSpriteFrames(res.disparo_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.disparo_jugador_plist);
         cc.spriteFrameCache.addSpriteFrames(res.animacion_cuervo_plist);
         cc.spriteFrameCache.addSpriteFrames(res.moneda_plist);
         cc.spriteFrameCache.addSpriteFrames(res.walking_plist);
@@ -145,13 +145,15 @@ var GameLayer = cc.Layer.extend({
     if ( this.teclaBarra && new Date().getTime() - this.tiempoDisparar > 1000 ){
         this.tiempoDisparar = new Date().getTime();
         var disparo = new Disparo(this.space,
-          cc.p(this.jugador.body.p.x, this.jugador.body.p.y),
+          cc.p(this.jugador.body.p.x+16, this.jugador.body.p.y-8),
           this);
 
           if ( this.jugador.sprite.scaleX > 0){
                disparo.body.vx = 400;
+               disparo.body.vy = 10;
           } else {
                disparo.body.vx = -400;
+               disparo.body.vy = 10;
           }
 
         this.disparos.push(disparo);
