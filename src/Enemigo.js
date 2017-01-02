@@ -1,5 +1,5 @@
 var Enemigo = cc.Class.extend({
-    direccion: "derecha",
+    direccionX: "derecha",
     space:null,
     sprite:null,
     shape:null,
@@ -28,6 +28,7 @@ ctor:function (space, posicion, layer) {
     this.body.setPos(posicion);
     this.body.setAngle(0);
     this.sprite.setBody(this.body);
+
     // Se añade el cuerpo al espacio
     this.space.addBody(this.body);
 
@@ -50,24 +51,25 @@ ctor:function (space, posicion, layer) {
 
         // Velocidad baja ha colisionado con algo,
         if ( this.body.vx < 3 &&  this.body.vx > -3 ) {
-           if (this.direccion == "derecha"){
-               this.direccion = "izquierda";
+           if (this.direccionX == "derecha"){
+               this.direccionX = "izquierda";
                this.body.p.x = this.body.p.x -10; // Para que salga de la colisión
                this.sprite.scaleX = 1;
            } else {
-               this.direccion = "derecha";
+               this.direccionX = "derecha";
                 this.body.p.x = this.body.p.x + 10; // Para que salga de la zona de colisión
                this.sprite.scaleX = -1;
            }
         }
 
         // Dar impulsos para mantener la velocidad
-        if (this.direccion == "izquierda" && this.body.vx > -100){
+        if (this.direccionX == "izquierda" && this.body.vx > -100){
             this.body.applyImpulse(cp.v(-100, 0), cp.v(0, 0));
         }
-        if (this.direccion == "derecha" && this.body.vx < 100){
-            this.body.applyImpulse(cp.v(100, 0), cp.v(0, 0));
+        if (this.direccionX == "derecha" && this.body.vx < 100){
+            this.body.applyImpulse(cp.v(100, 0), cp.v(0,0));
         }
+
 
 
 

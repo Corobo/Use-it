@@ -5,8 +5,10 @@ var tipoEnemigo = 3;
 var tipoContenedor = 4;
 var tipoDisparo = 5;
 var tipoSuelo = 6;
+var tipoDestructorBolas= 7;
+var tipoBolas = 8;
 
-var niveles = [ res.mapa1_tmx , res.mapa2_tmx ];
+var niveles = [ res.mapa_puzzles , res.mapa_boss ];
 var nivelActual = 0;
 
 var GameLayer = cc.Layer.extend({
@@ -22,6 +24,7 @@ var GameLayer = cc.Layer.extend({
     teclaArriba:false,
     teclaBarra:false,
     monedas:[],
+    contadoresBolas:[],
     jugador: null,
     space:null,
     ctor:function () {
@@ -158,6 +161,10 @@ var GameLayer = cc.Layer.extend({
 
         this.disparos.push(disparo);
         this.jugador.disparar();
+        var capaControles =
+                   this.getParent().getChildByTag(idCapaControles);
+        capaControles.actualizarVida(this.jugador);
+
     }
 
      if ( this.teclaArriba ){
@@ -199,7 +206,7 @@ var GameLayer = cc.Layer.extend({
      }
 
 }, cargarMapa:function () {
-       this.mapa = new cc.TMXTiledMap(res.mapa_puzzles);
+       this.mapa = new cc.TMXTiledMap(niveles[0]);
        // Añadirlo a la Layer
        this.addChild(this.mapa);
        // Ancho del mapa
@@ -240,6 +247,50 @@ var GameLayer = cc.Layer.extend({
            this.monedas.push(moneda);
        }
 
+       var grupoContadorBolas = this.mapa.getObjectGroup("ContadorBolas");
+       var contadorBolasArray = grupoContadorBolas.getObjects();
+       for (var i = 0; i < contadorBolasArray.length; i++) {
+          var contador = contadorBolasArray[i];
+          var splitedName = contador.name.split("_");
+          var contadorBolas = new ContadorBolas(this.space,cc.p(contadorBolasArray[i]["x"],
+            contadorBolasArray[i]["y"]),this,splitedName[1],splitedName[2]);
+          this.contadoresBolas.push(contadorBolas);
+       }
+
+       var grupoDestructorBolas = this.mapa.getObjectGroup("DestructorBolas");
+       var destructorBolasArray = grupoDestructorBolas.getObjects();
+          for (var i = 0; i < destructorBolasArray.length; i++) {
+              var destructor = destructorBolasArray[i];
+              var puntos = destructor.polylinePoints;
+
+              for(var j = 0; j < puntos.length - 1; j++){
+                  var bodyDestructor = new cp.StaticBody();
+
+                  var shapeDestructor = new cp.SegmentShape(bodyDestructor,
+                      cp.v(parseInt(destructor.x) + parseInt(puntos[j].x),
+                          parseInt(destructor.y) - parseInt(puntos[j].y)),
+                      cp.v(parseInt(destructor.x) + parseInt(puntos[j + 1].x),
+                          parseInt(destructor.y) - parseInt(puntos[j + 1].y)),
+                      5);
+
+                  shapeDestructor.setSensor(true);
+                  shapeDestructor.setCollisionType(tipoDestructorBolas);
+                  shapeDestructor.setFriction(1);
+
+                  this.space.addStaticShape(shapeDestructor);
+              }
+          }
+
+       var grupoMonedas = this.mapa.getObjectGroup("Llaves");
+          var monedasArray = grupoMonedas.getObject("llave1");
+          for (var i = 0; i < monedasArray.length; i++) {
+              var moneda = new Moneda(this.space,
+                  cc.p(monedasArray[i]["x"],monedasArray[i]["y"]),
+                  this);
+
+              this.monedas.push(moneda);
+          }
+
        var grupoEnemigos = this.mapa.getObjectGroup("Enemigos");
        var enemigosArray = grupoEnemigos.getObjects();
        for (var i = 0; i < enemigosArray.length; i++) {
@@ -250,6 +301,8 @@ var GameLayer = cc.Layer.extend({
            this.enemigos.push(enemigo);
            console.log("Enemigo agregado");
        }
+
+
 
 
 
@@ -338,6 +391,10 @@ var GameLayer = cc.Layer.extend({
           this.formasEliminar.push(shapes[0]);
           this.formasEliminar.push(shapes[1]);
      }, colisionDisparoConSuelo:function (arbiter, space) {
+          var shapes = arbiter.getShapes();
+
+          this.formasEliminar.push(shapes[0]);
+     }, colisionBolaConDestructor:function (arbiter, space) {
           var shapes = arbiter.getShapes();
 
           this.formasEliminar.push(shapes[0]);

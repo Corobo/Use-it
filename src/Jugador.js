@@ -16,6 +16,8 @@ var Jugador = cc.Class.extend({
     shape:null,
     body:null,
     layer:null,
+    vida:100,
+    digitos:[],
 
 ctor:function (space, posicion, layer) {
     this.space = space;
@@ -174,5 +176,12 @@ ctor:function (space, posicion, layer) {
          this.sprite.runAction(this.animacionDisparar);
          this.tiempoDisparando = 40;
          this.estado = disparando;
-     }
+         this.vida = this.vida - 10;
+         var copiaVida = this.vida;
+         this.digitos = [];
+         while(copiaVida >= 1) {
+                 this.digitos.push(copiaVida % 10);
+                 copiaVida /= 10;
+         }
+    }
 });

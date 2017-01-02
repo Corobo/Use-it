@@ -75,4 +75,7 @@
    <polyline points="0,0 -262.667,1.33333"/>
   </object>
  </objectgroup>
+ <objectgroup name="Monedas"/>
+ <objectgroup name="Contenedores"/>
+ <objectgroup name="Enemigos"/>
 </map>
