@@ -4,53 +4,31 @@ var ContadorBolas = cc.Class.extend({
     shape:null,
     layer:null,
     id:null,
+    posicion:null,
     numeroBolas:null,
+    bolasActuales:0,
+    contadores:[],
 ctor:function (space, posicion, layer, id, numeroBolas) {
     this.space = space;
     this.layer = layer;
     this.id = id;
     this.numeroBolas = numeroBolas;
-    // Crear animación
-    var framesAnimacion = [];
-    for (var i = 1; i <= 6; i++) {
-        var str = "moneda" + i + ".png";
-        var frame = cc.spriteFrameCache.getSpriteFrame(str);
-        framesAnimacion.push(frame);
-    }
-    var animacion = new cc.Animation(framesAnimacion, 0.2);
-    var actionAnimacionBucle =
-        new cc.RepeatForever(new cc.Animate(animacion));
+    this.posicion = posicion;
+    this.contadores = [res.contador_0_5_png,res.contador_1_5_png,res.contador_2_5_png,res.contador_3_5_png,res.contador_4_5_png,res.contador_5_5_png];
 
-    // Crear Sprite - Cuerpo y forma
-    this.sprite = new cc.PhysicsSprite("#moneda1.png");
-    // Cuerpo estática , no le afectan las fuerzas
-    var body = new cp.StaticBody();
-    body.setPos(posicion);
-    this.sprite.setBody(body);
-    // Los cuerpos estáticos nunca se añaden al Space
-    var radio = this.sprite.getContentSize().width / 2;
-    // forma
-    this.shape = new cp.CircleShape(body, radio , cp.vzero);
-    this.shape.setCollisionType(tipoMoneda);
-    // Nunca genera colisiones reales
-    this.shape.setSensor(true);
-    // forma estática
-    this.space.addStaticShape(this.shape);
-    // añadir sprite a la capa
+    this.sprite = cc.Sprite.create(this.contadores[this.bolasActuales]);
+    this.sprite.setPosition(posicion);
+    this.layer.addChild(this.sprite);
 
-    // ejecutar la animación
-    this.sprite.runAction(actionAnimacionBucle);
 
-    layer.addChild(this.sprite,10);
    }, eliminar: function (){
-      // quita la forma
       this.space.removeShape(this.shape);
-
-      // quita el cuerpo *opcional, funciona igual
-      // NO: es un cuerpo estático, no lo añadimos, no se puede quitar.
-      // this.space.removeBody(shape.getBody());
-
-      // quita el sprite
       this.layer.removeChild(this.sprite);
+   }, actualizarContador:function(){
+        this.bolasActuales++;
+        this.layer.removeChild(this.sprite);
+        this.sprite = cc.Sprite.create(this.contadores[this.bolasActuales]);
+        this.sprite.setPosition(this.posicion);
+        this.layer.addChild(this.sprite);
    }
 });

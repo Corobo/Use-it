@@ -11,6 +11,7 @@ var Jugador = cc.Class.extend({
     animacionQuieto:null,
     animacionCorrer:null,
     animacionSaltar:null,
+    terreno: "tierra",
     space:null,
     sprite:null,
     shape:null,
@@ -18,6 +19,8 @@ var Jugador = cc.Class.extend({
     layer:null,
     vida:100,
     digitos:[],
+    key:true,
+    anteriorSalto:0,
 
 ctor:function (space, posicion, layer) {
     this.space = space;
@@ -137,7 +140,7 @@ ctor:function (space, posicion, layer) {
 
        console.log("vel Y:"+this.body.vy );
 
-       if ( this.contadorVelYCero  > 1 ){
+       if ( this.contadorVelYCero  > 1 || this.terreno=="agua" ){
           if ( this.estado != saltar && this.tiempoDisparando <= 0) {
                this.estado = saltar;
                this.sprite.stopAllActions();
@@ -145,8 +148,12 @@ ctor:function (space, posicion, layer) {
                this.sprite.runAction(this.animacionSaltar);
            }
 
-           this.body.applyImpulse(cp.v(0, 300), cp.v(0, 0));
+           if(this.terreno=="agua")
+            this.body.applyImpulse(cp.v(0, 50), cp.v(0, 0));
+           else
+            this.body.applyImpulse(cp.v(0, 300), cp.v(0, 0));
            this.contadorVelYCero = 0;
+           this.terreno="tierra";
        }
 
     }, actualizarAnimacion: function(){

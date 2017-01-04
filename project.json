@@ -19,6 +19,8 @@
         "src/Enemigo.js",
         "src/Disparo.js",
         "src/ControlesLayer.js",
-        "src/ContadorBolas.js"
+        "src/ContadorBolas.js",
+        "src/PuertaPuzzle.js",
+        "src/Bola.js"
     ]
 }

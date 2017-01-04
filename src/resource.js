@@ -39,6 +39,14 @@ var res = {
     text_8_png : "res/Interfaz/Textos/text_8.png",
     text_9_png : "res/Interfaz/Textos/text_9.png",
     text_air_png : "res/Interfaz/Textos/text_air.png",
+    puerta_puzzle_png : "res/ObjetosMapa/Puertas/puerta_puzzle.png",
+    contador_0_5_png : "res/ObjetosMapa/Contadores/contador_0_5.png",
+    contador_1_5_png : "res/ObjetosMapa/Contadores/contador_1_5.png",
+    contador_2_5_png : "res/ObjetosMapa/Contadores/contador_2_5.png",
+    contador_3_5_png : "res/ObjetosMapa/Contadores/contador_3_5.png",
+    contador_4_5_png : "res/ObjetosMapa/Contadores/contador_4_5.png",
+    contador_5_5_png : "res/ObjetosMapa/Contadores/contador_5_5.png",
+    bola_png : "res/ObjetosMapa/Bolas/bola.png",
 
 };
 

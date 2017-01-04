@@ -7,6 +7,8 @@ var tipoDisparo = 5;
 var tipoSuelo = 6;
 var tipoDestructorBolas= 7;
 var tipoBolas = 8;
+var tipoTerrenoAgua = 9;
+var tipoPuertaPuzzle = 10;
 
 var niveles = [ res.mapa_puzzles , res.mapa_boss ];
 var nivelActual = 0;
@@ -27,6 +29,9 @@ var GameLayer = cc.Layer.extend({
     contadoresBolas:[],
     jugador: null,
     space:null,
+    puertasPuzzle:[],
+    bola:null,
+    destruirBola:null,
     ctor:function () {
         this._super();
         var size = cc.winSize;
@@ -87,6 +92,19 @@ var GameLayer = cc.Layer.extend({
       this.space.addCollisionHandler(tipoDisparo, tipoSuelo,
            null, this.colisionDisparoConSuelo.bind(this), null, null);
 
+      this.space.addCollisionHandler(tipoJugador, tipoTerrenoAgua,
+               null, this.colisionJugadorConAgua.bind(this), null, null);
+
+      this.space.addCollisionHandler(tipoBolas, tipoDestructorBolas,
+                 null, this.colisionBolaConDestructor.bind(this), null, null);
+
+      this.space.addCollisionHandler(tipoJugador, tipoPuertaPuzzle,
+           null, this.colisionJugadorConPuerta.bind(this), null, null);
+
+      cc.eventManager.addListener({
+                  event: cc.EventListener.MOUSE,
+                  onMouseDown: this.procesarMouseDown
+              }, this)
 
 
 
@@ -136,6 +154,20 @@ var GameLayer = cc.Layer.extend({
                  this.disparos.splice(r, 1);
              }
          }
+
+         for (var r = 0; r < this.puertasPuzzle.length; r++) {
+              if (this.puertasPuzzle[r].shape == shape) {
+                  this.puertasPuzzle[r].eliminar();
+                  this.puertasPuzzle.splice(r, 1);
+              }
+         }
+
+         if(this.destruirBola==true){
+            this.bola.eliminar();
+            this.destruirBola=false;
+         }
+
+
      }
 
      this.formasEliminar = [];
@@ -166,9 +198,16 @@ var GameLayer = cc.Layer.extend({
         capaControles.actualizarVida(this.jugador);
 
     }
-
+     var d = new Date();
+     var t = d.getTime();
      if ( this.teclaArriba ){
-        this.jugador.moverArriba();
+        if(this.jugador.terreno=="agua" && t-this.jugador.anteriorSalto>50){
+            this.jugador.moverArriba();
+            this.jugador.anteriorSalto = t;
+        }
+        else if(this.jugador.terreno="tierra"){
+            this.jugador.moverArriba();
+        }
      }
      if (this.teclaIzquierda){
         this.jugador.moverIzquierda();
@@ -257,6 +296,16 @@ var GameLayer = cc.Layer.extend({
           this.contadoresBolas.push(contadorBolas);
        }
 
+       var grupoPuertas = this.mapa.getObjectGroup("Puertas");
+       var puertasArray = grupoPuertas.getObjects();
+       for (var i = 0; i < puertasArray.length; i++) {
+         var puerta = puertasArray[i];
+         var splitedName = puerta.name.split("_");
+         var puertaO = new PuertaPuzzle(this.space,cc.p(puertasArray[i]["x"]+16,
+           puertasArray[i]["y"]+48),this,splitedName[1]);
+         this.puertasPuzzle.push(puertaO);
+        }
+
        var grupoDestructorBolas = this.mapa.getObjectGroup("DestructorBolas");
        var destructorBolasArray = grupoDestructorBolas.getObjects();
           for (var i = 0; i < destructorBolasArray.length; i++) {
@@ -280,6 +329,30 @@ var GameLayer = cc.Layer.extend({
                   this.space.addStaticShape(shapeDestructor);
               }
           }
+
+        var grupoAgua = this.mapa.getObjectGroup("Agua");
+         var aguaArray = grupoAgua.getObjects();
+            for (var i = 0; i < aguaArray.length; i++) {
+                var agua = aguaArray[i];
+                var puntos = agua.polylinePoints;
+
+                for(var j = 0; j < puntos.length - 1; j++){
+                    var bodyAgua = new cp.StaticBody();
+
+                    var shapAgua = new cp.SegmentShape(bodyAgua,
+                        cp.v(parseInt(agua.x) + parseInt(puntos[j].x),
+                            parseInt(agua.y) - parseInt(puntos[j].y)),
+                        cp.v(parseInt(agua.x) + parseInt(puntos[j + 1].x),
+                            parseInt(agua.y) - parseInt(puntos[j + 1].y)),
+                        5);
+
+                    shapAgua.setSensor(true);
+                    shapAgua.setCollisionType(tipoTerrenoAgua);
+                    shapAgua.setFriction(1);
+
+                    this.space.addStaticShape(shapAgua);
+                }
+            }
 
        var grupoMonedas = this.mapa.getObjectGroup("Llaves");
           var monedasArray = grupoMonedas.getObject("llave1");
@@ -330,6 +403,17 @@ var GameLayer = cc.Layer.extend({
                this.space.addStaticShape(shapeContenedor);
            }
        }
+    },procesarMouseDown:function(event) {
+         console.log(event.getLocationX());
+         console.log(event.getLocationY());
+         var instancia = event.getCurrentTarget();
+         var jugadorX = instancia.jugador.body.p.x;
+         var jugadorY = instancia.jugador.body.p.y;
+         var x = event.getLocationX();
+         var y = event.getLocationY();
+         instancia.bola = new Bola(instancia.space,cc.p(x+(jugadorX*0.95),y+(jugadorY*0.95)),instancia);
+
+
     },teclaPulsada: function(keyCode, event){
         var instancia = event.getCurrentTarget();
 
@@ -396,8 +480,20 @@ var GameLayer = cc.Layer.extend({
           this.formasEliminar.push(shapes[0]);
      }, colisionBolaConDestructor:function (arbiter, space) {
           var shapes = arbiter.getShapes();
+          if(this.bola!=null){
+            this.formasEliminar.push(shapes[0]);
+            this.destruirBola = true;
+            this.contadoresBolas[0].actualizarContador();
+          }
 
-          this.formasEliminar.push(shapes[0]);
+     }, colisionJugadorConAgua:function(arbiter,space){
+          this.jugador.terreno = "agua";
+     }, colisionJugadorConPuerta:function(arbiter,space){
+        if(this.jugador.key == true){
+            var shapes = arbiter.getShapes();
+
+            this.formasEliminar.push(shapes[1]);
+        }
      }
 });
 
