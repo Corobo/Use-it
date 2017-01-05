@@ -21,6 +21,7 @@
         "src/ControlesLayer.js",
         "src/ContadorBolas.js",
         "src/PuertaPuzzle.js",
-        "src/Bola.js"
+        "src/Bola.js",
+        "src/PulsarRaton.js"
     ]
 }

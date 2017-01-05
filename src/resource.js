@@ -47,6 +47,7 @@ var res = {
     contador_4_5_png : "res/ObjetosMapa/Contadores/contador_4_5.png",
     contador_5_5_png : "res/ObjetosMapa/Contadores/contador_5_5.png",
     bola_png : "res/ObjetosMapa/Bolas/bola.png",
+    pulsar_raton_png : "res/ObjetosMapa/Raton/pulsarRaton.png",
 
 };
 

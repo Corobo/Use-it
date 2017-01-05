@@ -13,6 +13,7 @@ ctor:function (space, posicion, layer) {
     // Cuerpo dinámico, SI le afectan las fuerzas
     this.body = new cp.Body(5, Infinity);
 
+
     this.body.setPos(posicion);
     this.body.setAngle(0);
     this.sprite.setBody(this.body);

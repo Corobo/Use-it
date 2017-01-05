@@ -32,6 +32,7 @@ var GameLayer = cc.Layer.extend({
     puertasPuzzle:[],
     bola:null,
     destruirBola:null,
+    pulsadoresRaton:[],
     ctor:function () {
         this._super();
         var size = cc.winSize;
@@ -354,15 +355,15 @@ var GameLayer = cc.Layer.extend({
                 }
             }
 
-       var grupoMonedas = this.mapa.getObjectGroup("Llaves");
-          var monedasArray = grupoMonedas.getObject("llave1");
-          for (var i = 0; i < monedasArray.length; i++) {
-              var moneda = new Moneda(this.space,
-                  cc.p(monedasArray[i]["x"],monedasArray[i]["y"]),
-                  this);
+     var grupoRaton = this.mapa.getObjectGroup("PulsarRaton");
+     var ratonArray = grupoRaton.getObjects();
+     for (var i = 0; i < ratonArray.length; i++) {
+         var raton = new PulsarRaton(this.space,
+             cc.p(ratonArray[i]["x"]+16,ratonArray[i]["y"]+16),
+             this);
 
-              this.monedas.push(moneda);
-          }
+         this.pulsadoresRaton.push(raton);
+     }
 
        var grupoEnemigos = this.mapa.getObjectGroup("Enemigos");
        var enemigosArray = grupoEnemigos.getObjects();
@@ -411,7 +412,14 @@ var GameLayer = cc.Layer.extend({
          var jugadorY = instancia.jugador.body.p.y;
          var x = event.getLocationX();
          var y = event.getLocationY();
-         instancia.bola = new Bola(instancia.space,cc.p(x+(jugadorX*0.95),y+(jugadorY*0.95)),instancia);
+
+
+         for(var i =0; i<instancia.pulsadoresRaton.length;i++){
+            var pulsador = instancia.pulsadoresRaton[i];
+            if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100){
+                instancia.bola = new Bola(instancia.space,pulsador.posicion,instancia);
+            }
+         }
 
 
     },teclaPulsada: function(keyCode, event){
