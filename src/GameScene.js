@@ -10,6 +10,7 @@ var tipoBolas = 8;
 var tipoTerrenoAgua = 9;
 var tipoPuertaPuzzle = 10;
 var tipoDestructorSouls = 11;
+var tipoSoul = 12;
 
 var niveles = [ res.mapa_puzzles , res.mapa_boss ];
 var nivelActual = 0;
@@ -34,6 +35,8 @@ var GameLayer = cc.Layer.extend({
     bola:null,
     destruirBola:null,
     pulsadoresRaton:[],
+    alma:null,
+    souls:[],
     ctor:function () {
         this._super();
         var size = cc.winSize;
@@ -45,6 +48,7 @@ var GameLayer = cc.Layer.extend({
         cc.spriteFrameCache.addSpriteFrames(res.jumping_plist);
         cc.spriteFrameCache.addSpriteFrames(res.dieing_plist);
         cc.spriteFrameCache.addSpriteFrames(res.idle_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.soul_plist);
 
 
 
@@ -102,6 +106,12 @@ var GameLayer = cc.Layer.extend({
 
       this.space.addCollisionHandler(tipoJugador, tipoPuertaPuzzle,
            null, this.colisionJugadorConPuerta.bind(this), null, null);
+
+      this.space.addCollisionHandler(tipoJugador, tipoSoul,
+               null, this.colisionJugadorConAlma.bind(this), null, null);
+
+      this.space.addCollisionHandler(tipoSoul, tipoDestructorSouls,
+                      null, this.colisionAlmaConDestructorAlmas.bind(this), null, null);
 
       cc.eventManager.addListener({
                   event: cc.EventListener.MOUSE,
@@ -164,9 +174,21 @@ var GameLayer = cc.Layer.extend({
               }
          }
 
+         for (var r = 0; r < this.souls.length; r++) {
+               if (this.souls[r].shape == shape) {
+                   this.souls[r].eliminar();
+                   this.souls.splice(r, 1);
+               }
+          }
+
          if(this.destruirBola==true){
             this.bola.eliminar();
             this.destruirBola=false;
+         }
+
+         if(this.destruirAlma==true){
+            this.alma.eliminar();
+            this.destruirAlma=false;
          }
 
 
@@ -288,6 +310,7 @@ var GameLayer = cc.Layer.extend({
            this.monedas.push(moneda);
        }
 
+
       var grupoContadorBolas = this.mapa.getObjectGroup("ContadorBolas");
              var contadorBolasArray = grupoContadorBolas.getObjects();
              for (var i = 0; i < contadorBolasArray.length; i++) {
@@ -298,14 +321,14 @@ var GameLayer = cc.Layer.extend({
                 this.contadoresBolas.push(contadorBolas);
       }
 
-       var grupoContadorBolas = this.mapa.getObjectGroup("ContadorBolas");
-       var contadorBolasArray = grupoContadorBolas.getObjects();
-       for (var i = 0; i < contadorBolasArray.length; i++) {
-          var contador = contadorBolasArray[i];
-          var splitedName = contador.name.split("_");
-          var contadorBolas = new ContadorBolas(this.space,cc.p(contadorBolasArray[i]["x"],
-            contadorBolasArray[i]["y"]),this,splitedName[1],splitedName[2]);
-          this.contadoresBolas.push(contadorBolas);
+       var grupoSouls = this.mapa.getObjectGroup("Souls");
+       var soulsArray = grupoSouls.getObjects();
+       for (var i = 0; i < soulsArray.length; i++) {
+          var soul = soulsArray[i];
+          var splitedName = soul.name.split("_");
+          var soulO = new Soul(this.space,cc.p(soulsArray[i]["x"],
+            soulsArray[i]["y"]),this,false);
+          this.souls.push(soulO);
        }
 
        var grupoPuertas = this.mapa.getObjectGroup("Puertas");
@@ -447,25 +470,47 @@ var GameLayer = cc.Layer.extend({
          var jugadorY = instancia.jugador.body.p.y;
          var x = event.getLocationX();
          var y = event.getLocationY();
-         instancia.bola = null;
-        var random = Math.floor((Math.random() * 10) + 1);
-        var encontrado = false;
-        var posicion = cc.p(0,0);
-         for(var i =0; i<instancia.pulsadoresRaton.length;i++){
-            var pulsador = instancia.pulsadoresRaton[i];
-            if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100 &&
-            pulsador.posicion.x-(jugadorX+x)>-300 && pulsador.posicion.y-(jugadorY+y)>-300){
-                encontrado = true;
-                posicion = pulsador.posicion;
+         if(instancia.jugador.bolas>0){
+             var random = Math.floor((Math.random() * 10) + 1);
+            var encontrado = false;
+            var posicion = cc.p(0,0);
+             for(var i =0; i<instancia.pulsadoresRaton.length;i++){
+                var pulsador = instancia.pulsadoresRaton[i];
+                if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100 &&
+                pulsador.posicion.x-(jugadorX+x)>-300 && pulsador.posicion.y-(jugadorY+y)>-300){
+                    encontrado = true;
+                    posicion = pulsador.posicion;
+                }
+             }
+             if(random>5){
+                posicion = cc.p(posicion.x+random,posicion.y+random);
+                instancia.bola = new Bola(instancia.space,posicion,instancia);
+             }
+             if(random<5){
+                posicion = cc.p(posicion.x+random,posicion.y+random);
+                instancia.bola = new Bola(instancia.space,posicion,instancia);
             }
          }
-         if(random>5){
-            posicion = cc.p(posicion.x+random,posicion.y+random);
-            instancia.bola = new Bola(instancia.space,posicion,instancia);
-         }
-         if(random<5){
-            posicion = cc.p(posicion.x+random,posicion.y+random);
-            instancia.bola = new Bola(instancia.space,posicion,instancia);
+         if(instancia.jugador.almas>0){
+           var random = Math.floor((Math.random() * 10) + 1);
+          var encontrado = false;
+          var posicion = cc.p(0,0);
+           for(var i =0; i<instancia.pulsadoresRaton.length;i++){
+              var pulsador = instancia.pulsadoresRaton[i];
+              if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100 &&
+              pulsador.posicion.x-(jugadorX+x)>-300 && pulsador.posicion.y-(jugadorY+y)>-300){
+                  encontrado = true;
+                  posicion = pulsador.posicion;
+              }
+           }
+           if(random>5){
+              posicion = cc.p(posicion.x+random,posicion.y+random);
+              instancia.alma = new Soul(instancia.space,posicion,instancia,true);
+           }
+           if(random<5){
+              posicion = cc.p(posicion.x+random,posicion.y+random);
+              instancia.alma = new Soul(instancia.space,posicion,instancia,true);
+          }
          }
 
 
@@ -549,6 +594,20 @@ var GameLayer = cc.Layer.extend({
 
             this.formasEliminar.push(shapes[1]);
         }
+     }, colisionJugadorConAlma: function(arbiter,space){
+        var shapes = arbiter.getShapes();
+
+        this.formasEliminar.push(shapes[1]);
+
+        this.jugador.actualizarAlmas();
+     }, colisionAlmaConDestructorAlmas : function(arbiter,space){
+        var shapes = arbiter.getShapes();
+          if(this.alma!=null){
+            this.formasEliminar.push(shapes[0]);
+            this.destruirAlma = true;
+            //aparece llave
+          }
+
      }
 });
 

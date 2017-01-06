@@ -21,6 +21,8 @@ var Jugador = cc.Class.extend({
     digitos:[],
     key:true,
     anteriorSalto:0,
+    almas:0,
+    bolas:0,
 
 ctor:function (space, posicion, layer) {
     this.space = space;
@@ -190,5 +192,9 @@ ctor:function (space, posicion, layer) {
                  this.digitos.push(copiaVida % 10);
                  copiaVida /= 10;
          }
+    }, actualizarAlmas:function(){
+       this.almas++;
+    }, actualizarBolas:function(){
+       this.bolas++;
     }
 });

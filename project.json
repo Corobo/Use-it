@@ -22,6 +22,7 @@
         "src/ContadorBolas.js",
         "src/PuertaPuzzle.js",
         "src/Bola.js",
-        "src/PulsarRaton.js"
+        "src/PulsarRaton.js",
+        "src/Soul.js"
     ]
 }
