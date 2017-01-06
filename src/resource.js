@@ -48,6 +48,8 @@ var res = {
     contador_5_5_png : "res/ObjetosMapa/Contadores/contador_5_5.png",
     bola_png : "res/ObjetosMapa/Bolas/bola.png",
     pulsar_raton_png : "res/ObjetosMapa/Raton/pulsarRaton.png",
+    soul_plist : "res/ObjetosMapa/Souls/soul.plist",
+    soul_png : "res/ObjetosMapa/Souls/soul.png",
 
 };
 

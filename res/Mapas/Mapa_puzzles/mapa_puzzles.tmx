@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="183">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="186">
  <tileset firstgid="1" name="PrtRiver" tilewidth="32" tileheight="32" tilecount="96" columns="16">
   <image source="PrtRiver.png" width="512" height="192"/>
  </tileset>
@@ -213,10 +213,6 @@
   <object id="77" name="puerta_2" x="2593" y="863" width="32" height="96"/>
   <object id="78" name="puerta_3" x="3424" y="865" width="32" height="96"/>
  </objectgroup>
- <objectgroup name="PuzzlesSoul">
-  <object id="149" name="recipe_soul_0" x="896.667" y="1215.33" width="30" height="30.6667"/>
-  <object id="150" name="soul_0_0" x="896" y="1472.67" width="33.3333" height="31.3333"/>
- </objectgroup>
  <objectgroup name="ContadorBolas">
   <object id="151" name="ContadorBolas_0_5" x="2209.67" y="767.333" width="32" height="32"/>
  </objectgroup>
@@ -259,5 +255,13 @@
   <object id="179" x="897.333" y="1152.67" width="32" height="32"/>
   <object id="180" x="3360" y="928" width="32" height="32"/>
   <object id="182" x="3392" y="928.67" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="DestructorSouls">
+  <object id="185" x="896" y="1230">
+   <polyline points="0,0 32,0"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Souls">
+  <object id="183" name="soul_0_0" x="897.333" y="1472.67" width="33.3333" height="31.3333"/>
  </objectgroup>
 </map>

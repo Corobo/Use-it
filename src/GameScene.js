@@ -9,6 +9,7 @@ var tipoDestructorBolas= 7;
 var tipoBolas = 8;
 var tipoTerrenoAgua = 9;
 var tipoPuertaPuzzle = 10;
+var tipoDestructorSouls = 11;
 
 var niveles = [ res.mapa_puzzles , res.mapa_boss ];
 var nivelActual = 0;
@@ -287,6 +288,16 @@ var GameLayer = cc.Layer.extend({
            this.monedas.push(moneda);
        }
 
+      var grupoContadorBolas = this.mapa.getObjectGroup("ContadorBolas");
+             var contadorBolasArray = grupoContadorBolas.getObjects();
+             for (var i = 0; i < contadorBolasArray.length; i++) {
+                var contador = contadorBolasArray[i];
+                var splitedName = contador.name.split("_");
+                var contadorBolas = new ContadorBolas(this.space,cc.p(contadorBolasArray[i]["x"],
+                  contadorBolasArray[i]["y"]),this,splitedName[1],splitedName[2]);
+                this.contadoresBolas.push(contadorBolas);
+      }
+
        var grupoContadorBolas = this.mapa.getObjectGroup("ContadorBolas");
        var contadorBolasArray = grupoContadorBolas.getObjects();
        for (var i = 0; i < contadorBolasArray.length; i++) {
@@ -330,6 +341,30 @@ var GameLayer = cc.Layer.extend({
                   this.space.addStaticShape(shapeDestructor);
               }
           }
+
+         var grupoDestructorSouls = this.mapa.getObjectGroup("DestructorSouls");
+         var destructorSoulsArray = grupoDestructorSouls.getObjects();
+            for (var i = 0; i < destructorSoulsArray.length; i++) {
+                var destructor = destructorSoulsArray[i];
+                var puntos = destructor.polylinePoints;
+
+                for(var j = 0; j < puntos.length - 1; j++){
+                    var bodyDestructor = new cp.StaticBody();
+
+                    var shapeDestructor = new cp.SegmentShape(bodyDestructor,
+                        cp.v(parseInt(destructor.x) + parseInt(puntos[j].x),
+                            parseInt(destructor.y) - parseInt(puntos[j].y)),
+                        cp.v(parseInt(destructor.x) + parseInt(puntos[j + 1].x),
+                            parseInt(destructor.y) - parseInt(puntos[j + 1].y)),
+                        5);
+
+                    shapeDestructor.setSensor(true);
+                    shapeDestructor.setCollisionType(tipoDestructorSouls);
+                    shapeDestructor.setFriction(1);
+
+                    this.space.addStaticShape(shapeDestructor);
+                }
+         }
 
         var grupoAgua = this.mapa.getObjectGroup("Agua");
          var aguaArray = grupoAgua.getObjects();
@@ -412,13 +447,25 @@ var GameLayer = cc.Layer.extend({
          var jugadorY = instancia.jugador.body.p.y;
          var x = event.getLocationX();
          var y = event.getLocationY();
-
-
+         instancia.bola = null;
+        var random = Math.floor((Math.random() * 10) + 1);
+        var encontrado = false;
+        var posicion = cc.p(0,0);
          for(var i =0; i<instancia.pulsadoresRaton.length;i++){
             var pulsador = instancia.pulsadoresRaton[i];
-            if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100){
-                instancia.bola = new Bola(instancia.space,pulsador.posicion,instancia);
+            if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100 &&
+            pulsador.posicion.x-(jugadorX+x)>-300 && pulsador.posicion.y-(jugadorY+y)>-300){
+                encontrado = true;
+                posicion = pulsador.posicion;
             }
+         }
+         if(random>5){
+            posicion = cc.p(posicion.x+random,posicion.y+random);
+            instancia.bola = new Bola(instancia.space,posicion,instancia);
+         }
+         if(random<5){
+            posicion = cc.p(posicion.x+random,posicion.y+random);
+            instancia.bola = new Bola(instancia.space,posicion,instancia);
          }
 
 
