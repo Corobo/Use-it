@@ -11,6 +11,7 @@ var tipoTerrenoAgua = 9;
 var tipoPuertaPuzzle = 10;
 var tipoDestructorSouls = 11;
 var tipoSoul = 12;
+var tipoBala = 13;
 
 var niveles = [ res.mapa_puzzles , res.mapa_boss ];
 var nivelActual = 0;
@@ -37,6 +38,9 @@ var GameLayer = cc.Layer.extend({
     pulsadoresRaton:[],
     alma:null,
     souls:[],
+    bolas:[],
+    balas:[],
+    pulsacionAnterior:0,
     ctor:function () {
         this._super();
         var size = cc.winSize;
@@ -101,6 +105,9 @@ var GameLayer = cc.Layer.extend({
       this.space.addCollisionHandler(tipoJugador, tipoTerrenoAgua,
                null, this.colisionJugadorConAgua.bind(this), null, null);
 
+      this.space.addCollisionHandler(tipoJugador, tipoBolas,
+               null, this.colisionJugadorConBola.bind(this), null, null);
+
       this.space.addCollisionHandler(tipoBolas, tipoDestructorBolas,
                  null, this.colisionBolaConDestructor.bind(this), null, null);
 
@@ -112,6 +119,9 @@ var GameLayer = cc.Layer.extend({
 
       this.space.addCollisionHandler(tipoSoul, tipoDestructorSouls,
                       null, this.colisionAlmaConDestructorAlmas.bind(this), null, null);
+
+      this.space.addCollisionHandler(tipoJugador, tipoBala,
+                            null, this.colisionJugadorConBala.bind(this), null, null);
 
       cc.eventManager.addListener({
                   event: cc.EventListener.MOUSE,
@@ -131,6 +141,7 @@ var GameLayer = cc.Layer.extend({
         nivelActual = nivelActual + 1;
         cc.director.runScene(new GameScene());
      }
+
 
 
 
@@ -181,6 +192,13 @@ var GameLayer = cc.Layer.extend({
                }
           }
 
+        for (var r = 0; r < this.bolas.length; r++) {
+                 if (this.bolas[r].shape == shape) {
+                     this.bolas[r].eliminar();
+                     this.bolas.splice(r, 1);
+                 }
+            }
+
          if(this.destruirBola==true){
             this.bola.eliminar();
             this.destruirBola=false;
@@ -195,31 +213,36 @@ var GameLayer = cc.Layer.extend({
      }
 
      this.formasEliminar = [];
-
+     this.jugador.comprobarVelocidadMuerte();
      // Caída, sí cae vuelve a la posición inicial
-     if( this.jugador.body.p.y < -100){
-        this.jugador.body.p = cc.p(50,150);
+     if( this.jugador.body.p.y < -100 || this.jugador.morir==true){
+        this.jugador.body.vy = 0;
+        this.jugador.body.p = cc.p(64,332);
+        this.jugador.morir = false;
      }
 
     if ( this.teclaBarra && new Date().getTime() - this.tiempoDisparar > 1000 ){
-        this.tiempoDisparar = new Date().getTime();
-        var disparo = new Disparo(this.space,
-          cc.p(this.jugador.body.p.x+16, this.jugador.body.p.y-8),
-          this);
 
-          if ( this.jugador.sprite.scaleX > 0){
-               disparo.body.vx = 400;
-               disparo.body.vy = 10;
-          } else {
-               disparo.body.vx = -400;
-               disparo.body.vy = 10;
-          }
+        if(this.jugador.balas>0){
+            this.tiempoDisparar = new Date().getTime();
+            var disparo = new Disparo(this.space,
+              cc.p(this.jugador.body.p.x+16, this.jugador.body.p.y-8),
+              this);
 
-        this.disparos.push(disparo);
-        this.jugador.disparar();
-        var capaControles =
-                   this.getParent().getChildByTag(idCapaControles);
-        capaControles.actualizarVida(this.jugador);
+              if ( this.jugador.sprite.scaleX > 0){
+                   disparo.body.vx = 400;
+                   disparo.body.vy = 10;
+              } else {
+                   disparo.body.vx = -400;
+                   disparo.body.vy = 10;
+              }
+
+            this.disparos.push(disparo);
+            this.jugador.disparar();
+            var capaControles =
+                       this.getParent().getChildByTag(idCapaControles);
+            capaControles.actualizarVida(this.jugador);
+        }
 
     }
      var d = new Date();
@@ -330,6 +353,25 @@ var GameLayer = cc.Layer.extend({
             soulsArray[i]["y"]),this,false);
           this.souls.push(soulO);
        }
+
+      var grupoBalas = this.mapa.getObjectGroup("Balas");
+             var balasArray = grupoSouls.getObjects();
+             for (var i = 0; i < balasArray.length; i++) {
+                var bala = balasArray[i];
+                var splitedName = bala.name;
+                var balaO = new Bala(this.space,cc.p(balasArray[i]["x"],
+                  balasArray[i]["y"]),this,splitedName);
+                this.balas.push(balaO);
+             }
+      var grupoBolas = this.mapa.getObjectGroup("Bolas");
+      var bolasArray = grupoBolas.getObjects();
+      for (var i = 0; i < bolasArray.length; i++) {
+         var bolaL = bolasArray[i];
+         var splitedName = bolaL.name.split("_");
+         var bolaO = new Bola(this.space,cc.p(bolasArray[i]["x"]+16,
+           bolasArray[i]["y"]+16),this,false);
+         this.bolas.push(bolaO);
+      }
 
        var grupoPuertas = this.mapa.getObjectGroup("Puertas");
        var puertasArray = grupoPuertas.getObjects();
@@ -463,54 +505,60 @@ var GameLayer = cc.Layer.extend({
            }
        }
     },procesarMouseDown:function(event) {
-         console.log(event.getLocationX());
-         console.log(event.getLocationY());
+         var d = new Date();
+         var t = d.getTime();
          var instancia = event.getCurrentTarget();
-         var jugadorX = instancia.jugador.body.p.x;
-         var jugadorY = instancia.jugador.body.p.y;
-         var x = event.getLocationX();
-         var y = event.getLocationY();
-         if(instancia.jugador.bolas>0){
-             var random = Math.floor((Math.random() * 10) + 1);
-            var encontrado = false;
-            var posicion = cc.p(0,0);
-             for(var i =0; i<instancia.pulsadoresRaton.length;i++){
-                var pulsador = instancia.pulsadoresRaton[i];
-                if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100 &&
-                pulsador.posicion.x-(jugadorX+x)>-300 && pulsador.posicion.y-(jugadorY+y)>-300){
-                    encontrado = true;
-                    posicion = pulsador.posicion;
+         if((t - instancia.pulsacionAnterior)>3000){
+             instancia.pulsacionAnterior = t;
+             console.log(event.getLocationX());
+             console.log(event.getLocationY());
+
+             var jugadorX = instancia.jugador.body.p.x;
+             var jugadorY = instancia.jugador.body.p.y;
+             var x = event.getLocationX();
+             var y = event.getLocationY();
+             if(instancia.jugador.bolas>0){
+                 var random = Math.floor((Math.random() * 10) + 1);
+                var encontrado = false;
+                var posicion = cc.p(0,0);
+                 for(var i =0; i<instancia.pulsadoresRaton.length;i++){
+                    var pulsador = instancia.pulsadoresRaton[i];
+                    if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100 &&
+                    pulsador.posicion.x-(jugadorX+x)>-300 && pulsador.posicion.y-(jugadorY+y)>-300){
+                        encontrado = true;
+                        posicion = pulsador.posicion;
+                    }
+                 }
+                 if(random>5){
+                    posicion = cc.p(posicion.x+random,posicion.y+random);
+                    instancia.bola = new Bola(instancia.space,posicion,instancia,true);
+                 }
+                 if(random<5){
+                    posicion = cc.p(posicion.x+random,posicion.y+random);
+                    instancia.bola = new Bola(instancia.space,posicion,instancia,true);
                 }
              }
-             if(random>5){
-                posicion = cc.p(posicion.x+random,posicion.y+random);
-                instancia.bola = new Bola(instancia.space,posicion,instancia);
-             }
-             if(random<5){
-                posicion = cc.p(posicion.x+random,posicion.y+random);
-                instancia.bola = new Bola(instancia.space,posicion,instancia);
-            }
-         }
-         if(instancia.jugador.almas>0){
-           var random = Math.floor((Math.random() * 10) + 1);
-          var encontrado = false;
-          var posicion = cc.p(0,0);
-           for(var i =0; i<instancia.pulsadoresRaton.length;i++){
-              var pulsador = instancia.pulsadoresRaton[i];
-              if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100 &&
-              pulsador.posicion.x-(jugadorX+x)>-300 && pulsador.posicion.y-(jugadorY+y)>-300){
-                  encontrado = true;
-                  posicion = pulsador.posicion;
+             if(instancia.jugador.almas>0){
+               var random = Math.floor((Math.random() * 10) + 1);
+              var encontrado = false;
+              var posicion = cc.p(0,0);
+               for(var i =0; i<instancia.pulsadoresRaton.length;i++){
+                  var pulsador = instancia.pulsadoresRaton[i];
+                  if(pulsador.posicion.x-(jugadorX+x)<100 && pulsador.posicion.y-(jugadorY+y)<100 &&
+                  pulsador.posicion.x-(jugadorX+x)>-300 && pulsador.posicion.y-(jugadorY+y)>-300){
+                      encontrado = true;
+                      posicion = pulsador.posicion;
+                  }
+               }
+               if(random>5){
+                  posicion = cc.p(posicion.x+random,posicion.y+random);
+                  instancia.alma = new Soul(instancia.space,posicion,instancia,true);
+               }
+               if(random<5){
+                  posicion = cc.p(posicion.x+random,posicion.y+random);
+                  instancia.alma = new Soul(instancia.space,posicion,instancia,true);
               }
-           }
-           if(random>5){
-              posicion = cc.p(posicion.x+random,posicion.y+random);
-              instancia.alma = new Soul(instancia.space,posicion,instancia,true);
-           }
-           if(random<5){
-              posicion = cc.p(posicion.x+random,posicion.y+random);
-              instancia.alma = new Soul(instancia.space,posicion,instancia,true);
-          }
+             }
          }
 
 
@@ -584,8 +632,15 @@ var GameLayer = cc.Layer.extend({
             this.formasEliminar.push(shapes[0]);
             this.destruirBola = true;
             this.contadoresBolas[0].actualizarContador();
+            this.jugador.actualizarBolas(false);
           }
 
+     }, colisionJugadorConBola: function(arbiter,space){
+             var shapes = arbiter.getShapes();
+
+             this.formasEliminar.push(shapes[1]);
+
+             this.jugador.actualizarBolas(true);
      }, colisionJugadorConAgua:function(arbiter,space){
           this.jugador.terreno = "agua";
      }, colisionJugadorConPuerta:function(arbiter,space){
@@ -599,15 +654,22 @@ var GameLayer = cc.Layer.extend({
 
         this.formasEliminar.push(shapes[1]);
 
-        this.jugador.actualizarAlmas();
+        this.jugador.actualizarAlmas(true);
      }, colisionAlmaConDestructorAlmas : function(arbiter,space){
         var shapes = arbiter.getShapes();
           if(this.alma!=null){
             this.formasEliminar.push(shapes[0]);
             this.destruirAlma = true;
+            this.jugador.actualizarAlmas(false);
             //aparece llave
           }
 
+     },colisionJugadorConBala: function(arbiter,space){
+          var shapes = arbiter.getShapes();
+
+          this.formasEliminar.push(shapes[1]);
+
+          this.jugador.actualizarBalas(true);
      }
 });
 

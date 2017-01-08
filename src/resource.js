@@ -10,6 +10,7 @@ var res = {
     PrtRiver_png: "res/Mapas/Mapa_puzzles/PrtRiver.png",
     bkBlue_png: "res/Mapas/Mapa_puzzles/bkBlue.png",
     bkBlue_boss_png: "res/Mapas/Mapa_boss/bkBlue.png",
+    escalera_png : "res/Mapas/Mapa_boss/escalera.png",
     moneda_png : "res/moneda.png",
     moneda_plist : "res/moneda.plist",
     disparo_png : "res/disparo.png",
@@ -46,10 +47,12 @@ var res = {
     contador_3_5_png : "res/ObjetosMapa/Contadores/contador_3_5.png",
     contador_4_5_png : "res/ObjetosMapa/Contadores/contador_4_5.png",
     contador_5_5_png : "res/ObjetosMapa/Contadores/contador_5_5.png",
-    bola_png : "res/ObjetosMapa/Bolas/bola.png",
+    bola_png : "res/ObjetosMapa/Recolectables/bola.png",
     pulsar_raton_png : "res/ObjetosMapa/Raton/pulsarRaton.png",
-    soul_plist : "res/ObjetosMapa/Souls/soul.plist",
-    soul_png : "res/ObjetosMapa/Souls/soul.png",
+    soul_plist : "res/ObjetosMapa/Recolectables/soul.plist",
+    soul_png : "res/ObjetosMapa/Recolectables/soul.png",
+    bala_png: "res/ObjetosMapa/Recolectables/bala.png",
+
 
 };
 

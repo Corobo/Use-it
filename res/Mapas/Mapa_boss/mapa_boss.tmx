@@ -6,6 +6,9 @@
  <tileset firstgid="113" name="bkBlue" tilewidth="32" tileheight="32" tilecount="16" columns="4">
   <image source="bkBlue.png" width="128" height="128"/>
  </tileset>
+ <tileset firstgid="129" name="escalera" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="escalera.png" width="32" height="32"/>
+ </tileset>
  <layer name="Fondo" width="50" height="50">
   <data encoding="base64" compression="zlib">
    eJztk7cNwFAQhf7KzjmM7id5CU6ioKCHrrXWhyGMoSvqU5jDEtbCvoU9HOEs7Fe4wxPewk7p2z/8g+iUvv3DP4hO6ds//IPolL79wz+ITunbP/yD6JS+/cM/iE7p2z/8g+iUvv3DP4hO6ds//IPolL79wz+ITunbP/yD6JS+/eP3D1IQlws=
@@ -13,7 +16,7 @@
  </layer>
  <layer name="Terreno" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJztmc1OAjEQxxvwoAIXuBiOeFDDSRF19THA+ATGj/d/AKexk4yTdrcfu7SD/Se/dLc02/4WFpbZU6XUmXDOgQslP0tVPXLkA/gEvoBv0i/NQ6/13bAk/dUjT0r0eASegIVhbtoRMLa0bds5PHD9J8BdT8dEj5EHK4LPeBe3Pa6fe0hP9Sgr1aOshHxfISnBY/Dvf84WeIjw8I2e4yqBccfx98AGuFe/nr4+MR5vCXR5YF5VmE+JHnvGRnX/Lsd4rNna+L6rf+3pERPq8ewxHq/PWA7hMRtojqGjz/8xeDSqeuTMFJgQ9L7Lw+eaDxnXZxrLvsuDj/U9ZkhCz8HUMWeIh2vONo+udYaeg4a1tN/XwzVn21roa9ppov66+Xrw9yGnh20NoZ/d/+Sh76lfTJty33FI8B6R1q/0fdyMjJEW7qHb6pEv9P+5JA+sreL/AGnvB66f11WleOD6dU0eHXbkdfRw1V9KBGsONg9JwTrK1uznev7RV1Zku3rkj80Dn83R53Rztr1wjOH9tG+I2OZHj8uBSKkFu7DV/Ojvh2SqR1kck8c1cCMc7fEDgCaRPA==
+   eJztmc1OAjEQxxvwoAIXuBiOeFDDSRF19THE+ATGj7fwzZ2JnWSctLvtftAO9p/80t3SbPtbWFhmj40xJ8o5Bc6M/ixN8UiRd+AD+AS+WL82D1zrm2XJ+otHmuTocQ88AAvL3LYjYOxo67ZTeND6j4Cbno5JHqMAVoyQ8T6ue1y/9AjJd89z95nikVeKR16J+b4iuoSOIb//JVvgroVHaHCOiw6MG46/AzbArfn1DPVp4/HagSYPyouJ88nRYyfYmObf5TYea7E2ue/rXwd6tAn3eAwYT9dnW/bhMRtojqGD5/8QPCpTPFJmCkwYuO/zCLnmY8b1mcqx7/OQY0OPGZPYczD1zBnj4ZuzzqNpnbHnoBIt7w/18M1Ztxb+GjpNzF+3UA/5PqT0cK0h9rP7nzzwnvrJtl3uO/YJ3SPy+hXex83YGG2RHtgWj3Th/881eVBtFa8NrH9oez9o/byuqsmD1o81eXJ4ti338NVfcoRqDi4PTaE6ytbua/WgrGxbPPKIy4OezfHndHOxvfCMkf28b4i45ieP84HoUgv24ar58d8PzRSPvDgkj0vgSjno8QMIepfG
   </data>
  </layer>
  <objectgroup name="Suelos">
@@ -31,9 +34,6 @@
   </object>
   <object id="5" x="1320" y="1222">
    <polyline points="0,0 200,-94"/>
-  </object>
-  <object id="6" x="1542" y="1261.5">
-   <polyline points="0,0 23,0.5"/>
   </object>
   <object id="7" x="1562.5" y="1009.5">
    <polyline points="0,0 -19,-1"/>

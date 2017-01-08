@@ -5,9 +5,11 @@ var Soul = cc.Class.extend({
     layer:null,
     id:null,
     numeroAlmas:null,
+    fisica:null,
 ctor:function (space, posicion, layer,fisica) {
     this.space = space;
     this.layer = layer;
+    this.fisica = fisica;
 
     // Crear animación
     var framesAnimacion = [];
@@ -69,6 +71,8 @@ ctor:function (space, posicion, layer,fisica) {
       // quita el cuerpo *opcional, funciona igual
       // NO: es un cuerpo estático, no lo añadimos, no se puede quitar.
       // this.space.removeBody(shape.getBody());
+      if(this.fisica)
+        this.space.removeBody(this.shape.getBody());
 
       // quita el sprite
       this.layer.removeChild(this.sprite);

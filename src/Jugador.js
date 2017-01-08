@@ -23,6 +23,8 @@ var Jugador = cc.Class.extend({
     anteriorSalto:0,
     almas:0,
     bolas:0,
+    balas:0,
+    morir:false,
 
 ctor:function (space, posicion, layer) {
     this.space = space;
@@ -179,6 +181,7 @@ ctor:function (space, posicion, layer) {
                   console.log("Saltando" );
                   this.sprite.runAction(this.animacionSaltar);
               }
+
         }
     }, disparar: function(){
          this.sprite.stopAllActions();
@@ -192,9 +195,24 @@ ctor:function (space, posicion, layer) {
                  this.digitos.push(copiaVida % 10);
                  copiaVida /= 10;
          }
-    }, actualizarAlmas:function(){
-       this.almas++;
-    }, actualizarBolas:function(){
+    }, actualizarAlmas:function(bool){
+       if(bool)
+        this.almas++;
+       else
+        this.almas--;
+    }, actualizarBolas:function(bool){
+       if(bool)
        this.bolas++;
+      else
+       this.bolas--;
+    }, comprobarVelocidadMuerte:function(){
+        if(this.body.vy<-425 && this.terreno=="tierra"){
+            this.morir=true;
+        }
+    }, actualizarBalas:function(bool,num){
+            if(bool)
+            this.balas = this.balas+num;
+           else
+            this.balas--;
     }
 });
