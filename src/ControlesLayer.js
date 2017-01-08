@@ -56,8 +56,8 @@ var ControlesLayer = cc.Layer.extend({
 
         return true;
 
-    }, agregarMoneda:function(){
-         this.monedas = this.monedas + 1;
+    }, agregarMoneda:function(num){
+         this.monedas = this.monedas + num;
          this.etiquetaMonedas.setString("Monedas: " + this.monedas);
     }, actualizarVida:function(jugador){
         if(jugador.digitos.length==3){

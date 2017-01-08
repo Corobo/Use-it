@@ -11,8 +11,6 @@ var res = {
     bkBlue_png: "res/Mapas/Mapa_puzzles/bkBlue.png",
     bkBlue_boss_png: "res/Mapas/Mapa_boss/bkBlue.png",
     escalera_png : "res/Mapas/Mapa_boss/escalera.png",
-    moneda_png : "res/moneda.png",
-    moneda_plist : "res/moneda.plist",
     disparo_png : "res/disparo.png",
     disparo_plist : "res/disparo.plist",
     animacion_cuervo_png: "res/animacion_cuervo.png",
@@ -52,6 +50,13 @@ var res = {
     soul_plist : "res/ObjetosMapa/Recolectables/soul.plist",
     soul_png : "res/ObjetosMapa/Recolectables/soul.png",
     bala_png: "res/ObjetosMapa/Recolectables/bala.png",
+    cajaMonedas_png: "res/ObjetosMapa/Recolectables/cajaMonedas.png",
+    moneda_png: "res/ObjetosMapa/Recolectables/moneda.png",
+    proteccion_png: "res/ObjetosMapa/Recolectables/proteccion.png",
+    invulnerabilidad_png: "res/ObjetosMapa/Recolectables/invulnerabilidad.png",
+    vida_png: "res/ObjetosMapa/Recolectables/vida.png",
+    llave_png: "res/ObjetosMapa/Recolectables/llave.png",
+    salto_png : "res/ObjetosMapa/Recolectables/salto.png",
 
 
 };

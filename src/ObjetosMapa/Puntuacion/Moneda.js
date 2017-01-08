@@ -1,16 +1,15 @@
-var Bala = cc.Class.extend({
+var Moneda = cc.Class.extend({
     space:null,
     sprite:null,
     shape:null,
     layer:null,
     fisica:null,
     numeroBalas:null,
-ctor:function (space, posicion, layer,numeroBalas) {
+ctor:function (space, posicion, layer) {
     this.space = space;
     this.layer = layer;
-    this.numeroBalas = numeroBalas;
     // Crear Sprite - Cuerpo y forma
-        this.sprite = new cc.PhysicsSprite(res.bala_png);
+        this.sprite = new cc.PhysicsSprite(res.moneda_png);
         var body = new cp.StaticBody();
         body.setPos(posicion);
         this.sprite.setBody(body);
@@ -18,7 +17,7 @@ ctor:function (space, posicion, layer,numeroBalas) {
         var radio = this.sprite.getContentSize().width / 2;
         // forma
         this.shape = new cp.CircleShape(body, radio , cp.vzero);
-        this.shape.setCollisionType(tipoBala);
+        this.shape.setCollisionType(tipoMoneda);
         // Nunca genera colisiones reales
         this.shape.setSensor(true);
         // forma estática

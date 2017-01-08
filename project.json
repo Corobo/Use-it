@@ -14,16 +14,23 @@
         "src/resource.js",
         "src/app.js",
         "src/GameScene.js",
-        "src/Moneda.js",
         "src/Jugador.js",
         "src/Enemigo.js",
         "src/Disparo.js",
         "src/ControlesLayer.js",
-        "src/ContadorBolas.js",
-        "src/PuertaPuzzle.js",
-        "src/Bola.js",
-        "src/PulsarRaton.js",
-        "src/Soul.js",
-        "src/Bala.js"
+        "src/ObjetosMapa/Puzzles/ContadorBolas.js",
+        "src/ObjetosMapa/Puzzles/PuertaPuzzle.js",
+        "src/ObjetosMapa/Puzzles/Bola.js",
+        "src/ObjetosMapa/Puzzles/PulsarRaton.js",
+        "src/ObjetosMapa/Puzzles/Soul.js",
+        "src/ObjetosMapa/Puzzles/LLave.js",
+        "src/ObjetosMapa/Puntuacion/Moneda.js",
+        "src/ObjetosMapa/Puntuacion/CajaMonedas.js",
+        "src/ObjetosMapa/PowerUps/Bala.js",
+        "src/ObjetosMapa/PowerUps/Invulnerabilidad.js",
+        "src/ObjetosMapa/PowerUps/Proteccion.js",
+        "src/ObjetosMapa/PowerUps/Vida.js",
+        "src/ObjetosMapa/PowerUps/Salto.js"
+
     ]
 }

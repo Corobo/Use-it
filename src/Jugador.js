@@ -19,13 +19,16 @@ var Jugador = cc.Class.extend({
     layer:null,
     vida:100,
     digitos:[],
-    key:true,
+    key:false,
     anteriorSalto:0,
     almas:0,
     bolas:0,
-    balas:0,
+    balas:1,
     morir:false,
-
+    llavesRecogidas:0,
+    saltoPotenciado:false,
+    invulnerabilidad:false,
+    tiempoInvulnerabilidad:0,
 ctor:function (space, posicion, layer) {
     this.space = space;
     this.layer = layer;
@@ -154,10 +157,14 @@ ctor:function (space, posicion, layer) {
 
            if(this.terreno=="agua")
             this.body.applyImpulse(cp.v(0, 50), cp.v(0, 0));
-           else
-            this.body.applyImpulse(cp.v(0, 300), cp.v(0, 0));
+           else{
+            if(this.saltoPotenciado)
+                this.body.applyImpulse(cp.v(0, 400), cp.v(0, 0));
+            else
+                this.body.applyImpulse(cp.v(0, 300), cp.v(0, 0));
            this.contadorVelYCero = 0;
            this.terreno="tierra";
+        }
        }
 
     }, actualizarAnimacion: function(){
@@ -209,10 +216,47 @@ ctor:function (space, posicion, layer) {
         if(this.body.vy<-425 && this.terreno=="tierra"){
             this.morir=true;
         }
-    }, actualizarBalas:function(bool,num){
+    }, actualizarBalas:function(bool){
             if(bool)
-            this.balas = this.balas+num;
+            this.balas++;
            else
             this.balas--;
+    }, actualizarLlaves:function(bool){
+         if(bool){
+         this.key=true;
+         this.llavesRecogidas++;
+         }
+        else
+         this.key=false;
+    },actualizarSalto:function(bool){
+        if(bool)
+        this.saltoPotenciado=true;
+       else
+        this.saltoPotenciado=false;
+    },actualizarProteccion:function(bool){
+         if(bool)
+         this.proteccion=true;
+        else
+         this.proteccion=false;
+    },actualizarInvulnerabilidad:function(bool){
+      if(bool)
+      this.invulnerabilidad=true;
+     else
+      this.invulnerabilidad=false;
+    },actualizarVida:function(bool,num){
+        if(bool){
+          this.vida=100;
+          this.digitos[0]= 0;
+          this.digitos[1]= 0;
+          this.digitos[2]= 1;
+          }
+         else{
+          if(this.proteccion==false || this.invulnerabilidad==false){
+            this.vida= this.vida-num;
+            }
+           if(this.proteccion==true){
+            this.proteccion=false;
+           }
+        }
     }
 });
