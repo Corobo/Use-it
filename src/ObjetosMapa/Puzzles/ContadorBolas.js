@@ -22,7 +22,6 @@ ctor:function (space, posicion, layer, id, numeroBolas) {
 
 
    }, eliminar: function (){
-      this.space.removeShape(this.shape);
       this.layer.removeChild(this.sprite);
    }, actualizarContador:function(){
         this.bolasActuales++;
@@ -30,5 +29,10 @@ ctor:function (space, posicion, layer, id, numeroBolas) {
         this.sprite = cc.Sprite.create(this.contadores[this.bolasActuales]);
         this.sprite.setPosition(this.posicion);
         this.layer.addChild(this.sprite);
+   }, estaLleno:function(){
+        if(this.numeroBolas==this.bolasActuales)
+            return true;
+        else
+            return false;
    }
 });

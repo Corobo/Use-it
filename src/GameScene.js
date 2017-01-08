@@ -54,7 +54,9 @@ var GameLayer = cc.Layer.extend({
     protecciones:[],
     invulnerabilidades:[],
     pulsacionAnterior:0,
+    eliminarContador:-1,
     llave:null,
+    destruirLlave:false,
     ctor:function () {
         this._super();
         var size = cc.winSize;
@@ -251,16 +253,28 @@ var GameLayer = cc.Layer.extend({
                  }
             }
 
-         if(this.destruirBola==true){
+         if(this.destruirBola){
             this.bola.eliminar();
             this.destruirBola=false;
          }
 
-         if(this.destruirAlma==true){
+         if(this.destruirAlma){
             this.alma.eliminar();
             this.destruirAlma=false;
             this.llave = new Llave(this.space,this.llaves[this.jugador.llavesRecogidas],this);
          }
+
+         if(this.destruirLlave){
+            this.llave.eliminar();
+            this.destruirLlave=false;
+         }
+
+         if(this.eliminarContador!=-1){
+            this.contadoresBolas[this.eliminarContador].eliminar();
+            this.contadoresBolas.splice(this.eliminarContador,1);
+            this.eliminarContador=-1;
+            this.llave = new Llave(this.space,this.llaves[this.jugador.llavesRecogidas],this);
+          }
 
 
      }
@@ -391,7 +405,7 @@ var GameLayer = cc.Layer.extend({
        var grupoLlaves = this.mapa.getObjectGroup("Llaves");
         var llavesArray = grupoLlaves.getObjects();
         for (var i = 0; i < llavesArray.length; i++) {
-          var llave = cc.p(llavesArray[i]["x"],llavesArray[i]["y"]);
+          var llave = cc.p(llavesArray[i]["x"]+16,llavesArray[i]["y"]+16);
 
           this.llaves.push(llave);
         }
@@ -731,7 +745,14 @@ var GameLayer = cc.Layer.extend({
             this.destruirBola = true;
             this.contadoresBolas[0].actualizarContador();
             this.jugador.actualizarBolas(false);
-          }
+            this.eliminarContador = -1;
+            for(var i = 0; i<this.contadoresBolas.length;i++){
+                if(this.contadoresBolas[i].estaLleno()){
+                    this.eliminarContador=i;
+                    }
+                }
+             }
+
 
      }, colisionJugadorConBola: function(arbiter,space){
              var shapes = arbiter.getShapes();
@@ -810,6 +831,8 @@ var GameLayer = cc.Layer.extend({
         this.formasEliminar.push(shapes[1]);
 
         this.jugador.actualizarLlaves(true);
+
+        this.destruirLlave=true;
     }
 });
 
