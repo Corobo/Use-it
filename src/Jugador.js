@@ -19,6 +19,8 @@ var Jugador = cc.Class.extend({
     layer:null,
     vida:100,
     digitos:[],
+    digitosAire:[],
+    aire:100,
     key:false,
     anteriorSalto:0,
     almas:0,
@@ -29,6 +31,7 @@ var Jugador = cc.Class.extend({
     saltoPotenciado:false,
     invulnerabilidad:false,
     tiempoInvulnerabilidad:0,
+    tiempoEnAgua:0,
 ctor:function (space, posicion, layer) {
     this.space = space;
     this.layer = layer;
@@ -258,5 +261,21 @@ ctor:function (space, posicion, layer) {
             this.proteccion=false;
            }
         }
+    }, actualizarAire:function(bool){
+       if(bool){
+        this.aire = this.aire - 1;
+        var copiaAire = this.aire;
+        this.digitosAire = [];
+        while(copiaAire >= 1) {
+                this.digitosAire.push(copiaAire % 10);
+                copiaAire /= 10;
+        }
+       }else{
+        this.aire=100;
+        this.digitosAire[0]= 0;
+        this.digitosAire[1]= 0;
+        this.digitosAire[2]= 1;
+
+       }
     }
 });

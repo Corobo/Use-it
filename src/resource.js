@@ -37,6 +37,16 @@ var res = {
     text_7_png : "res/Interfaz/Textos/text_7.png",
     text_8_png : "res/Interfaz/Textos/text_8.png",
     text_9_png : "res/Interfaz/Textos/text_9.png",
+    text1_0_png : "res/Interfaz/Textos/text1_0.png",
+    text1_1_png : "res/Interfaz/Textos/text1_1.png",
+    text1_2_png : "res/Interfaz/Textos/text1_2.png",
+    text1_3_png : "res/Interfaz/Textos/text1_3.png",
+    text1_4_png : "res/Interfaz/Textos/text1_4.png",
+    text1_5_png : "res/Interfaz/Textos/text1_5.png",
+    text1_6_png : "res/Interfaz/Textos/text1_6.png",
+    text1_7_png : "res/Interfaz/Textos/text1_7.png",
+    text1_8_png : "res/Interfaz/Textos/text1_8.png",
+    text1_9_png : "res/Interfaz/Textos/text1_9.png",
     text_air_png : "res/Interfaz/Textos/text_air.png",
     puerta_puzzle_png : "res/ObjetosMapa/Puertas/puerta_puzzle.png",
     contador_0_5_png : "res/ObjetosMapa/Contadores/contador_0_5.png",
@@ -45,6 +55,7 @@ var res = {
     contador_3_5_png : "res/ObjetosMapa/Contadores/contador_3_5.png",
     contador_4_5_png : "res/ObjetosMapa/Contadores/contador_4_5.png",
     contador_5_5_png : "res/ObjetosMapa/Contadores/contador_5_5.png",
+    caja_objeto_png : "res/Interfaz/Marcos/caja_objeto.png",
     bola_png : "res/ObjetosMapa/Recolectables/bola.png",
     pulsar_raton_png : "res/ObjetosMapa/Raton/pulsarRaton.png",
     soul_plist : "res/ObjetosMapa/Recolectables/soul.plist",
@@ -57,6 +68,8 @@ var res = {
     vida_png: "res/ObjetosMapa/Recolectables/vida.png",
     llave_png: "res/ObjetosMapa/Recolectables/llave.png",
     salto_png : "res/ObjetosMapa/Recolectables/salto.png",
+    soul_individual_png : "res/Interfaz/Objetos/soul.png",
+    relleno_png : "res/Interfaz/Fondo/relleno.png",
 
 
 };

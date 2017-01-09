@@ -287,6 +287,28 @@ var GameLayer = cc.Layer.extend({
         this.jugador.body.p = cc.p(64,332);
         this.jugador.morir = false;
      }
+     if(this.jugador.almas>0 && this.jugador.bolas==0){
+         capaControles.dibujarAlmas();
+     }
+     if(this.jugador.almas==0 && this.jugador.bolas>0){
+         capaControles.dibujarBolas();
+     }
+     if(this.jugador.almas==0 && this.jugador.bolas==0){
+          capaControles.eliminarObjetos();
+     }
+     var d = new Date();
+     var t = d.getTime();
+     if(this.jugador.terreno=="agua"){
+        if(t-this.jugador.tiempoEnAgua>1000){
+            this.jugador.actualizarAire(true);
+            capaControles.actualizarAire(this.jugador
+            );
+            this.jugador.tiempoEnAgua=t;
+        }
+     }else{
+        this.jugador.actualizarAire(false);
+        capaControles.actualizarAire(this.jugador);
+     }
 
     if ( this.teclaBarra && new Date().getTime() - this.tiempoDisparar > 1000 ){
 
