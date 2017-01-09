@@ -18,6 +18,7 @@ var Jugador = cc.Class.extend({
     body:null,
     layer:null,
     vida:100,
+    vidas:3,
     digitos:[],
     digitosAire:[],
     aire:100,
@@ -260,6 +261,7 @@ ctor:function (space, posicion, layer) {
           this.digitos[0]= 0;
           this.digitos[1]= 0;
           this.digitos[2]= 1;
+          this.vidas = this.vidas + num;
           }
          else{
           if(this.proteccion==false || this.invulnerabilidad==false){

@@ -1,6 +1,8 @@
 var ControlesLayer = cc.Layer.extend({
     etiquetaMonedas:null,
     etiquetaMunicion:null,
+    etiquetaVidas:null,
+    spriteVidasN:null,
     spriteMoneda:null,
     spriteVidas:null,
     spriteDigito1:null,
@@ -116,6 +118,16 @@ var ControlesLayer = cc.Layer.extend({
         this.etiquetaMunicion.fillStyle = new cc.Color(255, 255, 255, 255);
         this.addChild(this.etiquetaMunicion);
 
+        this.spriteVidasN = cc.Sprite.create(res.vida_png);
+        this.spriteVidasN.setPosition(cc.p(this.size.width - 650, this.size.height - 30));
+
+        this.addChild(this.spriteVidasN);
+
+        this.etiquetaVidas = new cc.LabelTTF("3", "Comic Sans MS", 20);
+        this.etiquetaVidas.setPosition(cc.p(this.size.width - 625, this.size.height - 30));
+        this.etiquetaVidas.fillStyle = new cc.Color(255, 255, 255, 255);
+        this.addChild(this.etiquetaVidas);
+
 
 
         return true;
@@ -125,7 +137,9 @@ var ControlesLayer = cc.Layer.extend({
          this.etiquetaMonedas.setString(this.monedas);
     }, actualizarMunicion:function(jugador){
         this.etiquetaMunicion.setString(jugador.balas);
-    }, actualizarVida:function(jugador){
+    }, actualizarVidas:function(jugador){
+      this.etiquetaVidas.setString(jugador.vidas);
+    },actualizarVida:function(jugador){
         if(jugador.digitos.length==3){
         this.removeChild(this.spriteDigito1);
         this.removeChild(this.spriteDigito2);

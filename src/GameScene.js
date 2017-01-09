@@ -106,9 +106,9 @@ var GameLayer = cc.Layer.extend({
         }, this);
 
         this.cargarMapa();
-
+        var copia = this.posInicial;
         this.jugador = new Jugador(this.space,
-                       this.posInicial, this);
+                       copia, this);
 
         this.scheduleUpdate();
 
@@ -314,13 +314,20 @@ var GameLayer = cc.Layer.extend({
      this.formasEliminar = [];
      this.jugador.comprobarMuerte();
      // Caída, sí cae vuelve a la posición inicial
+     var copia = this.posInicial;
      if( this.jugador.body.p.y < -100 || this.jugador.morir==true){
-        this.jugador.body.vy = 0;
-        this.jugador.body.p = cc.p(64,332);
-        this.jugador.morir = false;
-        this.jugador.terreno = "tierra";
-        this.jugador.actualizarVida(true);
-        this.jugador.actualizarAire(false);
+        if(this.jugador.vidas>0){
+            this.jugador.body.vy = 0;
+            this.jugador.body.p = copia;
+            this.jugador.morir = false;
+            this.jugador.terreno = "tierra";
+            this.jugador.actualizarVida(true,0);
+            this.jugador.actualizarAire(false);
+            this.jugador.vidas--;
+        }else{
+             cc.director.pause();
+             cc.director.runScene(new GameOverLayer());
+        }
      }
      if(this.jugador.almas>0 && this.jugador.bolas==0){
          capaControles.dibujarAlmas();
@@ -379,6 +386,7 @@ var GameLayer = cc.Layer.extend({
     }
      var capaControles = this.getParent().getChildByTag(idCapaControles);
              capaControles.actualizarVida(this.jugador);
+     capaControles.actualizarVidas(this.jugador);
      var d = new Date();
      var t = d.getTime();
 
