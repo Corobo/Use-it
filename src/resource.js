@@ -70,6 +70,12 @@ var res = {
     salto_png : "res/ObjetosMapa/Recolectables/salto.png",
     soul_individual_png : "res/Interfaz/Objetos/soul.png",
     relleno_png : "res/Interfaz/Fondo/relleno.png",
+    fantasma_plist : "res/Enemigos/fantasma.plist",
+    fantasma_png : "res/Enemigos/fantasma.png",
+    volador_plist : "res/Enemigos/volador.plist",
+    volador_png : "res/Enemigos/volador.png",
+    terrestre_plist : "res/Enemigos/terrestre.plist",
+    terrestre_png : "res/Enemigos/terrestre.png",
 
 
 };

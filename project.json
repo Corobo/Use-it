@@ -16,7 +16,8 @@
         "src/GameScene.js",
         "src/Jugador.js",
         "src/Enemigo.js",
-        "src/Disparo.js",
+        "src/Efectos/Disparo.js",
+        "src/Efectos/DisparoEnemigo.js",
         "src/ControlesLayer.js",
         "src/ObjetosMapa/Puzzles/ContadorBolas.js",
         "src/ObjetosMapa/Puzzles/PuertaPuzzle.js",
@@ -30,7 +31,10 @@
         "src/ObjetosMapa/PowerUps/Invulnerabilidad.js",
         "src/ObjetosMapa/PowerUps/Proteccion.js",
         "src/ObjetosMapa/PowerUps/Vida.js",
-        "src/ObjetosMapa/PowerUps/Salto.js"
+        "src/ObjetosMapa/PowerUps/Salto.js",
+        "src/Enemigos/Volador.js",
+        "src/Enemigos/Fantasma.js",
+        "src/Enemigos/Terrestre.js"
 
     ]
 }

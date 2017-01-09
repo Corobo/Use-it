@@ -106,6 +106,16 @@ var ControlesLayer = cc.Layer.extend({
         this.etiquetaMonedas.fillStyle = new cc.Color(255, 255, 255, 255);
         this.addChild(this.etiquetaMonedas);
 
+        this.spriteMunicion = cc.Sprite.create(res.bala_png);
+        this.spriteMunicion.setPosition(cc.p(this.size.width - 185, this.size.height - 20));
+
+        this.addChild(this.spriteMunicion);
+
+        this.etiquetaMunicion = new cc.LabelTTF("0", "Comic Sans MS", 20);
+        this.etiquetaMunicion.setPosition(cc.p(this.size.width - 150, this.size.height - 20));
+        this.etiquetaMunicion.fillStyle = new cc.Color(255, 255, 255, 255);
+        this.addChild(this.etiquetaMunicion);
+
 
 
         return true;
@@ -113,6 +123,8 @@ var ControlesLayer = cc.Layer.extend({
     }, agregarMoneda:function(num){
          this.monedas = this.monedas + num;
          this.etiquetaMonedas.setString(this.monedas);
+    }, actualizarMunicion:function(jugador){
+        this.etiquetaMunicion.setString(jugador.balas);
     }, actualizarVida:function(jugador){
         if(jugador.digitos.length==3){
         this.removeChild(this.spriteDigito1);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="313">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="339">
  <tileset firstgid="1" name="PrtRiver" tilewidth="32" tileheight="32" tilecount="96" columns="16">
   <image source="PrtRiver.png" width="512" height="192"/>
  </tileset>
@@ -13,7 +13,7 @@
  </layer>
  <layer name="Terreno" width="200" height="50">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <objectgroup name="Suelos">
@@ -191,11 +191,14 @@
   <object id="287" x="2850.67" y="764">
    <polyline points="0,0 151.333,-2.66667"/>
   </object>
-  <object id="289" x="2656" y="448">
-   <polyline points="0,0 768,0"/>
-  </object>
   <object id="312" x="2021" y="1064">
    <polyline points="0,0 23,0"/>
+  </object>
+  <object id="331" x="3555" y="873">
+   <polyline points="0,0 25,0"/>
+  </object>
+  <object id="332" x="3714" y="873">
+   <polyline points="0,0 28,0"/>
   </object>
  </objectgroup>
  <objectgroup name="Monedas">
@@ -231,12 +234,26 @@
   <object id="136" x="3072.67" y="385.333">
    <polyline points="0,0 0.666667,63.3333"/>
   </object>
+  <object id="327" x="3647" y="800">
+   <polyline points="0,0 2,159"/>
+  </object>
+  <object id="328" x="3809" y="864">
+   <polyline points="0,0 0,94"/>
+  </object>
+  <object id="329" x="3488" y="864">
+   <polyline points="0,0 1,93"/>
+  </object>
+  <object id="338" x="3068" y="386">
+   <polyline points="0,0 4,106"/>
+  </object>
  </objectgroup>
  <objectgroup name="Enemigos">
-  <object id="87" name="terrestre1" x="2689" y="798" width="33" height="33"/>
-  <object id="100" name="terrestre2" x="3344" y="695" width="42" height="30"/>
-  <object id="137" name="volador1" x="2742.67" y="395.667" width="32" height="32"/>
-  <object id="138" name="volador2" x="3291.5" y="394.167" width="32" height="32"/>
+  <object id="87" name="terrestre" x="2714" y="782" width="65" height="44"/>
+  <object id="100" name="terrestre" x="3351" y="683" width="65" height="44"/>
+  <object id="137" name="volador" x="2742.67" y="390.67" width="84" height="87"/>
+  <object id="138" name="volador" x="3291.5" y="394.167" width="84" height="87"/>
+  <object id="323" name="fantasma" x="3508" y="918" width="32" height="32"/>
+  <object id="324" name="fantasma" x="3763" y="916" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="Pinchos">
   <object id="46" x="5" y="1587">
@@ -332,6 +349,36 @@
   <object id="267" x="3335" y="970">
    <polyline points="0,0 86,-1 5,18 79,20 5,36 77,48 6,72 83,88 4,105 15,110 54,115 80,108 76,72 72,36 76,23 59,71 43,95 20,113 12,69 1,14 11,8 30,13 31,49 32,89 50,9 57,0 72,25 65,93"/>
   </object>
+  <object id="313" x="124" y="1362">
+   <polyline points="0,0 516,3 -2,14 510,24 -6,39 511,51 -6,60 516,78 -4,84 511,106"/>
+  </object>
+  <object id="314" x="57" y="1329">
+   <polyline points="0,0 516,3 -2,14 510,24 -6,39 511,51 -6,60 516,78 -4,84 511,106"/>
+  </object>
+  <object id="315" x="64" y="1448">
+   <polyline points="0,0 516,3 -2,14 510,24 -6,39 511,51 -6,60 516,78 -4,84 511,106"/>
+  </object>
+  <object id="316" x="46" y="1530">
+   <polyline points="0,0 516,3 -2,14 510,24 -6,39 511,51 -6,60 516,78 -4,84 511,106"/>
+  </object>
+  <object id="317" x="592" y="1529">
+   <polyline points="0,0 516,3 -2,14 510,24 -6,39 511,51 -6,60 516,78 -4,84 511,106"/>
+  </object>
+  <object id="318" x="289" y="1427">
+   <polyline points="0,0 516,3 -2,14 510,24 -6,39 511,51 -6,60 516,78 -4,84 511,106"/>
+  </object>
+  <object id="319" x="200" y="1323">
+   <polyline points="0,0 516,3 -2,14 510,24 -6,39 511,51 -6,60 516,78 -4,84 511,106"/>
+  </object>
+  <object id="320" x="32" y="1304">
+   <polyline points="0,0 705,0 1,-10 1,6 704,6"/>
+  </object>
+  <object id="321" x="1099" y="1506">
+   <polyline points="0,0 6,-187 15,-70 16,-20 33,-194 32,13 36,-164 42,-48 56,-170 59,-40 65,-156 71,-70 72,-207 74,-119 90,-201 92,-43 100,-219 109,-151 129,-186 132,-89 147,-216 -1,-200 876,-198 881,-205 864,-206 844,-206 808,-204 759,-201 727,-201 691,-201 669,-201 645,-205 626,-206 610,-207 588,-207 555,-206 527,-203 498,-202 471,-207 287,-203 265,-203 239,-203 137,-203 118,-203 98,-203 76,-203 51,-203 24,-203 6,-204"/>
+  </object>
+  <object id="322" x="1902" y="1460">
+   <polyline points="0,0 38,-29 63,-37 70,-44 73,13 75,-51 99,-16 107,-35 131,-62 140,-31 153,-96 161,-11 174,-49 182,37 195,-82 200,-13 211,-87 215,19 225,-56 234,-4 251,-79 258,0 272,-56 281,10 285,-78 298,-7 317,-33 330,69 337,-39 354,-57 355,-39 368,-103 382,30 398,-54 402,16 430,-98 435,18 452,-76 455,26 476,-82 490,27 515,-55 520,66 527,-21 533,98 531,5 532,130 531,-63 533,-12 533,-42 534,0 534,-92 521,-76 505,-74 464,-64 364,-64 246,-67 206,-68 169,-75 133,-75 107,-65 54,-64 61,-141 46,-114 52,-92 67,-125 67,-132 34,-143 73,-135 -26,-84 17,-63 102,-151 59,-118 62,-74 60,-61 31,-15 10,-69"/>
+  </object>
  </objectgroup>
  <objectgroup name="PulsarRaton">
   <object id="178" x="2080.67" y="704.667" width="32" height="32"/>
@@ -360,4 +407,12 @@
  </objectgroup>
  <objectgroup name="Salto"/>
  <objectgroup name="CajaMonedas"/>
+ <objectgroup name="MurosFantasma">
+  <object id="334" x="3561" y="880">
+   <polyline points="0,0 -7,10 20,0 19,76 -6,76 -5,9"/>
+  </object>
+  <object id="335" x="3716" y="881">
+   <polyline points="0,0 0,75 23,75 24,-2 0,-2"/>
+  </object>
+ </objectgroup>
 </map>

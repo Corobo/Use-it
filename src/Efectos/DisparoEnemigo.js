@@ -1,4 +1,4 @@
- var Disparo = cc.Class.extend({
+ var DisparoEnemigo = cc.Class.extend({
     space:null,
     sprite:null,
     body:null,
@@ -37,7 +37,7 @@ ctor:function (space, posicion, layer) {
     // agregar forma dinamica
     this.shape.setSensor(true);
     this.space.addShape(this.shape);
-    this.shape.setCollisionType(tipoDisparo);
+    this.shape.setCollisionType(tipoDisparoEnemigo);
     // añadir sprite a la capa
 
     // ejecutar la animación
@@ -55,5 +55,9 @@ ctor:function (space, posicion, layer) {
 
         // quita el sprite
         this.layer.removeChild(this.sprite);
+    }, mantenerVelocidadDisparo: function() {
+        if(this.body.vx<0  || this.body.vx>0){
+            this.body.vx = 0;
+        }
     }
 });

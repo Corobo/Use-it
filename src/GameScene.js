@@ -19,6 +19,8 @@ var tipoVida = 17;
 var tipoCajaMonedas = 18;
 var tipoLlave = 19;
 var disparoEnemigo = 20;
+var tipoMuroFantasma = 21;
+var tipoDisparoEnemigo = 22;
 
 var niveles = [ res.mapa_puzzles , res.mapa_boss ];
 var nivelActual = 0;
@@ -68,6 +70,9 @@ var GameLayer = cc.Layer.extend({
         cc.spriteFrameCache.addSpriteFrames(res.dieing_plist);
         cc.spriteFrameCache.addSpriteFrames(res.idle_plist);
         cc.spriteFrameCache.addSpriteFrames(res.soul_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.fantasma_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.volador_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.terrestre_plist);
 
 
 
@@ -86,7 +91,7 @@ var GameLayer = cc.Layer.extend({
 
 
         this.jugador = new Jugador(this.space,
-               cc.p(64,377), this);
+               cc.p(2842,978), this);
 
         cc.eventManager.addListener({
             event: cc.EventListener.KEYBOARD,
@@ -155,6 +160,15 @@ var GameLayer = cc.Layer.extend({
 
         this.space.addCollisionHandler(tipoJugador, tipoLlave,
                                     null, this.colisionJugadorConLlave.bind(this), null, null);
+
+        this.space.addCollisionHandler(tipoJugador, tipoMuroFantasma,
+                                            null, this.colisionJugadorMuroFantasma.bind(this), null, null);
+
+        this.space.addCollisionHandler(tipoDisparoEnemigo, tipoJugador,
+                                                    null, this.colisionDisparoEnemigoConJugador.bind(this), null, null);
+
+        this.space.addCollisionHandler(tipoDisparoEnemigo, tipoSuelo,
+                                                    null, this.colisionDisparoEnemigoConSuelo.bind(this), null, null);
 
       cc.eventManager.addListener({
                   event: cc.EventListener.MOUSE,
@@ -299,7 +313,7 @@ var GameLayer = cc.Layer.extend({
      var d = new Date();
      var t = d.getTime();
      if(this.jugador.terreno=="agua"){
-        if(t-this.jugador.tiempoEnAgua>1000){
+        if(t-this.jugador.tiempoEnAgua>250){
             this.jugador.actualizarAire(true);
             capaControles.actualizarAire(this.jugador
             );
@@ -309,6 +323,14 @@ var GameLayer = cc.Layer.extend({
         this.jugador.actualizarAire(false);
         capaControles.actualizarAire(this.jugador);
      }
+
+     capaControles.actualizarMunicion(this.jugador);
+
+     for (var r = 0; r < this.disparos.length; r++) {
+          if (this.disparos[r] != null) {
+              this.disparos[r].mantenerVelocidadDisparo();
+          }
+      }
 
     if ( this.teclaBarra && new Date().getTime() - this.tiempoDisparar > 1000 ){
 
@@ -381,6 +403,13 @@ var GameLayer = cc.Layer.extend({
      if (this.jugador.body.vx > 200){
          this.jugador.body.vx = 200;
      }
+},disparaEnemigo:function(enemigo){
+
+    var disparo = new DisparoEnemigo(this.space,
+      cc.p(enemigo.body.p.x+16, enemigo.body.p.y-8),
+      this);
+
+    this.disparos.push(disparo);
 
 }, cargarMapa:function () {
        this.mapa = new cc.TMXTiledMap(niveles[0]);
@@ -591,6 +620,30 @@ var GameLayer = cc.Layer.extend({
                 }
             }
 
+        var grupoFantasma = this.mapa.getObjectGroup("MurosFantasma");
+         var fantasmaArray = grupoFantasma.getObjects();
+            for (var i = 0; i < fantasmaArray.length; i++) {
+                var fantasma = fantasmaArray[i];
+                var puntos = fantasma.polylinePoints;
+
+                for(var j = 0; j < puntos.length - 1; j++){
+                    var bodyFantasma = new cp.StaticBody();
+
+                    var shapeFantasma = new cp.SegmentShape(bodyFantasma,
+                        cp.v(parseInt(fantasma.x) + parseInt(puntos[j].x),
+                            parseInt(fantasma.y) - parseInt(puntos[j].y)),
+                        cp.v(parseInt(fantasma.x) + parseInt(puntos[j + 1].x),
+                            parseInt(fantasma.y) - parseInt(puntos[j + 1].y)),
+                        5);
+
+                    shapeFantasma.setSensor(true);
+                    shapeFantasma.setCollisionType(tipoMuroFantasma);
+                    shapeFantasma.setFriction(1);
+
+                    this.space.addStaticShape(shapeFantasma);
+                }
+            }
+
      var grupoRaton = this.mapa.getObjectGroup("PulsarRaton");
      var ratonArray = grupoRaton.getObjects();
      for (var i = 0; i < ratonArray.length; i++) {
@@ -604,9 +657,27 @@ var GameLayer = cc.Layer.extend({
        var grupoEnemigos = this.mapa.getObjectGroup("Enemigos");
        var enemigosArray = grupoEnemigos.getObjects();
        for (var i = 0; i < enemigosArray.length; i++) {
-           var enemigo = new Enemigo(this.space,
-               cc.p(enemigosArray[i]["x"],enemigosArray[i]["y"]),
-               this);
+
+           var name  = enemigosArray[i].name;
+           var enemigo = null;
+           switch(name){
+
+           case "fantasma":
+                    enemigo = new Fantasma(this.space,
+                   cc.p(enemigosArray[i]["x"],enemigosArray[i]["y"]),
+                   this);
+                    break;
+           case "terrestre":
+                    enemigo = new Terrestre(this.space,
+                       cc.p(enemigosArray[i]["x"],enemigosArray[i]["y"]),
+                       this);
+                    break;
+           case "volador":
+                    enemigo = new Volador(this.space,
+                    cc.p(enemigosArray[i]["x"],enemigosArray[i]["y"]),
+                    this);
+                    break;
+           }
 
            this.enemigos.push(enemigo);
            console.log("Enemigo agregado");
@@ -760,6 +831,10 @@ var GameLayer = cc.Layer.extend({
           var shapes = arbiter.getShapes();
 
           this.formasEliminar.push(shapes[0]);
+     },colisionDisparoEnemigoConSuelo:function(arbiter,space){
+            var shapes = arbiter.getShapes();
+
+            this.formasEliminar.push(shapes[0]);
      }, colisionBolaConDestructor:function (arbiter, space) {
           var shapes = arbiter.getShapes();
           if(this.bola!=null){
@@ -855,6 +930,13 @@ var GameLayer = cc.Layer.extend({
         this.jugador.actualizarLlaves(true);
 
         this.destruirLlave=true;
+    },colisionJugadorMuroFantasma: function(arbiter,space){
+        if(this.jugador.body.vx > 0)
+            this.jugador.body.p.x = this.jugador.body.p.x -10;
+        if(this.jugador.body.vx < 0)
+                    this.jugador.body.p.x = this.jugador.body.p.x +10;
+    },colisionDisparoEnemigoConJugador:function(arbiter,space){
+
     }
 });
 

@@ -198,13 +198,6 @@ ctor:function (space, posicion, layer) {
          this.sprite.runAction(this.animacionDisparar);
          this.tiempoDisparando = 40;
          this.estado = disparando;
-         this.vida = this.vida - 10;
-         var copiaVida = this.vida;
-         this.digitos = [];
-         while(copiaVida >= 1) {
-                 this.digitos.push(copiaVida % 10);
-                 copiaVida /= 10;
-         }
     }, actualizarAlmas:function(bool){
        if(bool)
         this.almas++;
@@ -277,5 +270,13 @@ ctor:function (space, posicion, layer) {
         this.digitosAire[2]= 1;
 
        }
+    }, recibirDaño:function(num){
+       this.vida = this.vida - num;
+        var copiaVida = this.vida;
+        this.digitos = [];
+        while(copiaVida >= 1) {
+                this.digitos.push(copiaVida % 10);
+                copiaVida /= 10;
+        }
     }
 });
