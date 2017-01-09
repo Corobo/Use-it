@@ -18,6 +18,7 @@
         "src/Enemigo.js",
         "src/Efectos/Disparo.js",
         "src/Efectos/DisparoEnemigo.js",
+        "src/Efectos/DisparoBoss.js",
         "src/ControlesLayer.js",
         "src/ObjetosMapa/Puzzles/ContadorBolas.js",
         "src/ObjetosMapa/Puzzles/PuertaPuzzle.js",
@@ -34,7 +35,8 @@
         "src/ObjetosMapa/PowerUps/Salto.js",
         "src/Enemigos/Volador.js",
         "src/Enemigos/Fantasma.js",
-        "src/Enemigos/Terrestre.js"
+        "src/Enemigos/Terrestre.js",
+        "src/Enemigos/Boss.js"
 
     ]
 }

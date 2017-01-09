@@ -21,9 +21,11 @@ var tipoLlave = 19;
 var disparoEnemigo = 20;
 var tipoMuroFantasma = 21;
 var tipoDisparoEnemigo = 22;
+var tipoMeta = 23;
+var tipoEscalera = 24;
 
 var niveles = [ res.mapa_puzzles , res.mapa_boss ];
-var nivelActual = 0;
+var nivelActual = 1;
 
 var GameLayer = cc.Layer.extend({
     monedas:0,
@@ -59,6 +61,7 @@ var GameLayer = cc.Layer.extend({
     eliminarContador:-1,
     llave:null,
     destruirLlave:false,
+    posInicial:null,
     ctor:function () {
         this._super();
         var size = cc.winSize;
@@ -73,6 +76,10 @@ var GameLayer = cc.Layer.extend({
         cc.spriteFrameCache.addSpriteFrames(res.fantasma_plist);
         cc.spriteFrameCache.addSpriteFrames(res.volador_plist);
         cc.spriteFrameCache.addSpriteFrames(res.terrestre_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.disparo_enemigo_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.disparo_boss_plist);
+        cc.spriteFrameCache.addSpriteFrames(res.boss_plist);
+
 
 
 
@@ -90,8 +97,7 @@ var GameLayer = cc.Layer.extend({
               null, this.colisionJugadorConMoneda.bind(this), null, null);
 
 
-        this.jugador = new Jugador(this.space,
-               cc.p(2842,978), this);
+
 
         cc.eventManager.addListener({
             event: cc.EventListener.KEYBOARD,
@@ -100,6 +106,10 @@ var GameLayer = cc.Layer.extend({
         }, this);
 
         this.cargarMapa();
+
+        this.jugador = new Jugador(this.space,
+                       this.posInicial, this);
+
         this.scheduleUpdate();
 
         // jugador y moneda
@@ -169,6 +179,14 @@ var GameLayer = cc.Layer.extend({
 
         this.space.addCollisionHandler(tipoDisparoEnemigo, tipoSuelo,
                                                     null, this.colisionDisparoEnemigoConSuelo.bind(this), null, null);
+        this.space.addCollisionHandler(tipoJugador, tipoEnemigo,
+                                                            null, this.colisionJugadorConEnemigo.bind(this), null, null);
+        this.space.addCollisionHandler(tipoBolas, tipoEnemigo,
+                            null, this.colisionBolaConEnemigo.bind(this), null, null);
+        this.space.addCollisionHandler(tipoJugador, tipoMeta,
+                   null, this.colisionJugadorConMeta.bind(this), null, null);
+        this.space.addCollisionHandler(tipoJugador, tipoEscalera,
+                          null, this.colisionJugadorConEscalera.bind(this), null, null);
 
       cc.eventManager.addListener({
                   event: cc.EventListener.MOUSE,
@@ -294,12 +312,15 @@ var GameLayer = cc.Layer.extend({
      }
 
      this.formasEliminar = [];
-     this.jugador.comprobarVelocidadMuerte();
+     this.jugador.comprobarMuerte();
      // Caída, sí cae vuelve a la posición inicial
      if( this.jugador.body.p.y < -100 || this.jugador.morir==true){
         this.jugador.body.vy = 0;
         this.jugador.body.p = cc.p(64,332);
         this.jugador.morir = false;
+        this.jugador.terreno = "tierra";
+        this.jugador.actualizarVida(true);
+        this.jugador.actualizarAire(false);
      }
      if(this.jugador.almas>0 && this.jugador.bolas==0){
          capaControles.dibujarAlmas();
@@ -360,13 +381,20 @@ var GameLayer = cc.Layer.extend({
              capaControles.actualizarVida(this.jugador);
      var d = new Date();
      var t = d.getTime();
+
+     if(this.jugador.invulnerabilidad==true && t-this.jugador.tiempoInvulnerabilidad>5000){
+        this.jugador.actualizarInvulnerabilidad(false,t)
+     }
      if ( this.teclaArriba ){
         if(this.jugador.terreno=="agua" && t-this.jugador.anteriorSalto>50){
             this.jugador.moverArriba();
             this.jugador.anteriorSalto = t;
         }
-        else if(this.jugador.terreno="tierra"){
+        else if(this.jugador.terreno=="tierra"){
             this.jugador.moverArriba();
+        }else if(this.jugador.terreno=="escalera" && t-this.jugador.anteriorSalto>25){
+             this.jugador.moverArriba();
+             this.jugador.anteriorSalto = t;
         }
      }
      if (this.teclaIzquierda){
@@ -403,16 +431,44 @@ var GameLayer = cc.Layer.extend({
      if (this.jugador.body.vx > 200){
          this.jugador.body.vx = 200;
      }
-},disparaEnemigo:function(enemigo){
+},disparaEnemigo:function(enemigo,tipo,direccion){
+       var disparo = null;
+        var random= Math.floor((Math.random() * 128) + 1);
+        var randomPos= Math.floor((Math.random() * 4) + 1);
+    switch(tipo){
+        case "boss":
+            if(direccion=="derecha"){
+                if(randomPos>2)
+                disparo = new DisparoBoss(this.space,
+                              cc.p(enemigo.body.p.x+64, enemigo.body.p.y+random),
+                              this,100);
+                else
+                    disparo = new DisparoBoss(this.space,
+                      cc.p(enemigo.body.p.x+64, enemigo.body.p.y-random),
+                      this,100);
+            }else{
+                if(randomPos>2)
+                    disparo = new DisparoBoss(this.space,
+                              cc.p(enemigo.body.p.x+64, enemigo.body.p.y+random),
+                              this,-100);
+                else
+                    disparo = new DisparoBoss(this.space,
+                      cc.p(enemigo.body.p.x+64, enemigo.body.p.y-random),
+                      this,-100);
+            }
+            break;
+        case "volador":
+             disparo = new DisparoEnemigo(this.space,
+              cc.p(enemigo.body.p.x+16, enemigo.body.p.y-8),
+              this);
+            break;
+    }
 
-    var disparo = new DisparoEnemigo(this.space,
-      cc.p(enemigo.body.p.x+16, enemigo.body.p.y-8),
-      this);
 
     this.disparos.push(disparo);
 
 }, cargarMapa:function () {
-       this.mapa = new cc.TMXTiledMap(niveles[0]);
+       this.mapa = new cc.TMXTiledMap(niveles[nivelActual]);
        // Añadirlo a la Layer
        this.addChild(this.mapa);
        // Ancho del mapa
@@ -452,6 +508,14 @@ var GameLayer = cc.Layer.extend({
 
            this.monedas.push(moneda);
        }
+
+       var grupoInicial = this.mapa.getObjectGroup("Inicial");
+          var inicialArray = grupoInicial.getObjects();
+          for (var i = 0; i < inicialArray.length; i++) {
+              var inicial =  cc.p(inicialArray[i]["x"],inicialArray[i]["y"]);
+
+              this.posInicial = inicial;
+          }
 
        var grupoLlaves = this.mapa.getObjectGroup("Llaves");
         var llavesArray = grupoLlaves.getObjects();
@@ -620,6 +684,31 @@ var GameLayer = cc.Layer.extend({
                 }
             }
 
+        var grupoMeta = this.mapa.getObjectGroup("Meta");
+        var metaArray = grupoMeta.getObjects();
+        for (var i = 0; i < metaArray.length; i++) {
+            var meta = metaArray[i];
+            var puntos = meta.polylinePoints;
+
+            for(var j = 0; j < puntos.length - 1; j++){
+                var bodyMeta = new cp.StaticBody();
+
+                var shapeMeta = new cp.SegmentShape(bodyMeta,
+                    cp.v(parseInt(meta.x) + parseInt(puntos[j].x),
+                        parseInt(meta.y) - parseInt(puntos[j].y)),
+                    cp.v(parseInt(meta.x) + parseInt(puntos[j + 1].x),
+                        parseInt(meta.y) - parseInt(puntos[j + 1].y)),
+                    5);
+
+                shapeMeta.setSensor(true);
+                shapeMeta.setCollisionType(tipoMeta);
+                shapeMeta.setFriction(1);
+
+                this.space.addStaticShape(shapeMeta);
+            }
+                }
+
+
         var grupoFantasma = this.mapa.getObjectGroup("MurosFantasma");
          var fantasmaArray = grupoFantasma.getObjects();
             for (var i = 0; i < fantasmaArray.length; i++) {
@@ -642,7 +731,32 @@ var GameLayer = cc.Layer.extend({
 
                     this.space.addStaticShape(shapeFantasma);
                 }
-            }
+
+        }
+    var grupoEscalera = this.mapa.getObjectGroup("Escaleras");
+         var escaleraArray = grupoEscalera.getObjects();
+            for (var i = 0; i < escaleraArray.length; i++) {
+                var escalera = escaleraArray[i];
+                var puntos = escalera.polylinePoints;
+
+                for(var j = 0; j < puntos.length - 1; j++){
+                    var bodyEscalera = new cp.StaticBody();
+
+                    var shapeEscalera = new cp.SegmentShape(bodyEscalera,
+                        cp.v(parseInt(escalera.x) + parseInt(puntos[j].x),
+                            parseInt(escalera.y) - parseInt(puntos[j].y)),
+                        cp.v(parseInt(escalera.x) + parseInt(puntos[j + 1].x),
+                            parseInt(escalera.y) - parseInt(puntos[j + 1].y)),
+                        5);
+
+                    shapeEscalera.setSensor(true);
+                    shapeEscalera.setCollisionType(tipoEscalera);
+                    shapeEscalera.setFriction(1);
+
+                    this.space.addStaticShape(shapeEscalera);
+                }
+
+        }
 
      var grupoRaton = this.mapa.getObjectGroup("PulsarRaton");
      var ratonArray = grupoRaton.getObjects();
@@ -659,6 +773,7 @@ var GameLayer = cc.Layer.extend({
        for (var i = 0; i < enemigosArray.length; i++) {
 
            var name  = enemigosArray[i].name;
+
            var enemigo = null;
            switch(name){
 
@@ -677,6 +792,16 @@ var GameLayer = cc.Layer.extend({
                     cc.p(enemigosArray[i]["x"],enemigosArray[i]["y"]),
                     this);
                     break;
+            case "boss_derecha":
+                enemigo = new Boss(this.space,
+                cc.p(enemigosArray[i]["x"],enemigosArray[i]["y"]),
+                this,"derecha");
+                break;
+            case "boss_izquierda":
+                enemigo = new Boss(this.space,
+                cc.p(enemigosArray[i]["x"],enemigosArray[i]["y"]),
+                this,"izquierda");
+                break;
            }
 
            this.enemigos.push(enemigo);
@@ -850,7 +975,6 @@ var GameLayer = cc.Layer.extend({
                 }
              }
 
-
      }, colisionJugadorConBola: function(arbiter,space){
              var shapes = arbiter.getShapes();
 
@@ -859,7 +983,9 @@ var GameLayer = cc.Layer.extend({
              this.jugador.actualizarBolas(true);
      }, colisionJugadorConAgua:function(arbiter,space){
           this.jugador.terreno = "agua";
-     }, colisionJugadorConPuerta:function(arbiter,space){
+     },colisionJugadorConEscalera:function(arbiter,space){
+        this.jugador.terreno = "escalera";
+     },colisionJugadorConPuerta:function(arbiter,space){
         if(this.jugador.key == true){
             var shapes = arbiter.getShapes();
 
@@ -894,7 +1020,9 @@ var GameLayer = cc.Layer.extend({
 
          this.formasEliminar.push(shapes[1]);
 
-         this.jugador.actualizarInvulnerabilidad(true);
+         var d = new Date();
+         var t = d.getTime();
+         this.jugador.actualizarInvulnerabilidad(true,t);
     },colisionJugadorConProteccion: function(arbiter,space){
         var shapes = arbiter.getShapes();
 
@@ -936,7 +1064,32 @@ var GameLayer = cc.Layer.extend({
         if(this.jugador.body.vx < 0)
                     this.jugador.body.p.x = this.jugador.body.p.x +10;
     },colisionDisparoEnemigoConJugador:function(arbiter,space){
+        var shapes = arbiter.getShapes();
 
+        this.formasEliminar.push(shapes[0]);
+        var d = new Date();
+        var t = d.getTime();
+        if(t-this.jugador.tiempoInmunidad>1000){
+            this.jugador.actualizarVida(false,10);
+            this.jugador.tiempoInmunidad=t;
+        }
+    },colisionJugadorConEnemigo:function(arbiter,space){
+        var d = new Date();
+        var t = d.getTime();
+        if(t-this.jugador.tiempoInmunidad>1000){
+            this.jugador.actualizarVida(false,20);
+            this.jugador.tiempoInmunidad=t;
+        }
+    }, colisionJugadorConMeta:function(arbiter,space){
+        nivelActual++;
+        cc.director.runScene(new GameScene());
+    }, colisionBolaConEnemigo:function(arbiter,space){
+        var shapes = arbiter.getShapes();
+
+        this.formasEliminar.push(shapes[1]);
+        this.destruirBola = true;
+
+        this.jugador.actualizarBolas(false);
     }
 });
 

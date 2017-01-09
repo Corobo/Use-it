@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="28">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="77">
  <tileset firstgid="1" name="PrtRiver_Boss" tilewidth="32" tileheight="32" tilecount="112" columns="16">
   <image source="PrtRiver_Boss.png" trans="000000" width="512" height="224"/>
  </tileset>
@@ -16,7 +16,12 @@
  </layer>
  <layer name="Terreno" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJztmc1OAjEQxxvwoAIXuBiOeFDDSRF19THE+ATGj7fwzZ2JnWSctLvtftAO9p/80t3SbPtbWFhmj40xJ8o5Bc6M/ixN8UiRd+AD+AS+WL82D1zrm2XJ+otHmuTocQ88AAvL3LYjYOxo67ZTeND6j4Cbno5JHqMAVoyQ8T6ue1y/9AjJd89z95nikVeKR16J+b4iuoSOIb//JVvgroVHaHCOiw6MG46/AzbArfn1DPVp4/HagSYPyouJ88nRYyfYmObf5TYea7E2ue/rXwd6tAn3eAwYT9dnW/bhMRtojqGD5/8QPCpTPFJmCkwYuO/zCLnmY8b1mcqx7/OQY0OPGZPYczD1zBnj4ZuzzqNpnbHnoBIt7w/18M1Ztxb+GjpNzF+3UA/5PqT0cK0h9rP7nzzwnvrJtl3uO/YJ3SPy+hXex83YGG2RHtgWj3Th/881eVBtFa8NrH9oez9o/byuqsmD1o81eXJ4ti338NVfcoRqDi4PTaE6ytbua/WgrGxbPPKIy4OezfHndHOxvfCMkf28b4i45ieP84HoUgv24ar58d8PzRSPvDgkj0vgSjno8QMIepfG
+   eJztmc9OAjEQh0fwoMAJLoYjHtBwUkRdXkOMT2D88/4P4DR2knHSsu22a9ulv+RL2QK78y1hKbMXAHBZOBPkCsrPEqpHinwgn8gX8s3mS/NQtb5rlmy+eqRJjh5PyDOy0Mz1OELGhvHY4xQeVP85ch9pn+QxcmDFcHm9jbuI9UsPl5xFPnbMVI+8Uj3yis/1iggJ7UNe/yU75LGDh2vUMdYBjFv2f0C2yAP8err6dPF4C6DNg/IKfj45ehwEW2j/Xe7isRG1yW3b/MbRo0u4h8v1iL6fXcnFI8fsYRgeDVSPlJkhU4batnm4Ou2jVeeexrAd6iH36RPfczCzHNPHw+Z1zKOtTt9z0IiRz/fpwZ9TTlP46+bqIT+HlB6mGlw95HtPwYOvrUPWHf8JrRF5/4rWcjH+K6WI9CCX0jI0D1V7SR7UW1XfDXUNKu3zoPp5X7UkD6pf9eTJ4UWP3MPWf8kR6jmYPEoK9VF2ertUD8pKj9Ujj5g86N4cv083F48XltfIeT7XR0zHJ4/rngjpBdsw9fxMvx8lUj3yYkgeN8ht4SiPHys1kAs=
+  </data>
+ </layer>
+ <layer name="Escaleras" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2EENADAMA7FSH/ORmLS0tRHkvqkCALY4vwc8oiOLDgAAAIAepvwfOrLoyKIjy5QOgG4uxt0Gjg==
   </data>
  </layer>
  <objectgroup name="Suelos">
@@ -74,8 +79,136 @@
   <object id="27" x="305.333" y="304">
    <polyline points="0,0 -262.667,1.33333"/>
   </object>
+  <object id="60" x="710.667" y="877.333">
+   <polyline points="0,0 22.6667,0"/>
+  </object>
+  <object id="61" x="484" y="812">
+   <polyline points="0,0 24,0"/>
+  </object>
+  <object id="62" x="814.667" y="909.333">
+   <polyline points="0,0 76,0"/>
+  </object>
+  <object id="63" x="965.333" y="842.667">
+   <polyline points="0,0 22.6667,1.33333"/>
+  </object>
+  <object id="64" x="1280" y="908">
+   <polyline points="0,0 32,-1.33333"/>
+  </object>
+  <object id="65" x="1345.33" y="844">
+   <polyline points="0,0 26.6667,2.66667"/>
+  </object>
+  <object id="66" x="1416" y="781.333">
+   <polyline points="0,0 137.333,-1.33333"/>
+  </object>
+  <object id="67" x="1544" y="682.667">
+   <polyline points="0,0 14.6667,0"/>
+  </object>
+  <object id="71" x="389.333" y="545.333">
+   <polyline points="0,0 473.333,0 -2.66667,14.6667 465.333,18.6667 -5.33333,26.6667"/>
+  </object>
+  <object id="72" x="389.333" y="562.667">
+   <polyline points="0,0 473.333,0 -2.66667,14.6667 465.333,18.6667 -5.33333,26.6667"/>
+  </object>
+  <object id="73" x="409.333" y="576">
+   <polyline points="0,0 473.333,0 -2.66667,14.6667 465.333,18.6667 -5.33333,26.6667"/>
+  </object>
+  <object id="74" x="368" y="597.333">
+   <polyline points="0,0 473.333,0 -2.66667,14.6667 465.333,18.6667 -5.33333,26.6667"/>
+  </object>
+  <object id="75" x="389.333" y="606.667">
+   <polyline points="0,0 473.333,0 -2.66667,14.6667 465.333,18.6667 -5.33333,26.6667"/>
+  </object>
+  <object id="76" x="396" y="620">
+   <polyline points="0,0 473.333,0 -2.66667,14.6667 465.333,18.6667 -5.33333,26.6667"/>
+  </object>
  </objectgroup>
  <objectgroup name="Monedas"/>
  <objectgroup name="Contenedores"/>
- <objectgroup name="Enemigos"/>
+ <objectgroup name="Enemigos" offsetx="3" offsety="-2">
+  <object id="29" name="boss_izquierda" x="1086" y="1403" width="306" height="160"/>
+  <object id="32" name="boss_derecha" x="170" y="1040" width="322" height="160"/>
+  <object id="33" name="boss_derecha" x="37.6667" y="828.667" width="322" height="160"/>
+  <object id="34" name="boss_derecha" x="35" y="328" width="322" height="160"/>
+  <object id="35" name="boss_izquierda" x="1043" y="60" width="322" height="160"/>
+ </objectgroup>
+ <objectgroup name="Pinchos"/>
+ <objectgroup name="Bolas">
+  <object id="38" x="97.3333" y="1536" width="32" height="32"/>
+  <object id="68" x="833.333" y="952" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Llaves"/>
+ <objectgroup name="ContadorBolas"/>
+ <objectgroup name="DestructorBolas"/>
+ <objectgroup name="Agua">
+  <object id="47" x="36" y="1412">
+   <polyline points="0,0 1526.67,8 2.66667,13.3333 1529.33,21.3333 2.66667,32 1526.67,36 2.66667,50.6667 1528,56"/>
+  </object>
+  <object id="48" x="38.6667" y="1446.67">
+   <polyline points="0,0 1526.67,8 2.66667,13.3333 1529.33,21.3333 2.66667,32 1526.67,36 2.66667,50.6667 1528,56"/>
+  </object>
+  <object id="49" x="37.3333" y="1481.33">
+   <polyline points="0,0 1526.67,8 2.66667,13.3333 1529.33,21.3333 2.66667,32 1526.67,36 2.66667,50.6667 1528,56"/>
+  </object>
+  <object id="50" x="34.6667" y="1509.33">
+   <polyline points="0,0 1526.67,8 2.66667,13.3333 1529.33,21.3333 2.66667,32 1526.67,36 2.66667,50.6667 1528,56"/>
+  </object>
+  <object id="69" x="389.333" y="520">
+   <polyline points="0,0 473.333,0 -2.66667,14.6667 465.333,18.6667 -5.33333,26.6667"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="DestructorSouls"/>
+ <objectgroup name="Souls"/>
+ <objectgroup name="Proteccion"/>
+ <objectgroup name="Vida"/>
+ <objectgroup name="Salto"/>
+ <objectgroup name="CajaMonedas"/>
+ <objectgroup name="MurosFantasma"/>
+ <objectgroup name="PulsarRaton">
+  <object id="36" x="1214" y="1314" width="32" height="32"/>
+  <object id="37" x="289.333" y="672" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Inicial">
+  <object id="28" x="67" y="1344" width="30" height="29"/>
+ </objectgroup>
+ <objectgroup name="Meta">
+  <object id="45" x="1442.67" y="133.333">
+   <polyline points="0,0 -30.6667,37.3333 22.6667,52 -14.6667,81.3333"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Balas">
+  <object id="40" x="62.6667" y="1176" width="32" height="32"/>
+  <object id="41" x="1529.33" y="1533.33" width="32" height="32"/>
+  <object id="44" x="46.6667" y="448" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="Invulnerable"/>
+ <objectgroup name="Puertas"/>
+ <objectgroup name="Escaleras">
+  <object id="51" x="1540" y="1122.67">
+   <polyline points="0,0 24,12 2,34 21.3333,51.3333 0.666667,74.6667 22.6667,98.6667 0.666667,116 24,134.667 3.33333,152 25.3333,174.667 1.33333,191.333 21.3333,214 -0.666667,226.667 22,244 1.33333,251.333"/>
+  </object>
+  <object id="52" x="321.333" y="323.333">
+   <polyline points="0,0 25.3333,29.3333 -2,58 22.6667,90.6667 1.33333,123.333 26,148.667 2,154"/>
+  </object>
+  <object id="53" x="1545.33" y="1126.67">
+   <polyline points="0,0 25.3333,29.3333 -2,58 22.6667,90.6667 1.33333,123.333 26,148.667 2,154"/>
+  </object>
+  <object id="54" x="1538.67" y="1128">
+   <polyline points="0,0 25.3333,29.3333 -2,58 22.6667,90.6667 1.33333,123.333 26,148.667 2,154"/>
+  </object>
+  <object id="55" x="1538.67" y="1218">
+   <polyline points="0,0 25.3333,29.3333 -2,58 22.6667,90.6667 1.33333,123.333 26,148.667 2,154"/>
+  </object>
+  <object id="56" x="1542.67" y="1216">
+   <polyline points="0,0 25.3333,29.3333 -2,58 22.6667,90.6667 1.33333,123.333 26,148.667 2,154"/>
+  </object>
+  <object id="57" x="1547.33" y="1120.67">
+   <polyline points="0,0 24,12 2,34 21.3333,51.3333 0.666667,74.6667 22.6667,98.6667 0.666667,116 24,134.667 3.33333,152 25.3333,174.667 1.33333,191.333 21.3333,214 -0.666667,226.667 22,244 1.33333,251.333"/>
+  </object>
+  <object id="58" x="1541.33" y="1112.67">
+   <polyline points="0,0 24,12 2,34 21.3333,51.3333 0.666667,74.6667 22.6667,98.6667 0.666667,116 24,134.667 3.33333,152 25.3333,174.667 1.33333,191.333 21.3333,214 -0.666667,226.667 22,244 1.33333,251.333"/>
+  </object>
+  <object id="59" x="1539.33" y="1110.67">
+   <polyline points="0,0 0,259.333 8,-7.33333 12,264 17.3333,-16 24.6667,262.667 10,259.333 0,261.333 11.3333,241.333 18.6667,242 20,230 12.6667,207.333 -4,195.333 12.6667,168.667 24,155.333 22,123.333 10.6667,85.3333 4,64 8.66667,26.6667 18,22"/>
+  </object>
+ </objectgroup>
 </map>

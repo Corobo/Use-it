@@ -1,17 +1,18 @@
- var DisparoEnemigo = cc.Class.extend({
+ var DisparoBoss = cc.Class.extend({
     space:null,
     sprite:null,
     body:null,
     shape:null,
     layer:null,
-ctor:function (space, posicion, layer) {
+    velocidad:null,
+ctor:function (space, posicion, layer,velocidad) {
     this.space = space;
     this.layer = layer;
-
+    this.velocidad = velocidad;
     // Crear animación
     var framesAnimacion = [];
-    for (var i = 1; i <= 3; i++) {
-        var str = "disparo_enemigo_0" + i + ".png";
+    for (var i = 1; i <= 2; i++) {
+        var str = "disparo_boss_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -20,7 +21,7 @@ ctor:function (space, posicion, layer) {
         new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
-    this.sprite = new cc.PhysicsSprite("#disparo_enemigo_01.png");
+    this.sprite = new cc.PhysicsSprite("#disparo_boss_01.png");
     // Cuerpo estática , no le afectan las fuerzas
     this.body = new cp.Body(5, Infinity);
 
@@ -43,6 +44,11 @@ ctor:function (space, posicion, layer) {
     // ejecutar la animación
     this.sprite.runAction(actionAnimacionBucle);
 
+    if(velocidad>0)
+            this.sprite.scaleX = -1;
+        else
+            this.sprite.scaleX = 1;
+
     layer.addChild(this.sprite,10);
 
 
@@ -56,8 +62,9 @@ ctor:function (space, posicion, layer) {
         // quita el sprite
         this.layer.removeChild(this.sprite);
     }, mantenerVelocidadDisparo: function() {
-        if(this.body.vx<0  || this.body.vx>0){
-            this.body.vx = 0;
+        if(this.body.vy<0){
+            this.body.vy = 0;
+            this.body.vx = this.velocidad;
         }
     }
 });

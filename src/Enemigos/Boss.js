@@ -1,18 +1,19 @@
-var Volador = cc.Class.extend({
-    direccionX: "derecha",
+var Boss = cc.Class.extend({
+    direccionX:null,
     space:null,
     sprite:null,
     shape:null,
     layer:null,
     disparoAnterior:0,
-ctor:function (space, posicion, layer) {
+ctor:function (space, posicion, layer,direccionX) {
     this.space = space;
     this.layer = layer;
+    this.direccionX = direccionX;
 
     // Crear animación
     var framesAnimacion = [];
-    for (var i = 1; i <= 3; i++) {
-        var str = "volador_0" + i + ".png";
+    for (var i = 1; i <= 2; i++) {
+        var str = "boss_0" + i + ".png";
         var frame = cc.spriteFrameCache.getSpriteFrame(str);
         framesAnimacion.push(frame);
     }
@@ -21,7 +22,7 @@ ctor:function (space, posicion, layer) {
         new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
-    this.sprite = new cc.PhysicsSprite("#volador_01.png");
+    this.sprite = new cc.PhysicsSprite("#boss_01.png");
     // Cuerpo estática , no le afectan las fuerzas
     // Cuerpo dinámico, SI le afectan las fuerzas
     this.body = new cp.Body(5, Infinity);
@@ -44,41 +45,21 @@ ctor:function (space, posicion, layer) {
 
     // ejecutar la animación
     this.sprite.runAction(actionAnimacionBucle);
+    if(direccionX=="derecha")
+        this.sprite.scaleX = -1;
+    else
+        this.sprite.scaleX = 1;
 
     layer.addChild(this.sprite,10);
 
    }, moverAutomaticamente: function(){
-        // invertir direccion
-
-        // Velocidad baja ha colisionado con algo,
-        if ( this.body.vx < 3 &&  this.body.vx > -3 ) {
-           if (this.direccionX == "derecha"){
-               this.direccionX = "izquierda";
-               this.body.p.x = this.body.p.x -10; // Para que salga de la colisión
-               this.sprite.scaleX = 1;
-           } else {
-               this.direccionX = "derecha";
-                this.body.p.x = this.body.p.x + 10; // Para que salga de la zona de colisión
-               this.sprite.scaleX = -1;
-           }
-        }
-
-        // Dar impulsos para mantener la velocidad
-        if (this.direccionX == "izquierda" && this.body.vx > -100){
-            this.body.applyImpulse(cp.v(-100, 0), cp.v(0, 0));
-        }
-        if (this.direccionX == "derecha" && this.body.vx < 100){
-            this.body.applyImpulse(cp.v(100, 0), cp.v(0,0));
-        }
-        if (this.body.vy<0){
-            this.body.vy = 0;
-        }
         var d = new Date();
         var t = d.getTime();
         if(t-this.disparoAnterior>500){
             this.disparoAnterior = t;
-            this.layer.disparaEnemigo(this,"volador","abajo");
+            this.layer.disparaEnemigo(this,"boss",this.direccionX);
         }
+
 
 
 

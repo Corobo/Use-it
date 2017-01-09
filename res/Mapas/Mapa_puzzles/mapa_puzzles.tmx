@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="339">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="344">
  <tileset firstgid="1" name="PrtRiver" tilewidth="32" tileheight="32" tilecount="96" columns="16">
   <image source="PrtRiver.png" width="512" height="192"/>
  </tileset>
@@ -414,5 +414,13 @@
   <object id="335" x="3716" y="881">
    <polyline points="0,0 0,75 23,75 24,-2 0,-2"/>
   </object>
+ </objectgroup>
+ <objectgroup name="Meta">
+  <object id="340" x="3888" y="879">
+   <polyline points="0,0 0,48"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Inicial">
+  <object id="343" x="65" y="1250" width="30" height="27"/>
  </objectgroup>
 </map>

@@ -32,6 +32,7 @@ var Jugador = cc.Class.extend({
     invulnerabilidad:false,
     tiempoInvulnerabilidad:0,
     tiempoEnAgua:0,
+    tiempoInmunidad:0,
 ctor:function (space, posicion, layer) {
     this.space = space;
     this.layer = layer;
@@ -150,7 +151,7 @@ ctor:function (space, posicion, layer) {
 
        console.log("vel Y:"+this.body.vy );
 
-       if ( this.contadorVelYCero  > 1 || this.terreno=="agua" ){
+       if ( this.contadorVelYCero  > 1 || this.terreno=="agua" || this.terreno=="escalera" ){
           if ( this.estado != saltar && this.tiempoDisparando <= 0) {
                this.estado = saltar;
                this.sprite.stopAllActions();
@@ -160,14 +161,18 @@ ctor:function (space, posicion, layer) {
 
            if(this.terreno=="agua")
             this.body.applyImpulse(cp.v(0, 50), cp.v(0, 0));
+           else if(this.terreno=="escalera")
+            this.body.applyImpulse(cp.v(0, 25), cp.v(0, 0));
            else{
             if(this.saltoPotenciado)
                 this.body.applyImpulse(cp.v(0, 400), cp.v(0, 0));
             else
                 this.body.applyImpulse(cp.v(0, 300), cp.v(0, 0));
-           this.contadorVelYCero = 0;
-           this.terreno="tierra";
-        }
+            this.contadorVelYCero = 0;
+
+            }
+            this.terreno="tierra";
+
        }
 
     }, actualizarAnimacion: function(){
@@ -208,8 +213,14 @@ ctor:function (space, posicion, layer) {
        this.bolas++;
       else
        this.bolas--;
-    }, comprobarVelocidadMuerte:function(){
+    }, comprobarMuerte:function(){
         if(this.body.vy<-425 && this.terreno=="tierra"){
+            this.morir=true;
+        }
+        if(this.aire<=1){
+            this.morir=true;
+        }
+        if(this.vida<=1){
             this.morir=true;
         }
     }, actualizarBalas:function(bool){
@@ -234,11 +245,15 @@ ctor:function (space, posicion, layer) {
          this.proteccion=true;
         else
          this.proteccion=false;
-    },actualizarInvulnerabilidad:function(bool){
-      if(bool)
-      this.invulnerabilidad=true;
-     else
+    },actualizarInvulnerabilidad:function(bool,tiempo){
+      if(bool){
+        this.invulnerabilidad=true;
+        this.tiempoInvulnerabilidad = tiempo;
+      }
+     else{
       this.invulnerabilidad=false;
+      this.tiempoInvulnerabilidad=tiempo;
+      }
     },actualizarVida:function(bool,num){
         if(bool){
           this.vida=100;
@@ -249,6 +264,12 @@ ctor:function (space, posicion, layer) {
          else{
           if(this.proteccion==false || this.invulnerabilidad==false){
             this.vida= this.vida-num;
+            var copiaVida = this.vida;
+            this.digitos = [];
+            while(copiaVida >= 1) {
+                    this.digitos.push(copiaVida % 10);
+                    copiaVida /= 10;
+            }
             }
            if(this.proteccion==true){
             this.proteccion=false;
@@ -270,13 +291,5 @@ ctor:function (space, posicion, layer) {
         this.digitosAire[2]= 1;
 
        }
-    }, recibirDaño:function(num){
-       this.vida = this.vida - num;
-        var copiaVida = this.vida;
-        this.digitos = [];
-        while(copiaVida >= 1) {
-                this.digitos.push(copiaVida % 10);
-                copiaVida /= 10;
-        }
     }
 });

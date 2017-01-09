@@ -76,6 +76,12 @@ var res = {
     volador_png : "res/Enemigos/volador.png",
     terrestre_plist : "res/Enemigos/terrestre.plist",
     terrestre_png : "res/Enemigos/terrestre.png",
+    boss_plist : "res/Enemigos/boss.plist",
+    boss_png : "res/Enemigos/boss.png",
+    disparo_boss_plist : "res/Enemigos/Efectos/disparo_boss.plist",
+    disparo_boss_png : "res/Enemigos/Efectos/disparo_boss.png",
+    disparo_enemigo_plist: "res/Enemigos/Efectos/disparo_enemigo.plist",
+    disparo_enemigo_png : "res/Enemigos/Efectos/disparo_enemigo.png",
 
 
 };
