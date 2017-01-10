@@ -35,6 +35,7 @@ var Jugador = cc.Class.extend({
     tiempoEnAgua:0,
     tiempoInmunidad:0,
     proteccion:false,
+    objetosUsados:0,
 ctor:function (space, posicion, layer) {
     this.space = space;
     this.layer = layer;
@@ -171,7 +172,7 @@ ctor:function (space, posicion, layer) {
             else
                 this.body.applyImpulse(cp.v(0, 300), cp.v(0, 0));
             this.contadorVelYCero = 0;
-
+            cc.audioEngine.playEffect(res.sonido_salto_wav,false);
             }
             this.terreno="tierra";
 
@@ -294,5 +295,7 @@ ctor:function (space, posicion, layer) {
         this.digitosAire[2]= 1;
 
        }
+    },actualizarObjetosUsados:function(){
+        this.objetosUsados++;
     }
 });

@@ -49,6 +49,7 @@ var res = {
     text1_9_png : "res/Interfaz/Textos/text1_9.png",
     text_air_png : "res/Interfaz/Textos/text_air.png",
     puerta_puzzle_png : "res/ObjetosMapa/Puertas/puerta_puzzle.png",
+    puerta_boss_png : "res/ObjetosMapa/Puertas/puerta_boss.png",
     contador_0_5_png : "res/ObjetosMapa/Contadores/contador_0_5.png",
     contador_1_5_png : "res/ObjetosMapa/Contadores/contador_1_5.png",
     contador_2_5_png : "res/ObjetosMapa/Contadores/contador_2_5.png",
@@ -83,6 +84,13 @@ var res = {
     disparo_enemigo_plist: "res/Enemigos/Efectos/disparo_enemigo.plist",
     disparo_enemigo_png : "res/Enemigos/Efectos/disparo_enemigo.png",
     reloj_png: "res/Interfaz/Tiempo/reloj.png",
+    sonido_boss_wav : "res/Musica/sonidoBoss.wav",
+    sonido_mapa_wav : "res/Musica/sonidoMapa.wav",
+    sonido_salto_wav : "res/Musica/sonidoSalto.wav",
+    sonido_disparo_jugador_wav : "res/Musica/disparoJugador.wav",
+    sonido_disparo_enemigo_wav : "res/Musica/disparoEnemigo.wav",
+    sonido_morir_wav : "res/Musica/morir.wav",
+    sonido_destruir_enemigo_wav : "res/Musica/destruirEnemigo.wav",
 
 
 };

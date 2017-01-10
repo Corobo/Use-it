@@ -23,6 +23,7 @@
         "src/Layers/GameWinLayer.js",
         "src/ObjetosMapa/Puzzles/ContadorBolas.js",
         "src/ObjetosMapa/Puzzles/PuertaPuzzle.js",
+        "src/ObjetosMapa/Puzzles/PuertaBoss.js",
         "src/ObjetosMapa/Puzzles/Bola.js",
         "src/ObjetosMapa/Puzzles/PulsarRaton.js",
         "src/ObjetosMapa/Puzzles/Soul.js",

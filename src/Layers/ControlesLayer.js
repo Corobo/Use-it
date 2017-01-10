@@ -22,6 +22,10 @@ var ControlesLayer = cc.Layer.extend({
     textAir2:null,
     textAir3:null,
     relleno:null,
+    etiquetaTiempo:0,
+    tiempoMinuto:0,
+    tiempoSegundo:0,
+    spriteTiempo:null,
     ctor:function () {
         this._super();
         this.size = cc.winSize;
@@ -127,6 +131,16 @@ var ControlesLayer = cc.Layer.extend({
         this.etiquetaVidas.setPosition(cc.p(this.size.width - 625, this.size.height - 30));
         this.etiquetaVidas.fillStyle = new cc.Color(255, 255, 255, 255);
         this.addChild(this.etiquetaVidas);
+
+         this.spriteTiempo = cc.Sprite.create(res.reloj_png);
+         this.spriteTiempo.setPosition(cc.p(this.size.width - 375, this.size.height - 30));
+
+         this.addChild(this.spriteTiempo);
+
+        this.etiquetaTiempo = new cc.LabelTTF("0:00", "Comic Sans MS", 20);
+        this.etiquetaTiempo.setPosition(cc.p(this.size.width - 325, this.size.height - 30));
+        this.etiquetaTiempo.fillStyle = new cc.Color(255, 255, 255, 255);
+        this.addChild(this.etiquetaTiempo);
 
 
 
@@ -270,5 +284,11 @@ var ControlesLayer = cc.Layer.extend({
                      this.addChild(this.textAir1);
 
              }
+     },calcularTiempo:function(tiempo){
+        var segundos = tiempo/1000;
+        var minutos  = segundos/60;
+        this.tiempoMinutos = Math.floor(minutos);
+        this.tiempoSegundos = (minutos % 1)*60
+        this.etiquetaTiempo.setString(Math.floor(this.tiempoMinutos)+" : "+Math.floor(this.tiempoSegundos));
      }
 });
