@@ -25,7 +25,7 @@ var tipoMeta = 23;
 var tipoEscalera = 24;
 
 var niveles = [ res.mapa_puzzles , res.mapa_boss ];
-var nivelActual = 1;
+var nivelActual = 0;
 
 var GameLayer = cc.Layer.extend({
     monedas:0,
@@ -106,9 +106,8 @@ var GameLayer = cc.Layer.extend({
         }, this);
 
         this.cargarMapa();
-        var copia = this.posInicial;
         this.jugador = new Jugador(this.space,
-                       copia, this);
+                       cc.p(this.posInicial.x,this.posInicial.y), this);
 
         this.scheduleUpdate();
 
@@ -202,14 +201,6 @@ var GameLayer = cc.Layer.extend({
      var capaControles =
                this.getParent().getChildByTag(idCapaControles);
 
-     if ( capaControles.monedas >= 40){
-        nivelActual = nivelActual + 1;
-        cc.director.runScene(new GameScene());
-     }
-
-
-
-
       // Mover enemigos:
        for(var i = 0; i < this.enemigos.length; i++) {
           var enemigo = this.enemigos[i];
@@ -284,6 +275,19 @@ var GameLayer = cc.Layer.extend({
                      this.protecciones.splice(r, 1);
                  }
             }
+        for (var r = 0; r < this.invulnerabilidades.length; r++) {
+             if (this.invulnerabilidades[r].shape == shape) {
+                 this.invulnerabilidades[r].eliminar();
+                 this.invulnerabilidades.splice(r, 1);
+             }
+        }
+        for (var r = 0; r < this.cajasMonedas.length; r++) {
+             if (this.cajasMonedas[r].shape == shape) {
+                 this.cajasMonedas[r].eliminar();
+                 this.cajasMonedas.splice(r, 1);
+             }
+        }
+
 
          if(this.destruirBola){
             this.bola.eliminar();
@@ -314,11 +318,10 @@ var GameLayer = cc.Layer.extend({
      this.formasEliminar = [];
      this.jugador.comprobarMuerte();
      // Caída, sí cae vuelve a la posición inicial
-     var copia = this.posInicial;
      if( this.jugador.body.p.y < -100 || this.jugador.morir==true){
         if(this.jugador.vidas>0){
             this.jugador.body.vy = 0;
-            this.jugador.body.p = copia;
+            this.jugador.body.p = cc.p(this.posInicial.x,this.posInicial.y);
             this.jugador.morir = false;
             this.jugador.terreno = "tierra";
             this.jugador.actualizarVida(true,0);
@@ -587,14 +590,14 @@ var GameLayer = cc.Layer.extend({
         var grupoProteccion = this.mapa.getObjectGroup("Proteccion");
                  var proteccionArray = grupoProteccion.getObjects();
                  for (var i = 0; i < proteccionArray.length; i++) {
-                    var proteccion = new Bala(this.space,cc.p(proteccionArray[i]["x"]+16,
+                    var proteccion = new Proteccion(this.space,cc.p(proteccionArray[i]["x"]+16,
                       proteccionArray[i]["y"]+16),this);
                     this.protecciones.push(proteccion);
                  }
         var grupoInvulnerable = this.mapa.getObjectGroup("Invulnerable");
                   var invulnerableArray = grupoInvulnerable.getObjects();
                   for (var i = 0; i < invulnerableArray.length; i++) {
-                     var invulnerable = new Bala(this.space,cc.p(invulnerableArray[i]["x"]+16,
+                     var invulnerable = new Invulnerabilidad(this.space,cc.p(invulnerableArray[i]["x"]+16,
                        invulnerableArray[i]["y"]+16),this);
                      this.invulnerabilidades.push(invulnerable);
                   }
@@ -1001,7 +1004,7 @@ var GameLayer = cc.Layer.extend({
 
             this.jugador.key=false;
         }else{
-            this.jugador.body.p.x = this.jugador.body.p.x -20; // Para que salga de la colisión
+            this.jugador.body.p.x = this.jugador.body.p.x -5; // Para que salga de la colisión
         }
      }, colisionJugadorConAlma: function(arbiter,space){
         var shapes = arbiter.getShapes();
@@ -1088,9 +1091,16 @@ var GameLayer = cc.Layer.extend({
             this.jugador.actualizarVida(false,20);
             this.jugador.tiempoInmunidad=t;
         }
+        if(this.jugador.body.vx > 0){
+            this.jugador.body.p.x = this.jugador.body.p.x -5;
+        }else{
+             this.jugador.body.p.x = this.jugador.body.p.x + 5;
+        }
     }, colisionJugadorConMeta:function(arbiter,space){
         nivelActual++;
-        cc.director.runScene(new GameScene());
+        var capaControles =
+                           this.getParent().getChildByTag(idCapaControles);
+        cc.director.runScene(new GameWinLayer(capaControles.monedas,4,310000,this.jugador.vidas));
     }, colisionBolaConEnemigo:function(arbiter,space){
         var shapes = arbiter.getShapes();
 

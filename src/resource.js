@@ -82,6 +82,7 @@ var res = {
     disparo_boss_png : "res/Enemigos/Efectos/disparo_boss.png",
     disparo_enemigo_plist: "res/Enemigos/Efectos/disparo_enemigo.plist",
     disparo_enemigo_png : "res/Enemigos/Efectos/disparo_enemigo.png",
+    reloj_png: "res/Interfaz/Tiempo/reloj.png",
 
 
 };

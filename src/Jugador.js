@@ -34,6 +34,7 @@ var Jugador = cc.Class.extend({
     tiempoInvulnerabilidad:0,
     tiempoEnAgua:0,
     tiempoInmunidad:0,
+    proteccion:false,
 ctor:function (space, posicion, layer) {
     this.space = space;
     this.layer = layer;
@@ -264,7 +265,7 @@ ctor:function (space, posicion, layer) {
           this.vidas = this.vidas + num;
           }
          else{
-          if(this.proteccion==false || this.invulnerabilidad==false){
+          if(this.proteccion==false && this.invulnerabilidad==false){
             this.vida= this.vida-num;
             var copiaVida = this.vida;
             this.digitos = [];
