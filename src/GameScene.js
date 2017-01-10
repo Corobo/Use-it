@@ -26,10 +26,11 @@ var tipoEscalera = 24;
 var tipoPuertaBoss = 25;
 var tipoRail = 26;
 var tipoPinchos = 27;
+var tipoBoss = 28
 
 
 var niveles = [ res.mapa_puzzles , res.mapa_boss ];
-var nivelActual = 0;
+var nivelActual = 1;
 
 var GameLayer = cc.Layer.extend({
 	monedas:0,
@@ -185,6 +186,12 @@ var GameLayer = cc.Layer.extend({
         this.space.addCollisionHandler(tipoBolas, tipoEnemigo,
         	null, this.colisionBolaConEnemigo.bind(this), null, null);
 
+		this.space.addCollisionHandler(tipoBolas, tipoBoss,
+				null, this.colisionBolaConBoss.bind(this), null, null);
+
+		this.space.addCollisionHandler(tipoDisparo, tipoBoss,
+				null, this.colisionDisparoConBoss.bind(this), null, null);
+
         this.space.addCollisionHandler(tipoJugador, tipoMeta,
         	null, this.colisionJugadorConMeta.bind(this), null, null);
 
@@ -196,6 +203,9 @@ var GameLayer = cc.Layer.extend({
 
 		this.space.addCollisionHandler(tipoJugador, tipoPuertaBoss,
 			null, this.colisionJugadorConPuertaBoss.bind(this), null, null);
+
+		this.space.addCollisionHandler(tipoJugador, tipoPinchos,
+			null, this.colisionJugadorConPinchos.bind(this), null, null);
 
         cc.eventManager.addListener({
         	event: cc.EventListener.MOUSE,
@@ -310,6 +320,12 @@ var GameLayer = cc.Layer.extend({
      			this.saltos.splice(r, 1);
      		}
      	}
+     	for (var r = 0; r < this.puertasBoss.length; r++) {
+			if (this.puertasBoss[r].shape == shape) {
+				this.puertasBoss[r].eliminar();
+				this.puertasBoss.splice(r, 1);
+			}
+		}
 
 
      	if(this.destruirBola){
@@ -1052,7 +1068,16 @@ var GameLayer = cc.Layer.extend({
 
       	this.jugador.actualizarBalas(false);
 
-      }, colisionDisparoConSuelo:function (arbiter, space) {
+      }, colisionDisparoConBoss:function (arbiter, space) {
+		var shapes = arbiter.getShapes();
+
+		this.formasEliminar.push(shapes[0]);
+		this.formasEliminar.push(shapes[1]);
+
+		this.jugador.actualizarBalas(false);
+		this.jugador.matoBoss=true;
+
+	  },colisionDisparoConSuelo:function (arbiter, space) {
       	var shapes = arbiter.getShapes();
 
       	this.formasEliminar.push(shapes[0]);
@@ -1210,6 +1235,14 @@ var GameLayer = cc.Layer.extend({
     	this.destruirBola = true;
 
     	this.jugador.actualizarBolas(false);
+    }, colisionBolaConBoss:function(arbiter,space){
+         	var shapes = arbiter.getShapes();
+
+         	this.formasEliminar.push(shapes[1]);
+         	this.destruirBola = true;
+
+         	this.jugador.actualizarBolas(false);
+         	this.jugador.matoBoss=true;
     }, colisionJugadorConRail:function(arbiter,space){
     	if(this.jugador.body.vx>0){
     		this.jugador.body.applyImpulse(cp.v(125, 0), cp.v(0, 0));
@@ -1221,8 +1254,13 @@ var GameLayer = cc.Layer.extend({
 			this.jugador.body.applyImpulse(cp.v(0, -10), cp.v(0, 0));
 		}else if(this.jugador.body.vx<0){
 			this.jugador.body.applyImpulse(cp.v(-10, 0), cp.v(0, 0));
+		}else if(this.jugador.matoBoss){
+			var shapes = arbiter.getShapes();
+            this.formasEliminar.push(shapes[1]);
+		    this.jugador.matoBoss=false;
 		}
-	 } colisionJugadorConPinchos:function(arbiter,space){
+	 },colisionJugadorConPinchos:function(arbiter,space){
+	 	this.jugador.morir = true;
 	 }
 });
 

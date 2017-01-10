@@ -422,7 +422,7 @@
   </object>
  </objectgroup>
  <objectgroup name="Inicial">
-  <object id="343" x="3705" y="795" width="30" height="27"/>
+  <object id="343" x="65.6061" y="1246.52" width="30" height="27"/>
  </objectgroup>
  <objectgroup name="Escaleras"/>
  <objectgroup name="Railes">

@@ -17,7 +17,7 @@ ctor:function (space, posicion, layer, id) {
     this.sprite.setBody(body);;
     // forma
     this.shape = new cp.BoxShape(body, 32 , 96);
-    this.shape.setCollisionType(tipoPuertaPuzzle);
+    this.shape.setCollisionType(tipoPuertaBoss);
     // Nunca genera colisiones reales
     this.shape.setSensor(false);
     // forma estática

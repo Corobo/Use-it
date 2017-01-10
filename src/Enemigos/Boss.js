@@ -40,7 +40,7 @@ ctor:function (space, posicion, layer,direccionX) {
         this.sprite.getContentSize().height);
     // agregar forma dinamica
     this.space.addShape(this.shape);
-    this.shape.setCollisionType(tipoEnemigo);
+    this.shape.setCollisionType(tipoBoss);
     // añadir sprite a la capa
 
     // ejecutar la animación

@@ -36,6 +36,7 @@ var Jugador = cc.Class.extend({
     tiempoInmunidad:0,
     proteccion:false,
     objetosUsados:0,
+    matoBoss:false,
 ctor:function (space, posicion, layer) {
     this.space = space;
     this.layer = layer;
