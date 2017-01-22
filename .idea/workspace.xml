@@ -2,12 +2,529 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be83737f-9ac8-4800-a02e-a9b395e279a4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Enemigos/Boss.js" afterPath="$PROJECT_DIR$/src/Enemigos/Boss.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameScene.js" afterPath="$PROJECT_DIR$/src/GameScene.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Jugador.js" afterPath="$PROJECT_DIR$/src/Jugador.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ObjetosMapa/Puzzles/PuertaBoss.js" afterPath="$PROJECT_DIR$/src/ObjetosMapa/Puzzles/PuertaBoss.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/Mapas/Mapa_puzzles/mapa_puzzles.tmx" afterPath="$PROJECT_DIR$/res/Mapas/Mapa_puzzles/mapa_puzzles.tmx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.cocos-project.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.project" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\.settings\version.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\Use-it.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\config.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\Base64Images.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\CCBoot.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\CCDebugger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions3d\CCActionGrid.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions3d\CCActionGrid3D.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions3d\CCActionPageTurn3D.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions3d\CCActionTiledGrid.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions\CCAction.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions\CCActionCamera.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions\CCActionCatmullRom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions\CCActionEase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions\CCActionInstant.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions\CCActionInterval.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\actions\CCActionTween.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\audio\CCAudio.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\clipping-nodes\CCClippingNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\clipping-nodes\CCClippingNodeCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\clipping-nodes\CCClippingNodeWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\compression\ZipUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\compression\base64.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\compression\gzip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\compression\zlib.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\CCActionManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\CCCamera.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\CCConfiguration.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\CCDirector.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\CCDirectorWebGL.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\CCDrawingPrimitivesCanvas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\CCDrawingPrimitivesWebGL.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\CCScheduler.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\base-nodes\BaseNodesPropertyDefine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\base-nodes\CCAtlasNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\base-nodes\CCAtlasNodeCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\base-nodes\CCAtlasNodeWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\base-nodes\CCNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\base-nodes\CCNodeCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\base-nodes\CCNodeWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\cocoa\CCAffineTransform.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\cocoa\CCGeometry.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\event-manager\CCEvent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\event-manager\CCEventExtension.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\event-manager\CCEventListener.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\event-manager\CCEventManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\event-manager\CCTouch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\labelttf\CCLabelTTF.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\labelttf\CCLabelTTFCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\labelttf\CCLabelTTFWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\labelttf\LabelTTFPropertyDefine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\layers\CCLayer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\layers\CCLayerCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\layers\CCLayerWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCClass.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCCommon.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCConfig.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCEGLView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCInputExtension.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCInputManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCLoaders.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCMacro.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCSAXParser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCScreen.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCTypes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCTypesPropertyDefine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCTypesWebGL.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\CCVisibleRect.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\platform\miniFramework.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\renderer\RendererCanvas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\renderer\RendererWebGL.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\scenes\CCLoaderScene.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\scenes\CCScene.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCAnimation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCAnimationCache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCBakeSprite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCSprite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCSpriteBatchNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCSpriteBatchNodeCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCSpriteBatchNodeWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCSpriteCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCSpriteFrame.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCSpriteFrameCache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\CCSpriteWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\sprites\SpritesPropertyDefine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\support\CCPointExtension.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\support\CCVertex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\support\TransformUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\textures\CCTexture2D.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\textures\CCTextureAtlas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\textures\CCTextureCache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\textures\TexturesPropertyDefine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\textures\TexturesWebGL.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\core\utils\BinaryLoader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\effects\CCGrabber.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\effects\CCGrid.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\aabb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\gl\mat4stack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\gl\matrix.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\mat3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\mat4.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\plane.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\quaternion.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\ray2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\utility.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\vec2.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\vec3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\kazmath\vec4.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\labels\CCLabelAtlas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\labels\CCLabelAtlasCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\labels\CCLabelAtlasWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\labels\CCLabelBMFont.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\labels\CCLabelBMFontCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\labels\CCLabelBMFontWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\menus\CCMenu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\menus\CCMenuItem.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\motion-streak\CCMotionStreak.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\motion-streak\CCMotionStreakWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\node-grid\CCNodeGrid.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\node-grid\CCNodeGridWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\parallax\CCParallaxNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\parallax\CCParallaxNodeRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCPNGReader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCParticleBatchNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCParticleBatchNodeCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCParticleBatchNodeWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCParticleExamples.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCParticleSystem.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCParticleSystemCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCParticleSystemWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\particle\CCTIFFReader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\physics\CCPhysicsDebugNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\physics\CCPhysicsDebugNodeCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\physics\CCPhysicsDebugNodeWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\physics\CCPhysicsSprite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\physics\CCPhysicsSpriteCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\physics\CCPhysicsSpriteWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\progress-timer\CCActionProgressTimer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\progress-timer\CCProgressTimer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\progress-timer\CCProgressTimerCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\progress-timer\CCProgressTimerWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\render-texture\CCRenderTexture.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\render-texture\CCRenderTextureCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\render-texture\CCRenderTextureWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\shaders\CCGLProgram.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\shaders\CCGLStateCache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\shaders\CCShaderCache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\shaders\CCShaders.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\shape-nodes\CCDrawNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\shape-nodes\CCDrawNodeCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\shape-nodes\CCDrawNodeWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\text-input\CCIMEDispatcher.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\text-input\CCTextFieldTTF.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\tilemap\CCTGAlib.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\tilemap\CCTMXLayer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\tilemap\CCTMXLayerCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\tilemap\CCTMXLayerWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\tilemap\CCTMXObjectGroup.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\tilemap\CCTMXTiledMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\tilemap\CCTMXXMLParser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\transitions\CCTransition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\transitions\CCTransitionPageTurn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\cocos2d\transitions\CCTransitionProgress.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCBAnimationManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCBKeyframe.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCBReader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCBReaderUtil.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCBRelativePositioning.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCBSequence.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCBValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCControlLoader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCNodeLoader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCNodeLoaderLibrary.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccb-reader\CCSpriteLoader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccpool\CCPool.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\base-classes\CCProtectedNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\base-classes\CCProtectedNodeCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\base-classes\CCProtectedNodeWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\base-classes\UIScale9Sprite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\base-classes\UIScale9SpriteCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\base-classes\UIScale9SpriteWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\base-classes\UIWidget.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\base-classes\UIWidgetRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UIHBox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UILayout.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UILayoutCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UILayoutComponent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UILayoutManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UILayoutParameter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UILayoutWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UIRelativeBox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\layouts\UIVBox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\system\CocosGUI.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\system\UIHelper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UIButton.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UICheckBox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UIImageView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UILoadingBar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UIRichText.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UISlider.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UIText.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UITextAtlas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UITextBMFont.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\UITextField.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\scroll-widget\UIListView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\scroll-widget\UIPageView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\ccui\uiwidgets\scroll-widget\UIScrollView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\CocoStudio.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\action\CCActionFrame.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\action\CCActionManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\action\CCActionNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\action\CCActionObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\CCArmature.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\CCArmatureCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\CCArmatureWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\CCBone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\animation\CCArmatureAnimation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\animation\CCProcessBase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\animation\CCTween.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\datas\CCDatas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\display\CCDecorativeDisplay.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\display\CCDisplayFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\display\CCDisplayManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\display\CCSkin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\display\CCSkinCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\display\CCSkinWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\physics\CCColliderDetector.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\utils\CCArmatureDataManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\utils\CCArmatureDefine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\utils\CCDataReaderHelper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\utils\CCSpriteFrameCacheHelper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\utils\CCTransformHelp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\utils\CCTweenFunction.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\armature\utils\CCUtilMath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\components\CCComAttribute.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\components\CCComAudio.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\components\CCComController.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\components\CCComRender.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\components\CCComponent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\components\CCComponentContainer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\loader\load.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\loader\parsers\action-1.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\loader\parsers\action-2.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\loader\parsers\compatible.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\loader\parsers\scene-1.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\loader\parsers\timelineParser-1.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\loader\parsers\timelineParser-2.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\loader\parsers\uiParser-1.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\timeline\ActionTimeline.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\timeline\Frame.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\timeline\Timeline.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\trigger\ObjectFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\trigger\TriggerBase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\trigger\TriggerMng.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\cocostudio\trigger\TriggerObj.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\editbox\CCEditBox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\editbox\CCdomNode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlButton.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlColourPicker.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlHuePicker.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlPotentiometer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlSaturationBrightnessPicker.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlSlider.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlStepper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlSwitch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCControlUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCInvocation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCMenuPassive.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCScale9Sprite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCScale9SpriteCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\control-extension\CCScale9SpriteWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\scrollview\CCScrollView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\scrollview\CCScrollViewCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\scrollview\CCScrollViewWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\scrollview\CCSorting.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\gui\scrollview\CCTableView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\spine\CCSkeleton.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\spine\CCSkeletonAnimation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\spine\CCSkeletonCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\spine\CCSkeletonWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\extensions\spine\Spine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\box2d\box2d.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\chipmunk\chipmunk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\GAFBoot.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\GAFMacros.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFAsset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFAssetPreload.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFAtlasLoader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFDataReader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFLoader.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFMask.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFMaskProto.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFShaderManager.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFShaders.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFSprite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFSpriteCanvasRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFSpriteProto.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFSpriteWebGLRenderCmd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFTags.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFTextField.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFTimeLine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\gaf\Library\GAFTimeLineProto.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\pluginx\Plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\pluginx\platform\facebook.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\pluginx\platform\facebook_sdk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\external\socketio\socket.io.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\jsb_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\cocos2d-html5\moduleConfig.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\3d\jsb_cocos2d_3d.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\3d\jsb_cocos2d_3d_ext.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\ccui\jsb_ccui_create_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\ccui\jsb_ccui_deprecated.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\ccui\jsb_ccui_property_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\ccui\jsb_ccui_property_impls.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\ccui\jsb_cocos2d_ui.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\chipmunk\jsb_chipmunk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\chipmunk\jsb_chipmunk_constants.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\debugger\DevToolsUtils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\debugger\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\debugger\actors\root.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\debugger\actors\script.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\debugger\core\promise.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\debugger\main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\debugger\transport.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\extension\jsb_cocos2d_extension.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\extension\jsb_ext_create_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\extension\jsb_ext_property_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_boot.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_cocos2d.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_cocos2d_constants.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_cocosbuilder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_common.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_create_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_debugger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_deprecated.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_loaders.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_opengl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_opengl_constants.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_pool.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_property_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_property_impls.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\jsb_spine.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\physicsSprite\jsb_physicsSprite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\jsb_cocos2d_studio.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\jsb_studio_boot.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\jsb_studio_create_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\jsb_studio_load.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\jsb_studio_property_apis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\parsers\action-1.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\parsers\action-2.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\parsers\compatible.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\parsers\scene-1.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\parsers\timelineParser-1.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\parsers\timelineParser-2.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\bindings\script\studio\parsers\uiParser-1.x.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\frameworks\js-bindings\cocos2d-x\plugin\plugins\facebook\proj.android\DependProject\src\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\manifest.webapp" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\project.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\CloseNormal.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\CloseSelected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Efectos\Disparos\Jugador\disparo_jugador.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Efectos\Disparos\Jugador\disparo_jugador.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\Efectos\disparo_boss.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\Efectos\disparo_boss.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\Efectos\disparo_enemigo.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\Efectos\disparo_enemigo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\boss.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\boss.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\fantasma.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\fantasma.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\terrestre.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\terrestre.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\volador.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Enemigos\volador.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\HelloWorld.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Fondo\fondoToolBar.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Fondo\relleno.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Marcos\caja_objeto.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Objetos\soul.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text1_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Textos\text_air.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Tiempo\reloj.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Interfaz\Vida\corazon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Jugador\Caminando\walking.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Jugador\Caminando\walking.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Jugador\Muriendo\dieing.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Jugador\Muriendo\dieing.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Jugador\Parado\idle.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Jugador\Parado\idle.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Jugador\Saltando\jumping.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Jugador\Saltando\jumping.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Mapas\Mapa_boss\PrtRiver_Boss.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Mapas\Mapa_boss\bkBlue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Mapas\Mapa_boss\escalera.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Mapas\Mapa_boss\mapa_boss.tmx" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Mapas\Mapa_puzzles\PrtRiver.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Mapas\Mapa_puzzles\bkBlue.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Mapas\Mapa_puzzles\escalera.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Mapas\Mapa_puzzles\mapa_puzzles.tmx" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Musica\destruirEnemigo.wav" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Musica\disparoEnemigo.wav" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Musica\disparoJugador.wav" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Musica\morir.wav" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Musica\sonidoBoss.wav" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Musica\sonidoMapa.wav" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Musica\sonidoSalto.wav" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Contadores\contador_0_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Contadores\contador_1_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Contadores\contador_2_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Contadores\contador_3_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Contadores\contador_4_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Contadores\contador_5_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Puertas\puerta_boss.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Puertas\puerta_puzzle.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Raton\pulsarRaton.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\bala.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\bola.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\cajaMonedas.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\invulnerabilidad.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\llave.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\moneda.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\proteccion.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\salto.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\soul.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\soul.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\ObjetosMapa\Recolectables\vida.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\animacion_cuervo.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\animacion_cuervo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\boton_disparar.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\boton_jugar.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\boton_saltar.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\disparo.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\disparo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\jugador_avanzando.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\jugador_avanzando.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\jugador_subiendo.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\jugador_subiendo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\menu_titulo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\moneda.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\moneda.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\moneda1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\moneda2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\moneda3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\moneda4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\moneda5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\moneda6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playerdieright.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playerdieright.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playeridleright.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playeridleright.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playerjumpright.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playerjumpright.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playerrunright.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playerrunright.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playershootright.plist" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\playershootright.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\res\tiles32.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Efectos\Disparo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Efectos\DisparoBoss.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Efectos\DisparoEnemigo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Enemigos\Boss.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Enemigos\Fantasma.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Enemigos\Terrestre.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Enemigos\Volador.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\GameScene.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Jugador.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Layers\ControlesLayer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Layers\GameOverLayer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\Layers\GameWinLayer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\PowerUps\Bala.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\PowerUps\Invulnerabilidad.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\PowerUps\Proteccion.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\PowerUps\Salto.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\PowerUps\Vida.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puntuacion\CajaMonedas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puntuacion\Moneda.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puzzles\Bola.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puzzles\ContadorBolas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puzzles\Llave.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puzzles\PuertaBoss.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puzzles\PuertaPuzzle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puzzles\PulsarRaton.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\ObjetosMapa\Puzzles\Soul.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\app.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\maria\Desktop\Cosas de Adri\Use-it\src\resource.js" afterPath="" />
     </list>
     <ignored path="Use-it.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,108 +545,7 @@
     <favorites_list name="Use-it" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="GameScene.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameScene.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.655172">
-              <caret line="25" column="18" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Boss.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Enemigos/Boss.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PuertaBoss.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ObjetosMapa/Puzzles/PuertaBoss.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35146898">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Proteccion.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ObjetosMapa/PowerUps/Proteccion.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Salto.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ObjetosMapa/PowerUps/Salto.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameWinLayer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Layers/GameWinLayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="7" selection-start-line="101" selection-start-column="7" selection-end-line="104" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resource.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resource.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="58" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jugador.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jugador.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.827586">
-              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlesLayer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Layers/ControlesLayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="291" column="105" selection-start-line="291" selection-start-column="105" selection-end-line="291" selection-end-column="105" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -172,14 +588,15 @@
         <option value="$PROJECT_DIR$/src/Enemigos/Volador.js" />
         <option value="$PROJECT_DIR$/src/Efectos/DisparoBoss.js" />
         <option value="$PROJECT_DIR$/src/Layers/GameOverLayer.js" />
-        <option value="$PROJECT_DIR$/src/Layers/GameWinLayer.js" />
         <option value="$PROJECT_DIR$/src/Layers/ControlesLayer.js" />
-        <option value="$PROJECT_DIR$/src/resource.js" />
         <option value="$PROJECT_DIR$/project.json" />
-        <option value="$PROJECT_DIR$/src/Jugador.js" />
         <option value="$PROJECT_DIR$/src/Enemigos/Boss.js" />
-        <option value="$PROJECT_DIR$/src/GameScene.js" />
         <option value="$PROJECT_DIR$/src/ObjetosMapa/Puzzles/PuertaBoss.js" />
+        <option value="$PROJECT_DIR$/src/Layers/GameWinLayer.js" />
+        <option value="$PROJECT_DIR$/src/Jugador.js" />
+        <option value="$PROJECT_DIR$/src/GameScene.js" />
+        <option value="$PROJECT_DIR$/src/resource.js" />
+        <option value="$PROJECT_DIR$/src/Efectos/Disparo.js" />
       </list>
     </option>
   </component>
@@ -187,9 +604,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="20" />
-    <option name="width" value="1924" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -230,140 +647,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjetosMapa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puzzles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjetosMapa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Puntuacion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjetosMapa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PowerUps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Layers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Enemigos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Use-it" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Efectos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -584,12 +867,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="20" width="1924" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.50208336" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -597,13 +879,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13731655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.49791667" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -638,6 +921,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Jugador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Layers/ControlesLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="291" column="105" selection-start-line="291" selection-start-column="105" selection-end-line="291" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/resource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -657,13 +954,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Efectos/Disparo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -838,13 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Enemigos/Fantasma.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -866,24 +1149,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Efectos/Disparo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ObjetosMapa/Puzzles/Bola.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Efectos/DisparoEnemigo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -905,7 +1174,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="45" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +1186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,7 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,55 +1207,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Layers/GameWinLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="7" selection-start-line="101" selection-start-column="7" selection-end-line="104" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Layers/ControlesLayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.8335147">
           <caret line="291" column="105" selection-start-line="291" selection-start-column="105" selection-end-line="291" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resource.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="58" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jugador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.827586">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.655172">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="18" />
-          <folding />
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -998,7 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,6 +1235,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35146898">
           <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jugador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44069642">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Layers/GameWinLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6463547">
+          <caret line="89" column="27" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Efectos/Disparo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="71" selection-start-line="78" selection-start-column="71" selection-end-line="78" selection-end-column="71" />
           <folding />
         </state>
       </provider>

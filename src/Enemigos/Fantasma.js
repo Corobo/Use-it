@@ -4,9 +4,9 @@ var Fantasma = cc.Class.extend({
     sprite:null,
     shape:null,
     layer:null,
-ctor:function (space, posicion, layer) {
-    this.space = space;
-    this.layer = layer;
+    ctor:function (space, posicion, layer) {
+        this.space = space;
+        this.layer = layer;
 
     // Crear animación
     var framesAnimacion = [];
@@ -17,7 +17,7 @@ ctor:function (space, posicion, layer) {
     }
     var animacion = new cc.Animation(framesAnimacion, 0.2);
     var actionAnimacionBucle =
-        new cc.RepeatForever(new cc.Animate(animacion));
+    new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
     this.sprite = new cc.PhysicsSprite("#fantasma_01.png");
@@ -46,20 +46,20 @@ ctor:function (space, posicion, layer) {
 
     layer.addChild(this.sprite,10);
 
-   }, moverAutomaticamente: function(){
+}, moverAutomaticamente: function(){
         // invertir direccion
 
         // Velocidad baja ha colisionado con algo,
         if ( this.body.vx < 3 &&  this.body.vx > -3 ) {
-           if (this.direccionX == "derecha"){
-               this.direccionX = "izquierda";
+         if (this.direccionX == "derecha"){
+             this.direccionX = "izquierda";
                this.body.p.x = this.body.p.x -10; // Para que salga de la colisión
                this.sprite.scaleX = 1;
            } else {
-               this.direccionX = "derecha";
+             this.direccionX = "derecha";
                 this.body.p.x = this.body.p.x + 10; // Para que salga de la zona de colisión
-               this.sprite.scaleX = -1;
-           }
+                this.sprite.scaleX = -1;
+            }
         }
 
         // Dar impulsos para mantener la velocidad
@@ -73,7 +73,7 @@ ctor:function (space, posicion, layer) {
 
 
 
-   } , eliminar: function (){
+    } , eliminar: function (){
         // quita la forma
         this.space.removeShape(this.shape);
 

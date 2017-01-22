@@ -5,10 +5,10 @@ var Boss = cc.Class.extend({
     shape:null,
     layer:null,
     disparoAnterior:0,
-ctor:function (space, posicion, layer,direccionX) {
-    this.space = space;
-    this.layer = layer;
-    this.direccionX = direccionX;
+    ctor:function (space, posicion, layer,direccionX) {
+        this.space = space;
+        this.layer = layer;
+        this.direccionX = direccionX;
 
     // Crear animación
     var framesAnimacion = [];
@@ -19,7 +19,7 @@ ctor:function (space, posicion, layer,direccionX) {
     }
     var animacion = new cc.Animation(framesAnimacion, 0.2);
     var actionAnimacionBucle =
-        new cc.RepeatForever(new cc.Animate(animacion));
+    new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
     this.sprite = new cc.PhysicsSprite("#boss_01.png");
@@ -52,18 +52,18 @@ ctor:function (space, posicion, layer,direccionX) {
 
     layer.addChild(this.sprite,10);
 
-   }, moverAutomaticamente: function(){
-        var d = new Date();
-        var t = d.getTime();
-        if(t-this.disparoAnterior>500){
-            this.disparoAnterior = t;
-            this.layer.disparaEnemigo(this,"boss",this.direccionX);
-        }
+}, moverAutomaticamente: function(){
+    var d = new Date();
+    var t = d.getTime();
+    if(t-this.disparoAnterior>500){
+        this.disparoAnterior = t;
+        this.layer.disparaEnemigo(this,"boss",this.direccionX);
+    }
 
 
 
 
-   } , eliminar: function (){
+} , eliminar: function (){
         // quita la forma
         this.space.removeShape(this.shape);
 

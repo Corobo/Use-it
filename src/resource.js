@@ -1,9 +1,6 @@
 var res = {
-    HelloWorld_png : "res/HelloWorld.png",
-    CloseNormal_png : "res/CloseNormal.png",
-    CloseSelected_png : "res/CloseSelected.png",
-    boton_jugar_png : "res/boton_jugar.png",
-    menu_titulo_png : "res/menu_titulo.png",
+    boton_jugar_png : "res/Interfaz/Botones/boton_jugar.png",
+    menu_titulo_png : "res/Interfaz/Fondo/menu_titulo.png",
     mapa_puzzles : "res/Mapas/Mapa_puzzles/mapa_puzzles.tmx",
     mapa_boss : "res/Mapas/Mapa_boss/mapa_boss.tmx",
     PrtRiver_Boss_png: "res/Mapas/Mapa_boss/PrtRiver_Boss.png",
@@ -11,10 +8,6 @@ var res = {
     bkBlue_png: "res/Mapas/Mapa_puzzles/bkBlue.png",
     bkBlue_boss_png: "res/Mapas/Mapa_boss/bkBlue.png",
     escalera_png : "res/Mapas/Mapa_boss/escalera.png",
-    disparo_png : "res/disparo.png",
-    disparo_plist : "res/disparo.plist",
-    animacion_cuervo_png: "res/animacion_cuervo.png",
-    animacion_cuervo_plist: "res/animacion_cuervo.plist",
     disparo_jugador_png: "res/Efectos/Disparos/Jugador/disparo_jugador.png",
     disparo_jugador_plist: "res/Efectos/Disparos/Jugador/disparo_jugador.plist",
     walking_plist : "res/Jugador/Caminando/walking.plist",
@@ -91,6 +84,9 @@ var res = {
     sonido_disparo_enemigo_wav : "res/Musica/disparoEnemigo.wav",
     sonido_morir_wav : "res/Musica/morir.wav",
     sonido_destruir_enemigo_wav : "res/Musica/destruirEnemigo.wav",
+    abre_puerta_wav : "res/Musica/abrePuerta.wav",
+    llave_wav : "res/Musica/llave.wav",
+    coge_objeto_wav : "res/Musica/cogeObjeto.wav",
 
 
 };

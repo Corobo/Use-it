@@ -4,9 +4,9 @@
     body:null,
     shape:null,
     layer:null,
-ctor:function (space, posicion, layer) {
-    this.space = space;
-    this.layer = layer;
+    ctor:function (space, posicion, layer) {
+        this.space = space;
+        this.layer = layer;
 
     // Crear animación
     var framesAnimacion = [];
@@ -17,7 +17,7 @@ ctor:function (space, posicion, layer) {
     }
     var animacion = new cc.Animation(framesAnimacion, 0.2);
     var actionAnimacionBucle =
-        new cc.RepeatForever(new cc.Animate(animacion));
+    new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
     this.sprite = new cc.PhysicsSprite("#disparo_enemigo_01.png");
@@ -46,7 +46,7 @@ ctor:function (space, posicion, layer) {
     layer.addChild(this.sprite,10);
 
 
-   }, eliminar: function (){
+}, eliminar: function (){
         // quita la forma
         this.space.removeShape(this.shape);
 

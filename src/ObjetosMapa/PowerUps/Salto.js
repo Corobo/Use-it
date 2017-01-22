@@ -5,14 +5,14 @@ var Salto = cc.Class.extend({
     layer:null,
     fisica:null,
     numeroBalas:null,
-ctor:function (space, posicion, layer) {
-    this.space = space;
-    this.layer = layer;
+    ctor:function (space, posicion, layer) {
+        this.space = space;
+        this.layer = layer;
     // Crear Sprite - Cuerpo y forma
-        this.sprite = new cc.PhysicsSprite(res.salto_png);
-        var body = new cp.StaticBody();
-        body.setPos(posicion);
-        this.sprite.setBody(body);
+    this.sprite = new cc.PhysicsSprite(res.salto_png);
+    var body = new cp.StaticBody();
+    body.setPos(posicion);
+    this.sprite.setBody(body);
         // Los cuerpos estáticos nunca se añaden al Space
         var radio = this.sprite.getContentSize().width / 2;
         // forma
@@ -24,9 +24,9 @@ ctor:function (space, posicion, layer) {
         this.space.addStaticShape(this.shape);
         // añadir sprite a la capa
 
-    this.layer.addChild(this.sprite,10);
+        this.layer.addChild(this.sprite,10);
 
-   } , eliminar: function (){
+    } , eliminar: function (){
         // quita la forma
         this.space.removeShape(this.shape);
 

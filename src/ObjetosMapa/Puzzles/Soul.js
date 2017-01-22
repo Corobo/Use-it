@@ -6,10 +6,10 @@ var Soul = cc.Class.extend({
     id:null,
     numeroAlmas:null,
     fisica:null,
-ctor:function (space, posicion, layer,fisica) {
-    this.space = space;
-    this.layer = layer;
-    this.fisica = fisica;
+    ctor:function (space, posicion, layer,fisica) {
+        this.space = space;
+        this.layer = layer;
+        this.fisica = fisica;
 
     // Crear animación
     var framesAnimacion = [];
@@ -20,15 +20,15 @@ ctor:function (space, posicion, layer,fisica) {
     }
     var animacion = new cc.Animation(framesAnimacion, 0.2);
     var actionAnimacionBucle =
-        new cc.RepeatForever(new cc.Animate(animacion));
+    new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
     this.sprite = new cc.PhysicsSprite("#soul_01.png");
     // Cuerpo estática , no le afectan las fuerzas
     if(fisica==false){
-    var body = new cp.StaticBody();
-    body.setPos(posicion);
-    this.sprite.setBody(body);
+        var body = new cp.StaticBody();
+        body.setPos(posicion);
+        this.sprite.setBody(body);
     // Los cuerpos estáticos nunca se añaden al Space
     var radio = this.sprite.getContentSize().width / 2;
     // forma
@@ -39,9 +39,9 @@ ctor:function (space, posicion, layer,fisica) {
     // forma estática
     this.space.addStaticShape(this.shape);
     // añadir sprite a la capa
-    }else{
+}else{
     // Crear Sprite - Cuerpo y forma
-        this.sprite = new cc.PhysicsSprite("#soul_01.png");
+    this.sprite = new cc.PhysicsSprite("#soul_01.png");
         // Cuerpo estática , no le afectan las fuerzas
         // Cuerpo dinámico, SI le afectan las fuerzas
         var body = new cp.Body(5, Infinity);
@@ -57,14 +57,14 @@ ctor:function (space, posicion, layer,fisica) {
         this.shape = new cp.CircleShape(body, radio , cp.vzero);
         this.space.addShape(this.shape);
         this.shape.setCollisionType(tipoSoul);
-        }
+    }
 
     // ejecutar la animación
     this.sprite.runAction(actionAnimacionBucle);
 
     this.layer.addChild(this.sprite,10);
 
-   }, eliminar: function (){
+}, eliminar: function (){
       // quita la forma
       this.space.removeShape(this.shape);
 
@@ -76,5 +76,5 @@ ctor:function (space, posicion, layer,fisica) {
 
       // quita el sprite
       this.layer.removeChild(this.sprite);
-   }
+  }
 });

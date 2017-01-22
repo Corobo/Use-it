@@ -86,22 +86,25 @@ var GameWinLayer = cc.LayerColor.extend({
         this.etiquetaPuntuacionFinal.fillStyle = new cc.Color(255, 255, 255, 255);
         this.addChild(this.etiquetaPuntuacionFinal);
 
+        if(this.puntuacionFinal>=1000)
+            vidaExtra=true;
 
     },
     pulsarReiniciar:function (sender) {
         // Volver a ejecutar la escena Prinicpal
         cc.director.runScene(new GameScene());
     },calcularPuntuacion(){
-     var puntuacion = 0;
-      puntuacion = puntuacion + this.monedas * 20;
-      puntuacion = puntuacion + this.vidas * 10;
-      puntuacion = puntuacion - this.objetosUsados * 0.5;
-      puntuacion = puntuacion - (this.tiempo/1000) * 0.1;
-      this.puntuacionFinal = puntuacion;
-    },calcularTiempo(){
-       var segundos = this.tiempo/1000;
-       var minutos  = segundos/60;
-       this.tiempoMinutos = Math.floor(minutos);
-       this.tiempoSegundos = (minutos % 1)*60
-    }
+       var puntuacion = 0;
+       puntuacion = puntuacion + this.monedas * 20;
+       puntuacion = puntuacion + this.vidas * 10;
+       puntuacion = puntuacion - this.objetosUsados * 0.5;
+       puntuacion = puntuacion - (this.tiempo/1000) * 0.1;
+       this.puntuacionFinal = puntuacion;
+   },calcularTiempo(){
+     var segundos = this.tiempo/1000;
+     var minutos  = segundos/60;
+     this.tiempoMinutos = Math.floor(minutos);
+     this.tiempoSegundos = (minutos % 1)*60
+
+ }
 });

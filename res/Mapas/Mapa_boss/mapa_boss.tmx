@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="111">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="117">
  <tileset firstgid="1" name="PrtRiver_Boss" tilewidth="32" tileheight="32" tilecount="112" columns="16">
   <image source="PrtRiver_Boss.png" trans="000000" width="512" height="224"/>
  </tileset>
@@ -16,7 +16,7 @@
  </layer>
  <layer name="Terreno" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJztmU1OwzAQRictC6BdtRvULQtAXUEpkF6DIk6A+Ln/ARiLjDSM7MaOHewp/qQnN26azEuUNJ2eAsCZcs6RC9CfFVSPHHlHPpBP5IvNa/Mwtb51rNh89ciTEj0ekSdk2bHoxgkytYyHXufwoPpPkLtE2ySPiQcNw2d9F7cJ65cePmkS7ztlqkdZqR5lJeR+RcSEtiHv/5It8jDAwzdmH1cRTHu2v0c2yD38ePr6DPF4jaDPg/ICYT4leuwFG+j/Xh7isRa1yWXX/NrTY0i4h8/9iK7PoZTiUWJ2cBweLVSPnJkjM4ZZdnn4Ou2SVeef1rIc6yG3GZLQYzB37DPEw+V1yKOvztBj0IqRz4/pwd8zTjP47ebrIc9DTg9bDb4e8rP/wYM/W8c8d/wV/BmR96/oWS7Fb6UckR7koi3H5mFq1+RBvVVzbfDfUVrOB9XP+6qaPKh+05Mnh+du5B6u/kuJUM/B5qEp1EfZdstaPSgNG6tH/tg86L85/j/dQrxeOtaR83xujNj2Tx6XIxHTC3Zh6/nZvj80Uj3K4pg8rpEb5RiPb1Jhjp8=
+   eJztmUtOwzAQhictC6BdtRvULQtAXUEp0F6DIk6AeNz/AIxFRhpGdmPHDvYE/9InJ26azNdHmkxPAeBMOefIBejPCqpHjrwjH8gn8sXmtXmYWt9aVmy+euRJiR6PyBOybFm04wSZWsZjyzk8qP4T5C7RPslj4kHD8NnexW3C+qWHT5rEx06Z6lFWqkdZCTlfETGhfcjzv2SLPPTw8I05xlUE0479H5ANcg8/nr4+fTxeI+jyoLxAmE+JHgfBBrp/l/t4rEVtct01v/b06BPu4XM+ou9nX0rxKDF7GIfHDqpHzsyRGcOsuzx8nfbJqvPPzrIe6yH3GZLQ12DuOGaIh8vrmEdXnaGvwU6MfH5ID/6YcZrBbzdfD/k+5PSw1eDrIZ/7Hzz4tXXMdcdfwa8Ref+KruVS3CvliPQgF20Zm4epXZMH9VbNd4PfR2l5P6h+3lfV5EH1m548OTy3I/dw9V9KhHoONg9NoT7Ktl3X6kGhz792j4aNY/Og/+b4/3QLsbx0bCPn+dwQsR2fPC4HIqYX7MLW87P9fmikepTFmDyukRvlGI9vWXmOoA==
   </data>
  </layer>
  <layer name="Escaleras" width="50" height="50">
@@ -67,7 +67,7 @@
   <object id="19" x="881.333" y="644">
    <polyline points="0,0 0,-154.667"/>
   </object>
-  <object id="20" x="889.333" y="496">
+  <object id="20" x="893.333" y="490">
    <polyline points="0,0 282.667,0 464,93.3333 504,97.3333"/>
   </object>
   <object id="23" x="1388" y="593.333">
@@ -102,6 +102,24 @@
   </object>
   <object id="67" x="1544" y="682.667">
    <polyline points="0,0 14.6667,0"/>
+  </object>
+  <object id="111" x="1487" y="1276">
+   <polyline points="0,0 1,29"/>
+  </object>
+  <object id="112" x="1541" y="1007">
+   <polyline points="0,0 -13,1"/>
+  </object>
+  <object id="113" x="1464" y="594">
+   <polyline points="0,0 13,0"/>
+  </object>
+  <object id="114" x="1566" y="592">
+   <polyline points="0,0 -8,3"/>
+  </object>
+  <object id="115" x="317" y="302">
+   <polyline points="0,0 11,2"/>
+  </object>
+  <object id="116" x="421" y="305">
+   <polyline points="0,0 -11,0"/>
   </object>
  </objectgroup>
  <objectgroup name="Monedas"/>
@@ -233,7 +251,7 @@
   </object>
  </objectgroup>
  <objectgroup name="Railes">
-  <object id="81" x="1359.33" y="572.667">
+  <object id="81" x="1360.33" y="570.667">
    <polyline points="0,0 -176.667,-88"/>
   </object>
   <object id="82" x="890.667" y="290.667">
@@ -244,7 +262,7 @@
   </object>
  </objectgroup>
  <objectgroup name="ZonaBoss">
-  <object id="105" x="1446" y="1310" width="73" height="42"/>
+  <object id="105" x="1451" y="1321" width="73" height="42"/>
   <object id="106" x="1454" y="987" width="72" height="42"/>
   <object id="107" x="1485" y="575" width="73" height="42"/>
   <object id="108" x="333" y="285" width="73" height="42"/>

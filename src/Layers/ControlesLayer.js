@@ -97,7 +97,7 @@ var ControlesLayer = cc.Layer.extend({
 
         this.relleno = cc.Sprite.create(res.relleno_png);
         this.relleno.setPosition(cc.p(this.size.width*0.35,
-        this.size.height*0.94));
+            this.size.height*0.94));
 
         this.addChild(this.relleno);
 
@@ -132,10 +132,10 @@ var ControlesLayer = cc.Layer.extend({
         this.etiquetaVidas.fillStyle = new cc.Color(255, 255, 255, 255);
         this.addChild(this.etiquetaVidas);
 
-         this.spriteTiempo = cc.Sprite.create(res.reloj_png);
-         this.spriteTiempo.setPosition(cc.p(this.size.width - 375, this.size.height - 30));
+        this.spriteTiempo = cc.Sprite.create(res.reloj_png);
+        this.spriteTiempo.setPosition(cc.p(this.size.width - 375, this.size.height - 30));
 
-         this.addChild(this.spriteTiempo);
+        this.addChild(this.spriteTiempo);
 
         this.etiquetaTiempo = new cc.LabelTTF("0:00", "Comic Sans MS", 20);
         this.etiquetaTiempo.setPosition(cc.p(this.size.width - 325, this.size.height - 30));
@@ -147,14 +147,14 @@ var ControlesLayer = cc.Layer.extend({
         return true;
 
     }, agregarMoneda:function(num){
-         this.monedas = this.monedas + num;
-         this.etiquetaMonedas.setString(this.monedas);
-    }, actualizarMunicion:function(jugador){
-        this.etiquetaMunicion.setString(jugador.balas);
-    }, actualizarVidas:function(jugador){
-      this.etiquetaVidas.setString(jugador.vidas);
-    },actualizarVida:function(jugador){
-        if(jugador.digitos.length==3){
+       this.monedas = this.monedas + num;
+       this.etiquetaMonedas.setString(this.monedas);
+   }, actualizarMunicion:function(jugador){
+    this.etiquetaMunicion.setString(jugador.balas);
+}, actualizarVidas:function(jugador){
+  this.etiquetaVidas.setString(jugador.vidas);
+},actualizarVida:function(jugador){
+    if(jugador.digitos.length==3){
         this.removeChild(this.spriteDigito1);
         this.removeChild(this.spriteDigito2);
         this.removeChild(this.spriteDigito3);
@@ -175,8 +175,8 @@ var ControlesLayer = cc.Layer.extend({
             cc.p(this.size.width*0.145, this.size.height*0.94));
 
         this.addChild(this.spriteDigito3);
-        }
-        if(jugador.digitos.length==2){
+    }
+    if(jugador.digitos.length==2){
         this.removeChild(this.spriteDigito1);
         this.removeChild(this.spriteDigito2);
         this.removeChild(this.spriteDigito3);
@@ -192,103 +192,103 @@ var ControlesLayer = cc.Layer.extend({
 
         this.addChild(this.spriteDigito2);
 
-        }
-        if(jugador.digitos.length==1){
+    }
+    if(jugador.digitos.length==1){
         this.removeChild(this.spriteDigito1);
         this.removeChild(this.spriteDigito2);
         this.spriteDigito1 = cc.Sprite.create(this.text_num[jugador.digitos[0]]);
-                this.spriteDigito1.setPosition(
-                    cc.p(this.size.width*0.1, this.size.height*0.94));
+        this.spriteDigito1.setPosition(
+            cc.p(this.size.width*0.1, this.size.height*0.94));
 
-                this.addChild(this.spriteDigito1);
+        this.addChild(this.spriteDigito1);
 
-        }
-    }, dibujarBolas:function(){
-         this.removeChild(this.relleno);
-         this.relleno = cc.Sprite.create(res.relleno_png);
-         this.relleno.setPosition(cc.p(this.size.width*0.35,
-                 this.size.height*0.94));
+    }
+}, dibujarBolas:function(){
+   this.removeChild(this.relleno);
+   this.relleno = cc.Sprite.create(res.relleno_png);
+   this.relleno.setPosition(cc.p(this.size.width*0.35,
+       this.size.height*0.94));
 
-         this.addChild(this.relleno);
-        this.objetoBola = cc.Sprite.create(res.bola_png);
-           this.objetoBola.setPosition(
-               cc.p(this.size.width*0.35, this.size.height*0.94));
-        this.addChild(this.objetoBola);
+   this.addChild(this.relleno);
+   this.objetoBola = cc.Sprite.create(res.bola_png);
+   this.objetoBola.setPosition(
+     cc.p(this.size.width*0.35, this.size.height*0.94));
+   this.addChild(this.objetoBola);
 
-    }, dibujarAlmas:function(){
+}, dibujarAlmas:function(){
 
-        this.removeChild(this.relleno);
-         this.relleno = cc.Sprite.create(res.relleno_png);
-         this.relleno.setPosition(cc.p(this.size.width*0.35,
-                 this.size.height*0.94));
+    this.removeChild(this.relleno);
+    this.relleno = cc.Sprite.create(res.relleno_png);
+    this.relleno.setPosition(cc.p(this.size.width*0.35,
+       this.size.height*0.94));
 
-         this.addChild(this.relleno);
-        this.objetoAlma = cc.Sprite.create(res.soul_individual_png);
-           this.objetoAlma.setPosition(
-               cc.p(this.size.width*0.35, this.size.height*0.94));
-        this.addChild(this.objetoAlma);
-    }, eliminarObjetos:function(){
-        this.removeChild(this.relleno);
-         this.relleno = cc.Sprite.create(res.relleno_png);
-         this.relleno.setPosition(cc.p(this.size.width*0.35,
-                 this.size.height*0.94));
+    this.addChild(this.relleno);
+    this.objetoAlma = cc.Sprite.create(res.soul_individual_png);
+    this.objetoAlma.setPosition(
+     cc.p(this.size.width*0.35, this.size.height*0.94));
+    this.addChild(this.objetoAlma);
+}, eliminarObjetos:function(){
+    this.removeChild(this.relleno);
+    this.relleno = cc.Sprite.create(res.relleno_png);
+    this.relleno.setPosition(cc.p(this.size.width*0.35,
+       this.size.height*0.94));
 
-         this.addChild(this.relleno);
-    }, actualizarAire:function(jugador){
-             if(jugador.digitosAire.length==3){
-             this.removeChild(this.textAir1);
-             this.removeChild(this.textAir2);
-             this.removeChild(this.textAir3);
-             this.textAir1 = cc.Sprite.create(this.text_air[jugador.digitosAire[2]]);
-             this.textAir1.setPosition(
-                 cc.p(this.size.width*0.1, this.size.height*0.90));
+    this.addChild(this.relleno);
+}, actualizarAire:function(jugador){
+   if(jugador.digitosAire.length==3){
+       this.removeChild(this.textAir1);
+       this.removeChild(this.textAir2);
+       this.removeChild(this.textAir3);
+       this.textAir1 = cc.Sprite.create(this.text_air[jugador.digitosAire[2]]);
+       this.textAir1.setPosition(
+           cc.p(this.size.width*0.1, this.size.height*0.90));
 
-             this.addChild(this.textAir1);
+       this.addChild(this.textAir1);
 
-             this.textAir2 = cc.Sprite.create(this.text_air[jugador.digitosAire[0]]);
-             this.textAir2.setPosition(
-                 cc.p(this.size.width*0.12, this.size.height*0.90));
+       this.textAir2 = cc.Sprite.create(this.text_air[jugador.digitosAire[0]]);
+       this.textAir2.setPosition(
+           cc.p(this.size.width*0.12, this.size.height*0.90));
 
-             this.addChild(this.textAir2);
+       this.addChild(this.textAir2);
 
-             this.textAir3 = cc.Sprite.create(this.text_air[jugador.digitosAire[1]]);
-             this.textAir3.setPosition(
-                 cc.p(this.size.width*0.145, this.size.height*0.90));
+       this.textAir3 = cc.Sprite.create(this.text_air[jugador.digitosAire[1]]);
+       this.textAir3.setPosition(
+           cc.p(this.size.width*0.145, this.size.height*0.90));
 
-             this.addChild(this.textAir3);
-             }
-             if(jugador.digitosAire.length==2){
-             this.removeChild(this.textAir1);
-             this.removeChild(this.textAir2);
-             this.removeChild(this.textAir3);
-             this.textAir1 = cc.Sprite.create(this.text_air[jugador.digitosAire[1]]);
-             this.textAir1.setPosition(
-                 cc.p(this.size.width*0.1, this.size.height*0.90));
+       this.addChild(this.textAir3);
+   }
+   if(jugador.digitosAire.length==2){
+       this.removeChild(this.textAir1);
+       this.removeChild(this.textAir2);
+       this.removeChild(this.textAir3);
+       this.textAir1 = cc.Sprite.create(this.text_air[jugador.digitosAire[1]]);
+       this.textAir1.setPosition(
+           cc.p(this.size.width*0.1, this.size.height*0.90));
 
-             this.addChild(this.textAir1);
+       this.addChild(this.textAir1);
 
-             this.textAir2 = cc.Sprite.create(this.text_air[jugador.digitosAire[0]]);
-             this.textAir2.setPosition(
-                 cc.p(this.size.width*0.12, this.size.height*0.90));
+       this.textAir2 = cc.Sprite.create(this.text_air[jugador.digitosAire[0]]);
+       this.textAir2.setPosition(
+           cc.p(this.size.width*0.12, this.size.height*0.90));
 
-             this.addChild(this.textAir2);
+       this.addChild(this.textAir2);
 
-             }
-             if(jugador.digitosAire.length==1){
-             this.removeChild(this.textAir1);
-             this.removeChild(this.textAir2);
-             this.textAir1 = cc.Sprite.create(this.text_air[jugador.digitosAire[0]]);
-                     this.textAir1.setPosition(
-                         cc.p(this.size.width*0.1, this.size.height*0.90));
+   }
+   if(jugador.digitosAire.length==1){
+       this.removeChild(this.textAir1);
+       this.removeChild(this.textAir2);
+       this.textAir1 = cc.Sprite.create(this.text_air[jugador.digitosAire[0]]);
+       this.textAir1.setPosition(
+           cc.p(this.size.width*0.1, this.size.height*0.90));
 
-                     this.addChild(this.textAir1);
+       this.addChild(this.textAir1);
 
-             }
-     },calcularTiempo:function(tiempo){
-        var segundos = tiempo/1000;
-        var minutos  = segundos/60;
-        this.tiempoMinutos = Math.floor(minutos);
-        this.tiempoSegundos = (minutos % 1)*60
-        this.etiquetaTiempo.setString(Math.floor(this.tiempoMinutos)+" : "+Math.floor(this.tiempoSegundos));
-     }
+   }
+},calcularTiempo:function(tiempo){
+    var segundos = tiempo/1000;
+    var minutos  = segundos/60;
+    this.tiempoMinutos = Math.floor(minutos);
+    this.tiempoSegundos = (minutos % 1)*60
+    this.etiquetaTiempo.setString(Math.floor(this.tiempoMinutos)+" : "+Math.floor(this.tiempoSegundos));
+}
 });

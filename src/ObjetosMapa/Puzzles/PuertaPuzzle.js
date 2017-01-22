@@ -1,10 +1,10 @@
 var PuertaPuzzle = cc.Class.extend({
-    space:null,
-    sprite:null,
-    shape:null,
-    layer:null,
-    id:null,
-ctor:function (space, posicion, layer, id) {
+  space:null,
+  sprite:null,
+  shape:null,
+  layer:null,
+  id:null,
+  ctor:function (space, posicion, layer, id) {
     this.space = space;
     this.layer = layer;
     this.id = id;
@@ -25,7 +25,7 @@ ctor:function (space, posicion, layer, id) {
     // añadir sprite a la capa
 
     layer.addChild(this.sprite,10);
-   }, eliminar: function (){
+  }, eliminar: function (){
       // quita la forma
       this.space.removeShape(this.shape);
 
@@ -35,5 +35,5 @@ ctor:function (space, posicion, layer, id) {
 
       // quita el sprite
       this.layer.removeChild(this.sprite);
-   }
-});
+    }
+  });

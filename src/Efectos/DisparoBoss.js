@@ -5,10 +5,10 @@
     shape:null,
     layer:null,
     velocidad:null,
-ctor:function (space, posicion, layer,velocidad) {
-    this.space = space;
-    this.layer = layer;
-    this.velocidad = velocidad;
+    ctor:function (space, posicion, layer,velocidad) {
+        this.space = space;
+        this.layer = layer;
+        this.velocidad = velocidad;
     // Crear animación
     var framesAnimacion = [];
     for (var i = 1; i <= 2; i++) {
@@ -18,7 +18,7 @@ ctor:function (space, posicion, layer,velocidad) {
     }
     var animacion = new cc.Animation(framesAnimacion, 0.2);
     var actionAnimacionBucle =
-        new cc.RepeatForever(new cc.Animate(animacion));
+    new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
     this.sprite = new cc.PhysicsSprite("#disparo_boss_01.png");
@@ -45,14 +45,14 @@ ctor:function (space, posicion, layer,velocidad) {
     this.sprite.runAction(actionAnimacionBucle);
 
     if(velocidad>0)
-            this.sprite.scaleX = -1;
-        else
-            this.sprite.scaleX = 1;
+        this.sprite.scaleX = -1;
+    else
+        this.sprite.scaleX = 1;
 
     layer.addChild(this.sprite,10);
 
 
-   }, eliminar: function (){
+}, eliminar: function (){
         // quita la forma
         this.space.removeShape(this.shape);
 

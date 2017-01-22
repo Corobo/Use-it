@@ -1,23 +1,23 @@
  var Disparo = cc.Class.extend({
-    space:null,
-    sprite:null,
-    body:null,
-    shape:null,
-    layer:null,
-ctor:function (space, posicion, layer) {
-    this.space = space;
-    this.layer = layer;
+ 	space:null,
+ 	sprite:null,
+ 	body:null,
+ 	shape:null,
+ 	layer:null,
+ 	ctor:function (space, posicion, layer) {
+ 		this.space = space;
+ 		this.layer = layer;
 
     // Crear animación
     var framesAnimacion = [];
     for (var i = 1; i <= 4; i++) {
-        var str = "disparo_jugador_0" + i + ".png";
-        var frame = cc.spriteFrameCache.getSpriteFrame(str);
-        framesAnimacion.push(frame);
+    	var str = "disparo_jugador_0" + i + ".png";
+    	var frame = cc.spriteFrameCache.getSpriteFrame(str);
+    	framesAnimacion.push(frame);
     }
     var animacion = new cc.Animation(framesAnimacion, 0.2);
     var actionAnimacionBucle =
-        new cc.RepeatForever(new cc.Animate(animacion));
+    new cc.RepeatForever(new cc.Animate(animacion));
 
     // Crear Sprite - Cuerpo y forma
     this.sprite = new cc.PhysicsSprite("#disparo_jugador_01.png");
@@ -32,8 +32,8 @@ ctor:function (space, posicion, layer) {
 
     // forma
     this.shape = new cp.BoxShape(this.body,
-        this.sprite.getContentSize().width,
-        this.sprite.getContentSize().height);
+    	this.sprite.getContentSize().width,
+    	this.sprite.getContentSize().height);
     // agregar forma dinamica
     this.shape.setSensor(true);
     this.space.addShape(this.shape);
@@ -46,7 +46,7 @@ ctor:function (space, posicion, layer) {
     layer.addChild(this.sprite,10);
 
 
-   }, eliminar: function (){
+}, eliminar: function (){
         // quita la forma
         this.space.removeShape(this.shape);
 
@@ -56,8 +56,8 @@ ctor:function (space, posicion, layer) {
         // quita el sprite
         this.layer.removeChild(this.sprite);
     }, mantenerVelocidadDisparo: function() {
-        if(this.body.vy<0){
-            this.body.vy = 0;
-        }
+    	if(this.body.vy<0){
+    		this.body.vy = 0;
+    	}
     }
 });

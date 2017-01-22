@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="346">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="50" tilewidth="32" tileheight="32" nextobjectid="353">
  <tileset firstgid="1" name="PrtRiver" tilewidth="32" tileheight="32" tilecount="96" columns="16">
   <image source="PrtRiver.png" width="512" height="192"/>
  </tileset>
@@ -221,7 +221,7 @@
   <object id="307" x="2319" y="1300" width="32" height="32"/>
   <object id="308" x="2430" y="1296" width="32" height="32"/>
   <object id="309" x="2528" y="1297" width="32" height="32"/>
-  <object id="310" x="2667" y="797" width="32" height="32"/>
+  <object id="310" x="2667" y="782" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="Contenedores">
   <object id="96" x="3291" y="672">
@@ -239,7 +239,7 @@
   <object id="328" x="3809" y="864">
    <polyline points="0,0 0,94"/>
   </object>
-  <object id="329" x="3488" y="864">
+  <object id="329" x="3464" y="867">
    <polyline points="0,0 1,93"/>
   </object>
   <object id="338" x="3068" y="386">
@@ -402,11 +402,15 @@
  <objectgroup name="Invulnerable"/>
  <objectgroup name="Proteccion"/>
  <objectgroup name="Vida">
-  <object id="311" x="2913" y="930" width="32" height="32"/>
+  <object id="311" x="2914" y="923" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="Salto"/>
  <objectgroup name="CajaMonedas">
   <object id="344" x="3362" y="799" width="32" height="30"/>
+  <object id="349" x="1824" y="1017" width="32" height="30"/>
+  <object id="350" x="1172" y="1245" width="32" height="30"/>
+  <object id="351" x="1004" y="1371" width="32" height="30"/>
+  <object id="352" x="804" y="1369" width="32" height="30"/>
  </objectgroup>
  <objectgroup name="MurosFantasma">
   <object id="334" x="3561" y="880">
@@ -428,6 +432,9 @@
  <objectgroup name="Railes">
   <object id="345" x="1283.33" y="1280">
    <polyline points="0,0 442,-222"/>
+  </object>
+  <object id="346" x="3813" y="959">
+   <polyline points="0,0 55,-30"/>
   </object>
  </objectgroup>
  <objectgroup name="ZonaBoss"/>
